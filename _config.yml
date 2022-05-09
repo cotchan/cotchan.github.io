@@ -155,10 +155,10 @@ remote_theme: "jeffreytse/jekyll-theme-yat"
 #   - about.md
 
 # Page default value
-# defaults:
-#   home:
-#     heading: "Your awesome heading"
-#     subheading: "Your awesome subheading"
+defaults:
+  home:
+    heading: "Markdown 쓰고 싶어 옮긴 블로그"
+    subheading: "개발 블로그"
 #     banner: "Your image url"
 
 # Banner default settings
