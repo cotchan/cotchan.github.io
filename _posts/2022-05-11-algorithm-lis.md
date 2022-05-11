@@ -35,7 +35,7 @@ LIS 유형 문제입니다.
 
 ![lis_refer](https://user-images.githubusercontent.com/75410527/167801236-7dce3ede-6941-4d16-8117-4baf9a02e121.png)
 
-- 이미지 출처: https://chanhuiseok.github.io/posts/algo-49/
+- 이미지 출처: [알고리즘 - 최장 증가 부분 수열(LIS) 알고리즘](https://chanhuiseok.github.io/posts/algo-49/)
 
 lis 배열 사용 방식
 
