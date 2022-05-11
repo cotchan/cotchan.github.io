@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 최장 증가 부분 수열(LIS)
-subtitle: LIS(Longest Increasing Subsequence)
+subtitle: Longest Increasing Subsequence
 categories: algorithm
 tags: [algorithm]
 ---
