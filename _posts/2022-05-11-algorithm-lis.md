@@ -33,9 +33,11 @@ LIS 유형 문제입니다.
 - 즉, LIS의 형태를 유지하기 위해 주어진 배열의 인덱스를 하나씩 살펴보면서 그 숫자가 들어갈 위치를 이분탐색으로 찾아서 넣습니다.
 - 이를 위해 `lis`라는 리스트를 추가로 사용합니다.
 
-![lis_refer](https://user-images.githubusercontent.com/75410527/167801236-7dce3ede-6941-4d16-8117-4baf9a02e121.png)
+---
 
 - 이미지 출처: [알고리즘 - 최장 증가 부분 수열(LIS) 알고리즘](https://chanhuiseok.github.io/posts/algo-49/)
+
+![lis_refer](https://user-images.githubusercontent.com/75410527/167801236-7dce3ede-6941-4d16-8117-4baf9a02e121.png)
 
 lis 배열 사용 방식
 
