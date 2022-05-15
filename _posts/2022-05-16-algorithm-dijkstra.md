@@ -2,8 +2,8 @@
 layout: post
 title: 다익스트라 문제 접근 팁
 subtitle: dijkstra
-categories: ps_tip
-tags: [ps_tip]
+categories: algorithm
+tags: [algorithm]
 ---
 
 - 개인 공부 목적으로 작성한 포스팅입니다.
