@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 다익스트라 문제 접근 팁
-subtitle: dijkstra
+title: 다익스트라 문제 접근 방법
+subtitle: dijkstra 알고리즘
 categories: algorithm
 tags: [algorithm]
 ---
