@@ -1,6 +1,7 @@
 ---
 layout: post
-title: 프로젝트에 CompletableFuture handle() 적용하기
+title: 프로젝트에 CompletableFuture handle 적용하기
+subtitle: CompletableFuture handle
 categories: todayilearned
 tags: [todayilearned]
 ---
