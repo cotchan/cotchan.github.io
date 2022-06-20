@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 프로젝트에 CompletableFuture handle() 적용하기
-categories: til
-tags: [til]
+categories: todayilearned
+tags: [todayilearned]
 ---
 
 - 개인 공부 목적으로 작성한 포스팅입니다.
