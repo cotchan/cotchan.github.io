@@ -27,9 +27,9 @@ DataSource는 `커넥션을 획득하는 방법을 추상화한 것`입니다.
 
 ### 핵심 기능
 
-- DB 커넥션을 어떻게 획득할거냐?
-- 구현은 내가 DriverManager를 통해 하거나 Connection Pool을 사용해서 하거나 상관없음
-- 그냥 '커넥션 주세요' 이 방법만 추상화해놓은 것
+- DB 커넥션을 어떻게 획득할거냐?에 대한 기능을 제공합니다.
+- 구현은 내가 `DriverManager`를 통해 하거나 `커넥션 풀`을 통해 하거나 상관없습니다.
+- 그냥 `"DB 커넥션 주세요"` 이 방법만 추상화해놓은 것
 
 ```java
 public interface DataSource {
