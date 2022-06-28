@@ -121,3 +121,8 @@ for (int i = 1; i <= N; ++i) {
     }
 }
 ```
+
+---
+
+- 참고
+  - [[알고리즘 트레이닝] 5장 - 동적계획법과 냅색(Knapsack) (백준 12865번 평범한 배낭 문제로 살펴보기)](https://chanhuiseok.github.io/posts/improve-6/)
