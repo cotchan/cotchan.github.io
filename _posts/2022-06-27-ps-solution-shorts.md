@@ -68,3 +68,56 @@ static int getLowerBound(int value) {
     return ans;
 }
 ```
+
+### DP
+
+#### 동전 고르기 & 냅색
+
+- 동전 고르기
+  - N개의 동전 `int[] coins`를 가지고 M원을 만들 수 있는 동전의 최대/최소 갯수
+  - 핵심은 N,M을 어떤 순서로 루프 도는지가 중요하고, 새로운 `i번째 동전`을 사용할 때마다 `0~M원`을 전부 확인해줘야합니다.
+
+```java
+/**
+    * dp[i]: N번째 동전까지 고려했을 때 M원을 만드는데 필요한 최대/최소 동전 갯수
+*/
+int[] coins;
+
+for (int i = 0; i < N; ++i) {
+    for (int m = 0; m <= M; ++m) {
+        if (m >= coins[i]) {
+            dp[m] = Math.max(dp[m], dp[m-coins[i]] + 1);
+            //OR
+            dp[m] = Math.min(dp[m], dp[m-coins[i]] + 1);
+        }
+    }
+}
+```
+
+- 냅색 문제
+  - 핵심은 `dp[i][m]과의 비교대상`은 가방에 `넣거나, 안 넣거나` 이렇게 두 가지 상태입니다.
+    - 가방에 안 넣거나: `dp[i][m]`
+    - 가방에 넣거나: `dp[i][m-weight] + value`
+  - 자기 자신의 최대값을 갱신하는 dp[i][m] = Math.max(dp[i][m], newValue) 이런 형태가 아닙니다.
+
+```java
+/**
+    * dp[i][j]: i번째 보석까지 고려하고, 무게 j만큼 담았을 때 얻을 수 있는 최대 가치
+    *
+    * dp[i][j] = dp[i-1][j-nowWeight] + nowValue
+    * dp[i][j] = d[i-1][j]
+    */
+for (int i = 1; i <= N; ++i) {
+    for (int m = 0; m <= M; ++m) {
+        Stone nowStone = stones[i];
+
+        if (m >= nowStone.weight) {
+            dp[i][m] = Math.max(dp[i-1][m], dp[i-1][m-nowStone.weight] + nowStone.value);
+        } else {
+            dp[i][m] = dp[i-1][m];
+        }
+
+        ans = Math.max(ans, dp[i][m]);
+    }
+}
+```
