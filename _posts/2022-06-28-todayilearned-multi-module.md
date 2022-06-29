@@ -50,7 +50,7 @@ public class ModuleApiApplication {
 }
 ```
 
-### 2개 이상의 DB를 사용하는 경우
+### 멀티 DB를 사용하는 경우
 
 - 멀티 모듈에서 여러개 DB를 접근해서 사용하는 경우입니다.
 - 이 경우는 트랜잭션매니저를 여러개 사용해야 하기 때문에 보통 `DataSource`, `PlatformTransactionManager` 빈을 직접 정의해서 사용합니다.
@@ -58,7 +58,7 @@ public class ModuleApiApplication {
 
 #### 코드 예시
 
-```java
+````java
 @Configuration
 @EnableJpaRepositories(
     basePackages = "YOUR_REPOSITORY_PACKAGE_NAME",
@@ -120,4 +120,4 @@ spring:
         use_sql_comments: true
         implicit_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
         physical_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
-```
+````
