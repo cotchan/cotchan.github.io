@@ -13,7 +13,7 @@ tags: [todayilearned]
 - 멀티 모듈로 작업을 하게 되면 library 모듈과 서비스 모듈이 분리되므로 Entity, Repository 사용에 있어 바뀌는 부분이 생깁니다.
 - 싱글 DB일 때와 멀티 DB인 경우로 나뉠 수 있는데 이 부분을 정리하고자 작성합니다.
 
-### 하나의 DB만 사용하는 경우
+### 싱글 DB를 사용하는 경우
 
 - 멀티 모듈에서 하나의 DB만 접근해서 사용하는 경우입니다.
 - 하나의 DB만 사용하는 경우 별도의 트랜잭션 매니저를 정의하지 않아도 됩니다.
@@ -54,11 +54,11 @@ public class ModuleApiApplication {
 
 - 멀티 모듈에서 여러개 DB를 접근해서 사용하는 경우입니다.
 - 이 경우는 트랜잭션매니저를 여러개 사용해야 하기 때문에 보통 `DataSource`, `PlatformTransactionManager` 빈을 직접 정의해서 사용합니다.
-- 그러므로 `PlatformTransactionManager` 빈 설정에 접근할 Entity, Repository 설정이 함께 들어갑니다.
+- 그러므로 `PlatformTransactionManager` 빈 설정 클래스에 접근할 Entity, Repository 설정이 함께 들어갑니다.
 
 #### 코드 예시
 
-````java
+```java
 @Configuration
 @EnableJpaRepositories(
     basePackages = "YOUR_REPOSITORY_PACKAGE_NAME",
@@ -98,6 +98,7 @@ public class ApiDbConfig {
         return transactionManager;
     }
 }
+```
 
 - application.yml
 
@@ -120,4 +121,4 @@ spring:
         use_sql_comments: true
         implicit_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
         physical_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
-````
+```
