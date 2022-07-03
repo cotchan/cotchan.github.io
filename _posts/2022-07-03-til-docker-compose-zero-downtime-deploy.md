@@ -16,7 +16,7 @@ tags: [todayilearned]
 - 여기서 적용한 무중단 배포는 `1대의 서버`내에서 `nginx reload`를 사용하여 서버가 서비스를 제공하는 인스턴스를 변경하는 것을 의미합니다!
 - +) `Blue/Green` 배포 방식을 적용했습니다.
 
-### docker-compose.blue & green
+### 2개의 docker-compose
 
 - 우선, `blue & green` 배포를 위해 docker-compose.yml을 `2개 정의`합니다.
   - `docker-compose.blue.yml`
@@ -103,7 +103,7 @@ set $service_url http://127.0.0.1:8082;
     - `Green`가 떠있을 시 => `Blue`를 배포합니다.
   - 새로 배포한 컨테이너가 `Up` 상태로 제대로 배포가 되었다면, 기존에 떠있던 컨테이너를 `docker-compose down` 으로 삭제합니다.
 
-```
+```bash
 #!/bin/bash
 # deploy.sh
 
@@ -152,9 +152,9 @@ fi
 - 저 같은 경우는 `deploy.sh`는 `/script/deploy.sh`에 두고 `docker-compose.XXX.yml` 파일은 루트경로에 뒀습니다.
 - 상대 경로로 조회하면 찾지를 못하다보니 절대 경로를 정의해주었습니다.
 
-#### docker-compose up --build
+#### --build 옵션
 
-- `--build` 옵션은 선택사항입니다.
+- `docker-compose up --build`에서 `--build` 옵션은 선택사항입니다.
 - 해당 옵션을 적용하면 이미지가 있든 없든 이미지를 빌드하고 컨테이너를 시작합니다.
 - 이 옵션을 적용한 이유는 컨테이너를 한 번 실행한 후 소스 코드를 수정하고 다시 도커 컴포즈를 이용해 컨테이너를 시작할 때는 변경사항이 적용되어야 하므로 이 명령어로 컨테이너를 실행해야 합니다.
 - 소스 코드는 프리징된 상태라면 `--build` 옵션은 필요없습니다.
