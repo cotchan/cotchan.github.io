@@ -76,16 +76,19 @@ public abstract class ServiceRuntimeException extends RuntimeException {
 - 예외 메시지 생성 시 `MessageSourceAccessor`에 key 값을 넘겨줘서 예외 메시지를 만들기 위해 사용합니다.
 
 ```java
+import org.springframework.http.HttpStatus;
+
 @Getter
 @AllArgsConstructor
 public enum EnumApiException {
 
-    NOT_FOUND("error.notfound", "error.notfound.details"),
-    UNAUTHORIZED("error.authority","error.authority.details"),
-    DUPLICATED_VALUE("error.duplicate","error.duplicate.details");
+    NOT_FOUND("error.notfound", "error.notfound.details", HttpStatus.NOT_FOUND),
+    UNAUTHORIZED("error.authority","error.authority.details", HttpStatus.UNAUTHORIZED),
+    DUPLICATED_VALUE("error.duplicate","error.duplicate.details", HttpStatus.BAD_REQUEST);
 
     private String messageKey;
     private String messageDetailKey;
+    private HttpStatus status;
 }
 ```
 
@@ -159,17 +162,7 @@ public class GlobalExceptionHandler {
      */
     @ExceptionHandler(ApiException.class)
     public ResponseEntity<?> handleApiException(ApiException e) {
-        switch (e.getExceptionType()) {
-            case NOT_FOUND:
-                return createResponse(e, HttpStatus.NOT_FOUND);
-            case UNAUTHORIZED:
-                return createResponse(e, HttpStatus.FORBIDDEN);
-            case DUPLICATED_VALUE:
-                return createResponse(e, HttpStatus.BAD_REQUEST);
-            default:
-                log.warn("Unexpected apiException occurred: {}", e.getMessage(), e);
-                return createResponse(e, HttpStatus.INTERNAL_SERVER_ERROR);
-        }
+        return createResponse(e, e.getType().getStatus());
     }
 
     //...
