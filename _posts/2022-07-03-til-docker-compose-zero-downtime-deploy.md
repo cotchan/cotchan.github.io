@@ -158,7 +158,7 @@ fi
 - 저 같은 경우는 `deploy.sh`는 `/script/deploy.sh`에 두고 `docker-compose.XXX.yml` 파일은 루트경로에 뒀습니다.
 - 상대 경로로 조회하면 찾지를 못하다보니 절대 경로를 정의해주었습니다.
 
-#### --build 옵션
+#### compose build 옵션
 
 - `docker-compose up --build`에서 `--build` 옵션은 선택사항입니다.
 - 해당 옵션을 적용하면 이미지가 있든 없든 이미지를 빌드하고 컨테이너를 시작합니다.
