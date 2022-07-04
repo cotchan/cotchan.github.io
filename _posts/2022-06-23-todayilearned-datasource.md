@@ -9,9 +9,9 @@ tags: [todayilearned]
 - 개인 공부 목적으로 작성한 포스팅입니다.
 - 아래 출처를 참고하여 작성하였습니다. :)
 
-### JDBC(JDBC 표준 인터페이스)
+### JDBC란
 
-#### JDBC란
+#### JDBC 표준 인터페이스
 
 - JDBC(Java Database Connectivity)는 자바에서 데이터베이스에 접속할 수 있도록 하는 `자바 API`
 - JDBC는 데이터베이스에서 자료를 쿼리하거나 업데이트하는 방법을 제공합니다.
