@@ -19,6 +19,12 @@ tags: [todayilearned]
 
 ### Grafana Loki
 
+- `Grafana`에서 제공하는 로그 출력을 위한 데이터 소스입니다.
+- 아래와 같은 flow를 가지고 있고, k8s에 특화되어 있다고 합니다.
+
+![loki](https://user-images.githubusercontent.com/75410527/179705933-265db594-a60d-4184-92bb-df56870af22e.png)
+
+
 #### Promtail
 
 - `애플리케이션의 로그를 수집`하여 Loki에 보내는 `로그 수집기`입니다.
@@ -38,12 +44,16 @@ tags: [todayilearned]
 
 #### Promtail,Loki 로컬 설치
 
+- Promtail와 Loki를 로컬로 설치합니다.
+
 ```bash
 wget https://github.com/grafana/loki/releases/download/v2.3.0/loki-linux-amd64.zip
 wget https://github.com/grafana/loki/releases/download/v2.3.0/promtail-linux-amd64.zip
 ```
 
 #### Promtail,Loki 설정 파일 설치
+
+- Promtail와 Loki를 사용하는데 필요한 설정 파일도 로컬로 설치합니다.
 
 ```bash
 wget https://raw.githubusercontent.com/grafana/loki/v2.3.0/clients/cmd/promtail/promtail-local-config.yaml
@@ -167,7 +177,34 @@ nohup ./loki-linux-amd64 -config.file=loki-local-config.yaml &
 nohup ./promtail-linux-amd64 -config.file=promtail-local-config.yaml &
 ```
 
-### grafana 설정
+### grafana 연동
+
+- 위 과정을 통해 `application log` => `promtail` => `loki`로 이어지는 흐름은 완성했습니다.
+- 이제는 grafana 연동을 통해 `loki` => `grafana` 흐름을 완성할 차례입니다.
+
+---
+
+- data source로 Loki를 선택합니다.
+
+![239ca9b85d0a40be80ec052a5faad509](https://user-images.githubusercontent.com/75410527/179706926-0deb84ff-40af-4d26-bf7c-9cf9577a099d.png)
+
+---
+
+- `loki가 실행되고 있는 서버 URL`을 입력합니다.
+
+![61e95d9321a94c2880e57272a33de55f](https://user-images.githubusercontent.com/75410527/179707031-9ef7edbc-e084-4300-bfed-d13651f1b2e2.png)
+
+---
+
+- Promtail 설정에 따라 `filename` 또는 `jobs`로 쿼리를 생성합니다.
+
+![977162385fb74a2aa92af7384a64e7a3](https://user-images.githubusercontent.com/75410527/179707338-4c733a49-c5c6-4ee7-a292-4e4570e51d72.png)
+
+---
+
+- 저는 아래와 같이 연동을 완료했습니다.
+
+![스크린샷 2022-07-19 오후 3 17 50](https://user-images.githubusercontent.com/75410527/179707620-8d11634d-2887-48dd-9904-b0b584f5fd6d.png)
 
 ---
 
