@@ -8,6 +8,67 @@ tags: [ps]
 
 - 필요한대로 계속 업데이트할 예정입니다 :)
 
+### 이진탐색
+
+#### Lower bound
+
+- 원하는 `target 이상의 값`이 `최초로 나오는 위치`를 뜻합니다.
+- 달리 말하면, `target보다 같거나 큰 원소`의 위치 중 가장 작은 위치를 의미합니다.
+
+```java
+int getLowerBound(int[] numbers, int val) {
+    int st = 0;
+    int en = N-1;
+    int lowerBound = IMPOSSIBLE;
+
+    while (st <= en) {
+        int mid = (st + en) / 2;
+
+        if (numbers[mid] >= val) {
+            lowerBound = Math.min(lowerBound, mid);
+            en = mid - 1;
+        } else {
+            st = mid + 1;
+        }
+    }
+
+    return ans;
+}
+```
+
+#### Upper bound
+
+- 원하는 `target을 초과하는 값`이 `최초로 나오는 위치`를 뜻합니다.
+- 달리 말하면, `target을 초과하는 원소`의 위치 중 가장 작은 위치를 의미합니다.
+- Lower bound 코드에서 `등호만 제외하면` Upper bound를 구하는 코드입니다.
+
+```java
+int getUpperBound(int[] numbers, int val) {
+    int st = 0;
+    int en = N-1;
+    int upperBound = IMPOSSIBLE;
+
+    while (st <= en) {
+        int mid = (st + en) / 2;
+
+        if (numbers[mid] > val) {
+            upperBound = Math.min(upperBound, mid);
+            en = mid - 1;
+        } else {
+            st = mid + 1;
+        }
+    }
+
+    return ans;
+}
+```
+
+#### 배열 내 데이터의 갯수
+
+- lower bound와 upper bound의 성질을 이용하여 배열 내 데이터의 갯수를 구할 수 있습니다.
+- 배열 내 데이터의 갯수는 `lowerBound`와 `upperBound` 이 두 값이 `차이`입니다. 
+- `데이터가 존재하지 않는다면` 두 값은 같습니다.
+
 ### LIS
 
 최장 증가 부분 수열입니다.
