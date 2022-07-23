@@ -13,3 +13,5 @@ tags: [favorites]
 - [아내와 아들 그리고 딸밖에 모르는 남편](https://sculove.github.io/)
 - [함께 자라기](https://wbluke.github.io/)
 - [Gyun's 개발일지](https://devlog-wjdrbs96.tistory.com/)
+- [K리그 프로그래머](https://jeho.page/)
+- [엘키의 주절 주절](https://elky84.github.io/)
