@@ -11,7 +11,7 @@ tags: [todayilearned]
 
 ### 상황
 
-- 브릿지 모드로 사용하는 컨테이너에서만 호스트 PC에서 동작하는 카프카에 접근하도록 하기 위해 `SASL`
+- 브릿지 모드로 실행되는 스프링부트 컨테이너(도커)에서만 `호스트 PC의 카프카에 접근하도록` 하기 위해 `SASL` 인증을 추가하면서 공부한 내용을 정리합니다.
 
 ### JAAS/SASL
 
@@ -26,16 +26,19 @@ tags: [todayilearned]
 
 #### SASL
 
-- SASL 은 연결 지향 프로토콜에서 교체 가능한 메커니즘을 통해 인증 및 데이터 보안 서비스를 제공하는 프레임워크
+- `SASL`은 연결지향 프로토콜에서 교체 가능한 메커니즘을 통해 인증 및 데이터 보안 서비스를 제공하는 프레임워크
 
 ### broker 쪽 설정
 
+- `SASL` 인증을 설정하려면 `카프카 브로커`, `카프카 클라이언트`의 코드 수정이 필요합니다.
+- 먼저 카프카 브로커쪽에서 수정할 부분을 알아보겠습니다.
+
 #### jaas.conf 파일 생성
 
-카프카 브로커가 위치한 서버에 파일을 생성합니다.
+카프카 브로커가 위치한 서버에 `kafka_jaas.conf` 파일을 생성합니다.
 
-- 아래 만들면 사용자가 사용할수 있는 `alice`, `bob`, `charlie`가 추가됩니다.
-- kafka_jaas.conf라고 이름짓고 `${KAFKA_PATH}/config` 디렉토리 안에 저장해놓습니다.
+- `kafka_jaas.conf`라고 이름짓고 `${KAFKA_PATH}/config` 디렉토리 안에 저장해놓습니다.
+- 아래 코드처럼 작성하면, 카프카 클라이언트가 사용할 수 있는 `alice`, `bob`, `charlie` 사용자가 추가됩니다.
 
 ```conf
 KafkaServer {
@@ -55,7 +58,7 @@ KafkaServer {
 
 #### server.properties 수정
 
-- `인증을 사용한다`고 프로토콜을 설정해줘야 합니다.
+- `"인증을 사용한다"`라는 의미로 프로토콜을 설정해줘야 합니다.
 
 ```properties
 listeners=SASL_PLAINTEXT://:9092
@@ -70,17 +73,18 @@ sasl.mechanism.inter.broker.protocol=PLAIN
 sasl.enabled.mechanisms=PLAIN
 ```
 
-- listeners
-  - 일반적으로 PLAINTEXT://IP:PORT 형식을 사용
-  - SASL 기반의 인증을 사용하려면 SASL_PLAINTEXT: 로 적용
-  - TLS가 활성화되어 있다면 SASL_SSL: 을 사용
+- `listeners`
+  - 일반적으로 `PLAINTEXT://IP:PORT` 형식을 사용합니다.
+  - SASL 기반의 인증을 사용하려면 `SASL_PLAINTEXT:`로 적용해야 합니다.
+  - TLS가 활성화되어 있다면 `SASL_SSL:`을 사용합니다.
 
 #### kafka-server-start.sh 수정
 
-- kafka 서버 실행 파일인 kafka-server-start.sh을 실행할때 위의 `kafka_jaas.conf` 정보를 물고 실행되도록 환경 변수를 설정해줘야 합니다.
-- 쉘파일 내부에 export KAFKA_OPTS="-Djava.security.auth.login.config=경로/kafka/config/kafka_jaas.conf" 코드를 추가해줍니다. 그러면 브로커가 실행되면서 위의 `kafka_jaas.conf` 인증파일을 잘 물고 실행됩니다.
+- kafka 서버의 실행 파일인 `kafka-server-start.sh`를 실행할 때, 위의 `kafka_jaas.conf` 정보를 물고 실행되도록 환경 변수를 설정해줘야 합니다.
+- 쉘 파일 내부에 `export KAFKA_OPTS="-Djava.security.auth.login.config=file:$base_dir/../config/kafka_jaas.conf"` 코드를 추가해줍니다.
+- 그러면 kafka 브로커가 실행되면서 위의 `kafka_jaas.conf` 인증 파일을 물고 실행됩니다.
 
-추가한 코드
+`kafka-server-start.sh에` 추가한 코드
 
 ```bash
 if [ "x$KAFKA_OPTS" = "x" ]; then
@@ -88,7 +92,7 @@ if [ "x$KAFKA_OPTS" = "x" ]; then
 fi
 ```
 
-- 바뀐 후 `kafka-server-start.sh`
+- `kafka_jaas.conf` 설정이 추가된 `kafka-server-start.sh`
 
 ```bash
 if [ $# -lt 1 ];
@@ -130,7 +134,7 @@ exec $base_dir/kafka-run-class.sh $EXTRA_ARGS kafka.Kafka "$@"
 ### client 쪽 설정
 
 - client 쪽 설정은 `producer/consumer` 모두를 의미합니다.
-- 클라이언트쪽에서도 프로토콜을 설정해주고, 브로커에 접근하기 위한 `username`, `password`를 설정
+- 클라이언트쪽에서도 프로토콜을 설정해주고, 브로커에 접근하기 위한 `username`, `password`를 설정해줘야 합니다.
 
 #### 예시 코드
 
@@ -169,7 +173,7 @@ private Map<String, Object> consumerConfigs() {
 }
 ```
 
-#### '인증' 추가된 producer/consumer 설정
+#### '인증'이 추가된 producer/consumer 설정
 
 ```java
 private Map<String, Object> producerConfigs() {
