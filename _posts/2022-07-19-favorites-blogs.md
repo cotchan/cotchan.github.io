@@ -17,3 +17,4 @@ tags: [favorites]
 - [엘키의 주절 주절](https://elky84.github.io/)
 - [BaaaaaaaarkingDog](https://blog.encrypted.gg/)
 - [돌이 코딩하는 방](https://stonejjun.tistory.com/)
+- [굳건하게](https://travelbeeee.tistory.com/)
