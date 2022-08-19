@@ -17,17 +17,22 @@ tags: [todayilearned]
 
 ### Hikari Default maximumPoolSize(10개)
 
-- https://github.com/brettwooldridge/HikariCP
+- [https://github.com/brettwooldridge/HikariCP](https://github.com/brettwooldridge/HikariCP)
+
+![스크린샷 2022-08-19 오전 9 48 18](https://user-images.githubusercontent.com/75410527/185521560-86751ca2-50fa-400c-9aac-39c66ae6d224.png)
 
 ### Spring Default min-spare Thread(10개)
 
 - `server.tomcat.threads.min-spare` 속성은 Minimum amount of worker threads 의미로 `기본값은 10개`입니다.
 - 즉, 스프링부트 서버의 `Worker thread` 갯수의 기본값은 10개입니다.
 
-### poolSize = Tn x (Cm - 1) + 1
+### Tn x (Cm - 1) + 1
 
-- `Tn`은 Worker Thread 갯수를 의미합니다.
-- `Cm`은 쓰레드가 작업을 하면서 필요로 하는 `Connection` 갯수입니다.
+- `HikariCP`에서 제공하는 데드락을 피하기 위한 최적의 커넥션 풀 갯수를 구하는 공식입니다.
+  - `poolSize = Tn x (Cm - 1) + 1`
+  - [https://github.com/brettwooldridge/HikariCP/wiki/About-Pool-Sizing](https://github.com/brettwooldridge/HikariCP/wiki/About-Pool-Sizing)
+- `Tn`은 Worker Thread 갯수(`maximum number of threads`)를 의미합니다.
+- `Cm`은 하나의 쓰레드가 작업을 하면서 `동시에 필요로 하는 맥시멈 Connection 갯수`입니다.
   - 필요한 커낵션은 2개입니다.
 
 ### 필요한 커넥션 갯수: 2개
