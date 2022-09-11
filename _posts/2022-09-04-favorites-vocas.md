@@ -42,10 +42,16 @@ tags: [favorites]
 - 프로세스가 `실행 대기중`인 상태는 I/O에 대해 대기하는 상태로, 다른 어떤 일도 할 수 없는 상태를 의미합니다.
 - 보통 `디스크 또는 네트워크 등 I/O 작업 처리를 기다리는` 프로세스의 상태를 말합니다.
 
+### Throughput
+
+- `컴퓨터 시스템의 처리 능력`을 나타내는 단어로, `단위 시간당 처리할 수 있는 작업양`을 의미합니다.
+- Throughput is a measure of how many units of information `a system can process` in `a given amount of time.`
+
 ---
 
 - 참고
   - [TPS - 해시넷 위키](http://wiki.hash.kr/index.php/TPS)
   - [1. Load Average에 관해서](https://brunch.co.kr/@dreaminz/1)
   - [[Linux]Load Average 란?](https://kim-dragon.tistory.com/45)
-  
+  - [쓰루풋(Throughput)이란?](https://m.blog.naver.com/sung_mk1919/221212568779)
+  - [throughput](https://www.techtarget.com/searchnetworking/definition/throughput)
