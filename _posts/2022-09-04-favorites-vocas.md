@@ -47,6 +47,12 @@ tags: [favorites]
 - `컴퓨터 시스템의 처리 능력`을 나타내는 단어로, `단위 시간당 처리할 수 있는 작업양`을 의미합니다.
 - Throughput is a measure of how many units of information `a system can process` in `a given amount of time.`
 
+### Backpressure
+
+- 소프트웨어 시스템에서 백프레셔는 `트래픽 통신에 과부하를 일으키는 기능을 의미`합니다.
+- 다시 말해, 데이터를 보내는 쪽에서 너무 많은 데이터를 계속 Push 함으로써 데이터 소비자가 처리할 수 없는 상태를 의미합니다.
+- 리액티브 프로그래밍의 `non-blocking` 특성으로 인해 서버는 전체 스트림을 한 번에 보내지 않고, 데이터가 사용 가능한 즉시 데이터를 푸시할 수 있습니다. 따라서 클라이언트는 이벤트를 수신하고 처리하는 데 더 적은 시간을 기다립니다. 그러나 위와 같은 `Backpressure` 문제가 발생할 수 있습니다.
+
 ---
 
 - 참고
@@ -55,3 +61,4 @@ tags: [favorites]
   - [[Linux]Load Average 란?](https://kim-dragon.tistory.com/45)
   - [쓰루풋(Throughput)이란?](https://m.blog.naver.com/sung_mk1919/221212568779)
   - [throughput](https://www.techtarget.com/searchnetworking/definition/throughput)
+  - [Backpressure Mechanism in Spring WebFlux](https://www.baeldung.com/spring-webflux-backpressure)
