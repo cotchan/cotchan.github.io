@@ -10,6 +10,20 @@ tags: [favorites]
 - 아래 출처를 참고하여 작성하였습니다. :)
 - 계속 업데이트할 예정입니다.
 
+### I/O(input/output)
+
+- 데이터의 입출력을 의미합니다.
+- 파일을 읽고 쓰기
+- 네트워크의 어딘가와 `(소켓을 통해)` 데이터를 주고받는 것
+- 입출력 장치와 데이터를 주고 받는 것
+
+#### I/O 종류
+
+- network(socket) i/o
+- file i/o
+- pipe i/o(프로세스 간 통신)
+- device i/o
+
 ### TPS
 
 - TPS(티피에스)란 `Transaction Per Second`의 약자로서, `1초당 처리할 수 있는 트랜잭션의 개수를 의미`합니다.
@@ -64,3 +78,5 @@ tags: [favorites]
   - [쓰루풋(Throughput)이란?](https://m.blog.naver.com/sung_mk1919/221212568779)
   - [throughput](https://www.techtarget.com/searchnetworking/definition/throughput)
   - [Backpressure Mechanism in Spring WebFlux](https://www.baeldung.com/spring-webflux-backpressure)
+  - [block I/O vs non-block I/O 개념을 설명합니다! 소켓 I/O를 예제로 주로 설명해요! I/O multiplexing(다중 입출력) 설명도 빠질 수 없겠죠? ;)](https://www.youtube.com/watch?v=mb-QHxVfmcs&ab_channel=%EC%89%AC%EC%9A%B4%EC%BD%94%EB%93%9C)
+  - [cpu bound, io bound 의미를 설명합니다! 이에 따른 스레드 개수를 정하는 팁도 알려드립니다!](https://www.youtube.com/watch?v=qnVKEwjG_gM&t=77s&ab_channel=%EC%89%AC%EC%9A%B4%EC%BD%94%EB%93%9C)
