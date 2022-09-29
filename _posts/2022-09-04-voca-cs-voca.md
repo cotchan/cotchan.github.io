@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CS 단어 정리
-subtitle: 들을 때 마다 헷갈리는 단어들 정리
+subtitle: Computer Science 단어 정리
 categories: voca
 tags: [voca]
 ---
@@ -72,6 +72,33 @@ tags: [voca]
 
 ### Payload
 
+### JOIN
+
+#### Equi Join
+
+- 등가조인[Equi Join]
+
+```sql
+SELECT * FROM 테이블1, 테이블2
+	WHERE 테이블명1.컬럼명1=테이블명2.컬럼명2;
+```
+
+- 테이블간의 `공통 컬럼을 활용`하여 각 테이블의 특정 컬럼에 `일치한 데이터를 기준으로 연결`하는 방법
+  - 두 개의 테이블 간의 일치하는 것을 조인(교집합)
+- `등가조인(Equi Join)` = `내부조인(Inner Join)` = `단순조인(Simple Join)`
+
+#### NATURAL JOIN
+
+```sql
+SELECT 출력할 칼럼명1, 칼럼명2,..
+	FROM 테이블명1 NATURAL JOIN 테이블명2;
+```
+
+- 두 테이블 간 `동일한 이름을 갖는 모든 칼럼`에 대해 `EQUI JOIN을 수행`하는 방법
+- USING 조건절, ON조건절, WHERE절에서의 JOIN조건을 함께 정의 불가
+- NATURAL JOIN에 사용된 칼럼들은 같은 데이터 유형이어야 함
+- NATURAL JOIN은 Alias(별칭)이나 테이블명과 같은 접두사(ex> EMP.DEPTNO)를 붙일 수 없음
+
 ---
 
 - 참고
@@ -83,3 +110,4 @@ tags: [voca]
   - [Backpressure Mechanism in Spring WebFlux](https://www.baeldung.com/spring-webflux-backpressure)
   - [block I/O vs non-block I/O 개념을 설명합니다! 소켓 I/O를 예제로 주로 설명해요! I/O multiplexing(다중 입출력) 설명도 빠질 수 없겠죠? ;)](https://www.youtube.com/watch?v=mb-QHxVfmcs&ab_channel=%EC%89%AC%EC%9A%B4%EC%BD%94%EB%93%9C)
   - [cpu bound, io bound 의미를 설명합니다! 이에 따른 스레드 개수를 정하는 팁도 알려드립니다!](https://www.youtube.com/watch?v=qnVKEwjG_gM&t=77s&ab_channel=%EC%89%AC%EC%9A%B4%EC%BD%94%EB%93%9C)
+  - [[개미의 걸음 SQLD 2과목] JOIN(외부조인, 내부조인, 등가조인 , 비등가조인 , 셀프조인, 네츄럴조인, 크로스 조인)](https://2030bigdata.tistory.com/222)
