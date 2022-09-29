@@ -2,8 +2,8 @@
 layout: post
 title: CS 단어 정리
 subtitle: 들을 때 마다 헷갈리는 단어들 정리
-categories: favorites
-tags: [favorites]
+categories: voca
+tags: [voca]
 ---
 
 - 개인 공부 목적으로 작성한 포스팅입니다.
