@@ -96,7 +96,7 @@ SELECT 출력할 칼럼명1, 칼럼명2,..
 
 - 두 테이블 간 `동일한 이름을 갖는 모든 칼럼`에 대해 `EQUI JOIN을 수행`하는 방법
 - USING 조건절, ON조건절, WHERE절에서의 JOIN조건을 함께 정의 불가
-- NATURAL JOIN에 사용된 칼럼들은 같은 데이터 유형이어야 함
+- NATURAL JOIN에 사용된 칼럼들은 `같은 데이터 유형`이어야 함
 - NATURAL JOIN은 Alias(별칭)이나 테이블명과 같은 접두사(ex> EMP.DEPTNO)를 붙일 수 없음
 
 ---
