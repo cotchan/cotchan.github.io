@@ -10,6 +10,7 @@ tags: [favorites]
 
 ### Blog :)
 
+- [거북이같은 개발자의 집필 공간 Evans Library](https://evan-moon.github.io/)
 - [아내와 아들 그리고 딸밖에 모르는 남편](https://sculove.github.io/)
 - [함께 자라기](https://wbluke.github.io/)
 - [Gyun's 개발일지](https://devlog-wjdrbs96.tistory.com/)
