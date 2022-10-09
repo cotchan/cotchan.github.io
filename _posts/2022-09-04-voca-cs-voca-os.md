@@ -87,7 +87,6 @@ tags: [voca]
 
 <img width="500" alt="스크린샷 2022-09-30 오후 6 40 26" src="https://user-images.githubusercontent.com/75410527/193243059-9cbdcebe-6d6b-444b-92ed-66acafc4b03d.png">
 
-
 #### 레지스터의 종류
 
 - 데이터 레지스터 : 정수 값을 저장할 수 있는 레지스터.
@@ -115,6 +114,31 @@ tags: [voca]
 - 특히 운영체제 중에서도 커널을 통해 접근합니다.
 - 이 때 `프로세스에서 커널로 통제권이 넘어가서` `커널에 의해 실행`되는 걸 커널모드라고 합니다.
 
+### CPU atomic
+
+CPU atomic한 연산은,
+
+- 실행 중간에 간섭받거나 중단되지 않는다.
+- 같은 메모리 영역에 대해 동시에 실행되지 않는다.
+  - 같은 메모리영역에 대해 실행되지 않는다는 건, 동일한 parameter에 대해 (예시. `lock`) 두 개 이상의 스레드나 프로세스가 동시에 호출한다고 해도
+  - `CPU 레벨에서 알아서` 먼저 하나를 실행시키고, 하나가 실행이 끝나고 이어서 다른 하나를 실행시킴. `이렇게 동기화해서 실행시킨다는 뜻`
+
+### race condition
+
+- 여러 프로세스/스레드가 `동시에 같은 데이터를 조작`할 때 `타이밍`이나 `접근 순서`에 따라 `결과가 달라질 수 있는 상황`
+
+### 동기화(synchronization)
+
+- 여러 프로세스/스레드를 동시에 실행해도 `공유 데이터의 일관성을 유지`하는 것
+
+### critical section~
+
+- `공유 데이터의 일관성을 보장하기 위해` `하나의` 프로세스/스레드만 진입해서 실행 가능한 영역
+
+#### mutual exclusion
+
+- 하나의 프로세스/스레드만 진입해서 실행하게 하는 것
+
 ---
 
 - 참고
@@ -129,3 +153,5 @@ tags: [voca]
   - [컨텍스트 스위칭 뽀개기! 의미와 종류와 왜 스레드 컨텍스트 스위칭이 더 빠르다고 하는지까지..! 이 모든 것을 시원~~하게 설명합니다!!](https://youtu.be/Xh9Nt7y07FE)
   - [레지스터 (Register)](https://plummmm.tistory.com/113)
   - [캐시와 레지스터의 차이가 무엇일까요???](https://melonicedlatte.com/computer/2018/11/07/190754.html)
+  - [동기화(synchronization), 경쟁 조건(race condition), 임계 영역(critical section)을 자세하게 설명합니다! 헷갈리시는 분들 꼭 보세요!](https://www.youtube.com/watch?v=vp0Gckz3z64&ab_channel=%EC%89%AC%EC%9A%B4%EC%BD%94%EB%93%9C)
+  - [스핀락(spinlock) 뮤텍스(mutex) 세마포(semaphore) 각각의 특징과 차이 완벽 설명! 뮤텍스는 바이너리 세마포가 아니라는 것도 설명합니다!](https://www.youtube.com/watch?v=gTkvX2Awj6g&t=594s&ab_channel=%EC%89%AC%EC%9A%B4%EC%BD%94%EB%93%9C)
