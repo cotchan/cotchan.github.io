@@ -108,6 +108,14 @@ tags: [voca]
 - `프로세스/스레드의 상태`
 - 여기서 말하는 `상태`라는 건, `CPU에서의 상태`, 혹은 `메모리에서의 상태`를 의미한다.
 
+#### Context Swtiching
+
+- CPU에서 수행되기 위해서 어느 한 프로세스에서 다른 프로세스로 교체되는 것
+- CPU/코어에서 실행 중이던 프로세스/스레드가 다른 프로세스/스레드로 교체되는 것
+
+> 커널 모드에서 실행된다.  
+> CPU의 레지스터 상태가 교체된다.
+
 ### 커널모드
 
 - 커널 모드란, 프로세스가 실행되다가 하드웨어와 밀접한 일들 혹은 컴퓨터의 리소스들을 다뤄야하는 상황이 오면 이 때는 프로세스가 직접 컴퓨터의 리소스에 접근하는 게 아니라, 운영체제를 통해 접근합니다.
@@ -142,6 +150,16 @@ tags: [voca]
 
 - `하나의 프로세스/스레드만 진입`해서 실행하게 하는 것
 
+### mutex
+
+핵심은 LOCK을 가질 수 있을 때 까지 휴식
+
+- critical section에서 mutual exclusion을 보장하는 장치
+- critical section에 진입하려면 `mutex lock`을 획득해야 함
+- mutex lock을 획득하지 못한 스레드는 `큐에 들어간 후 대기(waiting) 상태로 전환`
+  - ex.entry queue
+- mutex lock을 쥔 스레드가 lock을 반환하면, lock을 기다리며 큐에 댁디 상태로 있던 스레드 중 하나가 실행
+
 ---
 
 - 참고
@@ -158,3 +176,4 @@ tags: [voca]
   - [캐시와 레지스터의 차이가 무엇일까요???](https://melonicedlatte.com/computer/2018/11/07/190754.html)
   - [동기화(synchronization), 경쟁 조건(race condition), 임계 영역(critical section)을 자세하게 설명합니다! 헷갈리시는 분들 꼭 보세요!](https://www.youtube.com/watch?v=vp0Gckz3z64&ab_channel=%EC%89%AC%EC%9A%B4%EC%BD%94%EB%93%9C)
   - [스핀락(spinlock) 뮤텍스(mutex) 세마포(semaphore) 각각의 특징과 차이 완벽 설명! 뮤텍스는 바이너리 세마포가 아니라는 것도 설명합니다!](https://www.youtube.com/watch?v=gTkvX2Awj6g&t=594s&ab_channel=%EC%89%AC%EC%9A%B4%EC%BD%94%EB%93%9C)
+  - [모니터가 어떻게 동기화에 사용되는지 아주 자세히 설명합니다! 자바에서 모니터는 어떤 모습인지도 설명하니 헷갈리시는 분들 꼭 보세요!](https://www.youtube.com/watch?v=Dms1oBmRAlo&ab_channel=%EC%89%AC%EC%9A%B4%EC%BD%94%EB%93%9C)
