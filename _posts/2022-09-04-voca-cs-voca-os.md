@@ -152,13 +152,28 @@ tags: [voca]
 
 ### mutex
 
-핵심은 LOCK을 가질 수 있을 때 까지 휴식
+> 핵심은 LOCK을 가질 수 있을 때 까지 휴식
 
-- critical section에서 mutual exclusion을 보장하는 장치
+- critical section에서 `mutual exclusion을 보장`하는 장치
 - critical section에 진입하려면 `mutex lock`을 획득해야 함
 - mutex lock을 획득하지 못한 스레드는 `큐에 들어간 후 대기(waiting) 상태로 전환`
   - ex.entry queue
-- mutex lock을 쥔 스레드가 lock을 반환하면, lock을 기다리며 큐에 댁디 상태로 있던 스레드 중 하나가 실행
+- mutex lock을 쥔 스레드가 lock을 반환하면, lock을 기다리며 큐에 대기 상태로 있던 스레드 중 하나가 실행
+
+### semaphore
+
+- 하나 이상의 프로세스/스레드가 critical section에 접근 가능하도록 하는 장치
+  - 세마포어의 특별한 기능이라 할 수 있는 `시그널 메커니즘`을 통해 제어한다.
+- `시그널 메커니즘`을 통해 프로세스/스레드 간 `동기화(작업 순서)를 보장`해줄 수 있다.
+
+> lock이라는 이름이 wait  
+> unlock이라는 이름이 signal
+
+```java
+semaphore->wait();
+... critical section
+semaphore->signal();
+```
 
 ---
 
