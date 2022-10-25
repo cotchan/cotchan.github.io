@@ -31,3 +31,4 @@ tags: [voca]
 
 - 참고
   - [Z세대는 어떻게 암호화폐와 NFT에 매료되나](https://www.bbc.com/korean/international-61489478)
+  - [널널한 개발자 TV](https://www.youtube.com/channel/UCdGTtaI-ERLjzZNLuBj3X6A)

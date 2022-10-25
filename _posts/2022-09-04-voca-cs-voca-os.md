@@ -72,6 +72,11 @@ tags: [voca]
 
 ### Payload
 
+> 헤더가 실어나르는 대상을 Payload라고 함(택배 내용물에 해당)
+
+- `단위 데이터`라고 하는 것(ex. 패킷, 프레임 등)은 `네트워크에서 항상 2개로 쪼갬`
+  - 앞단은 `Header`, 헤더가 실어나르는 대상을 `Payload`라고 함(택배 내용물에 해당)
+
 ### 레지스터
 
 - 레지스터는 `CPU에 존재`하는 다목적 저장 공간
@@ -192,3 +197,4 @@ semaphore->signal();
   - [동기화(synchronization), 경쟁 조건(race condition), 임계 영역(critical section)을 자세하게 설명합니다! 헷갈리시는 분들 꼭 보세요!](https://www.youtube.com/watch?v=vp0Gckz3z64&ab_channel=%EC%89%AC%EC%9A%B4%EC%BD%94%EB%93%9C)
   - [스핀락(spinlock) 뮤텍스(mutex) 세마포(semaphore) 각각의 특징과 차이 완벽 설명! 뮤텍스는 바이너리 세마포가 아니라는 것도 설명합니다!](https://www.youtube.com/watch?v=gTkvX2Awj6g&t=594s&ab_channel=%EC%89%AC%EC%9A%B4%EC%BD%94%EB%93%9C)
   - [모니터가 어떻게 동기화에 사용되는지 아주 자세히 설명합니다! 자바에서 모니터는 어떤 모습인지도 설명하니 헷갈리시는 분들 꼭 보세요!](https://www.youtube.com/watch?v=Dms1oBmRAlo&ab_channel=%EC%89%AC%EC%9A%B4%EC%BD%94%EB%93%9C)
+  - [널널한 개발자 TV](https://www.youtube.com/channel/UCdGTtaI-ERLjzZNLuBj3X6A)
