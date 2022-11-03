@@ -11,9 +11,9 @@ tags: [todayilearned]
 
 ### Collections.emptyList()
 
-- `명시적으로 빈 목록을 만들고 싶을 때` Collections.emptyList()는 원래 의도를 더 잘 표현했습니다.
+> 수정 불가능한 빈 리스트입니다.
 
-> 수정불가능한 빈 리스트입니다.
+- `명시적으로 '추가 삽입이 없는 그냥 빈 리스트'를 만들고 싶을 때` Collections.emptyList()는 그 의도를 더 잘 표현했습니다.
 
 그래서 아래와 같이 `Collections.emptyList()`를 호출해서 `add` 연산자를 실행해보면 예외가 발생합니다.
 
@@ -22,12 +22,12 @@ public static void main(String[] args) throws IOException {
     List<Integer> immutableIntegerList = Collections.emptyList();
 
     for (int loop = 0; loop < 5; ++loop) {
-        immutableIntegerList.add(loop);
+        immutableIntegerList.add(loop); // 예외 발생
     }
 }
 ```
 
-이렇게 에러가 터집니다.
+이렇게 `UnsupportedOperationException` 예외가 발생합니다.
 
 ```
 Exception in thread "main" java.lang.UnsupportedOperationException
@@ -40,7 +40,7 @@ Process finished with exit code 1
 
 - `AbstractList` 추상 클래스는 `random access`를 구현하는데 필요한 최소한의 것만 만들어 `List` 인터페이스의 구현체를 제공합니다.
 
-> add 메서드 호출 시 `UnsupportedOperationException` 예외가 발생함을 알 수 있습니다.
+> 그래서 add 메서드 호출 시 `UnsupportedOperationException` 예외가 발생함을 알 수 있습니다.
 
 ```java
 //AbstractList.java
