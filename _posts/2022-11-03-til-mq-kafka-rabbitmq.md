@@ -11,6 +11,10 @@ tags: [todayilearned]
 
 ### Kafka
 
+#### Kafka 구조
+
+<img width="500" alt="스크린샷 2022-09-30 오후 8 04 53" src="https://user-images.githubusercontent.com/75410527/199724070-124542e7-0778-4211-88f7-4d8258236d44.png">
+
 #### Kafka 특징
 
 **Pull 방식**
@@ -42,6 +46,10 @@ tags: [todayilearned]
 
 ### RabbitMQ
 
+#### RabbitMQ 구조
+
+<img width="500" alt="스크린샷 2022-09-30 오후 8 04 53" src="https://user-images.githubusercontent.com/75410527/199724309-760f59ac-8d6e-45d6-aeae-69a89502e357.png">
+
 #### RabbitMQ 특징
 
 **Push 방식**
@@ -55,6 +63,8 @@ tags: [todayilearned]
 - 송신자는 Message를 전송한 이후에 수신자로부터 ACK를 받지 못한다면, 수신자에게 ACK를 받을때까지 반복해서 Message를 전송해야 합니다.
   - 따라서 Producer는 ACK를 받지 못하면 Message를 재전송 하도록 구현되어 있습니다.
   - 그래서 수신자는 동일한 Message를 2번이상 받을 수 있습니다.
+
+<img width="500" alt="스크린샷 2022-09-30 오후 8 04 53" src="https://user-images.githubusercontent.com/75410527/199724505-9e64b644-df9c-49b5-a701-45ad9946ca9b.png">
 
 **Message priorities**
 
@@ -86,7 +96,7 @@ tags: [todayilearned]
 
 **RabbitMQ**
 
-- RabbitMQ는 대기열이므로 메시지는 `한 번 소비되면 사라지고` ACK가 제공됩니다.
+- RabbitMQ는 대기열 큐이므로 메시지는 `한 번 소비되면 사라지고` ACK가 제공됩니다.
 
 #### Delivery Guarantees
 
@@ -147,6 +157,7 @@ tags: [todayilearned]
 #### RabbitMQ 단점
 
 - 메시지 보존 X
+  - RabbitMQ는 대기열 큐이므로 메시지는 `한 번 소비되면 사라지고` ACK가 제공됩니다.
 
 ---
 
