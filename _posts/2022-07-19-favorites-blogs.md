@@ -20,3 +20,4 @@ tags: [favorites]
 - [돌이 코딩하는 방](https://stonejjun.tistory.com/)
 - [굳건하게](https://travelbeeee.tistory.com/)
 - [4주 스프린트에 따라 애자일하게 살고 있습니다. 취미로 야크 털을 깎습니다.](https://parksb.github.io/about.html)
+- [윤경구의 Log on Java](https://logonjava.blogspot.com/)
