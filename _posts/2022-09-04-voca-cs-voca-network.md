@@ -51,9 +51,44 @@ tags: [voca]
 
 - 외부 접근이 어렵다.
 
+### NAT IP
+
+> `외부망`과 `내부망`을 나눠주는 기능을 하는 IP    
+> `사설 네트워크에 속한 여러 개의 호스트`가 `하나의 공인 IP 주소를 사용`하여 인터넷에 접속하기 위해 사용
+
+- 사용 예시: 공인 NAT IP로 방화벽을 해제하였으니, NAT IP를 사용하여 테스트 부탁드립니다.
+
+#### NAT IP란?
+
+- NAT은 `Network Address Translation`의 줄임말입니다.
+- 즉, NAT은 사설 네트워크에 속한 여러 개의 호스트가 하나의 공인 IP 주소를 사용하여 인터넷에 접속하기 위해 사용합니다.
+- 즉, 외부망과 내부망을 나눠주는 기능을 하는 IP라고 보면 됩니다.
+
+#### NAT 특징
+
+#### 1,`내부에서 외부로 통신가능` (out-bound call 가능)
+#### 2.외부에서 내부로 통신불가 (In-bound call 불가)
+
+#### NAT 장점
+
+- 여러 사설 네트워크를 사용함으로서 인터넷 공인 IP 주소를 절약할 수 있습니다.
+- 사내망 IP주소를 외부로 알리지 않음으로서 외부로부터의 침입/공격 차단이 가능합니다.
+
+#### NAT 단점
+
+- 네트워크의 복잡성 증가
+- 네트워크 지연 영향
+
+#### NAT 종류
+
+- `Static NAT`: 사설IP와 공인 IP를 1:1로 매핑
+- `Dynamic NAT`: 다수의 공인 IP와 다수의 사설 IP를 매핑
+- `PAT`: 1개의 공인 IP와 다수의 사설 IP 매핑 => 1개의 공인 IP에 port를 구분하여 사설 PC를 구분합니다.
+
 ---
 
 - 참고
   - [사설 IP](https://namu.wiki/w/%EC%82%AC%EC%84%A4%20IP)
   - [IP주소란 무엇일까? 가상IP 부터 MAC주소까지 그 궁금증을 풀어보자!](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=with_msip&logNo=221029109709)
   - [[Network] 공인 IP, 사설 IP, 고정IP, 유동 IP 란?](https://bamdule.tistory.com/189)
+  - [NAT IP란?](https://blog.voidmainvoid.net/319)
