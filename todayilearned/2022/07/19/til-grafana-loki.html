@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Grafana Loki 적용기 | DEVELOPMENT</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Grafana Loki 적용기" />
+<meta name="author" content="cotchan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="개인 공부 목적으로 작성한 포스팅입니다. 아래 출처를 참고하여 작성하였습니다. :)" />
+<meta property="og:description" content="개인 공부 목적으로 작성한 포스팅입니다. 아래 출처를 참고하여 작성하였습니다. :)" />
+<link rel="canonical" href="https://cotchan.github.io/jekyll-theme-yat/todayilearned/2022/07/19/til-grafana-loki.html" />
+<meta property="og:url" content="https://cotchan.github.io/jekyll-theme-yat/todayilearned/2022/07/19/til-grafana-loki.html" />
+<meta property="og:site_name" content="DEVELOPMENT" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-07-19T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Grafana Loki 적용기" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"cotchan"},"dateModified":"2022-07-19T00:00:00+00:00","datePublished":"2022-07-19T00:00:00+00:00","description":"개인 공부 목적으로 작성한 포스팅입니다. 아래 출처를 참고하여 작성하였습니다. :)","headline":"Grafana Loki 적용기","mainEntityOfPage":{"@type":"WebPage","@id":"https://cotchan.github.io/jekyll-theme-yat/todayilearned/2022/07/19/til-grafana-loki.html"},"url":"https://cotchan.github.io/jekyll-theme-yat/todayilearned/2022/07/19/til-grafana-loki.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="shortcut icon" href="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-noto-sans@0.0.72/index.min.css">
+  <link rel="stylesheet" href="/jekyll-theme-yat/assets/css/main.css">
+  <script src="/jekyll-theme-yat/assets/js/main.js"></script><link type="application/atom+xml" rel="alternate" href="https://cotchan.github.io/jekyll-theme-yat/feed.xml" title="DEVELOPMENT" /><link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script charset="UTF-8"
+        src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/go.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// Init highlight js
+document.addEventListener('DOMContentLoaded', function(event) {
+  var els = document.querySelectorAll('pre code')
+
+  function addLangData(block) {
+    var outer = block.parentElement.parentElement.parentElement;
+    var lang = block.getAttribute('data-lang');
+    for (var i = 0; i < outer.classList.length; i++) {
+      var cls = outer.classList[i];
+      if (cls.startsWith('language-')) {
+        lang = cls;
+        break;
+      }
+    }
+    if (!lang) {
+      cls = block.getAttribute('class');
+      lang = cls ? cls.replace('hljs ', '') : '';
+    }
+    if (lang.startsWith('language-')) {
+      lang = lang.substr(9);
+    }
+    block.setAttribute('class', 'hljs ' + lang);
+    block.parentNode.setAttribute('data-lang', lang);
+  }
+
+  function addBadge(block) {
+    var enabled = ('true' || 'true').toLowerCase();
+    if (enabled == 'true') {
+      var pre = block.parentElement;
+      pre.classList.add('badge');
+    }
+  }
+
+  function handle(block) {
+    addLangData(block);
+    addBadge(block)
+    hljs.highlightBlock(block);
+  }
+
+  for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    handle(el);
+  }
+});
+</script>
+
+<style>
+  /* code language badge */
+  pre.badge::before {
+    content: attr(data-lang);
+    color: #fff;
+    background-color: #ff4e00;
+    padding: 0 .5em;
+    border-radius: 0 2px;
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 32px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+  }
+
+  /* fix wrong badge display for firefox browser */
+  code > table pre::before {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="site-header " role="banner">
+
+  <div class="wrapper">
+    <div class="site-header-inner"><span class="site-brand"><a class="site-brand-inner" rel="author" href="/jekyll-theme-yat/">
+  <img class="site-favicon" title="DEVELOPMENT" src="" onerror="this.style.display='none'">
+  DEVELOPMENT
+</a>
+</span><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewBox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger"><a class="page-link" href="/jekyll-theme-yat/about.html">ABOUT</a><a class="page-link" href="/jekyll-theme-yat/archives.html">ARCHIVES</a><a class="page-link" href="/jekyll-theme-yat/categories.html">CATEGORIES</a><a class="page-link" href="/jekyll-theme-yat/">HOME</a><a class="page-link" href="/jekyll-theme-yat/tags.html">TAGS</a>
+
+
+
+
+
+
+
+
+
+<span class="page-link">
+
+
+
+<div id="google_translate_element" style="display: none;">
+</div>
+
+<span class="ct-language">
+  <ul class="list-unstyled ct-language-dropdown">
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="en">
+          
+          <img src="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-400.png" title="English">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="fr">
+          
+          <img src="https://cdn.countryflags.com/thumbs/france/flag-400.png" title="French">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="zh-CN">
+          
+          <img src="https://cdn.countryflags.com/thumbs/china/flag-400.png" title="Chinese(Simple)">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ja">
+          
+          <img src="https://cdn.countryflags.com/thumbs/japan/flag-400.png" title="Japanese">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ko">
+          
+          <img src="https://cdn.countryflags.com/thumbs/south-korea/flag-400.png" title="Korean">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ru">
+          
+          <img src="https://cdn.countryflags.com/thumbs/russia/flag-400.png" title="Russian">
+          
+        </a>
+      </li>
+    
+  </ul>
+</span>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,
+    layout: google.translate.TranslateElement.InlineLayout.VERTICAL
+  }, 'google_translate_element');
+
+  // Links to cross-origin destinations are unsafe
+  var gll = document.getElementsByClassName('goog-logo-link')[0];
+  if (gll) {
+    gll.setAttribute('rel', 'noopener');
+  }
+
+  function restoreLang() {
+    var iframe = document.getElementsByClassName('goog-te-banner-frame')[0];
+    if (!iframe) return;
+
+    var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+    var restore_el = innerDoc.getElementsByTagName("button");
+
+    for (var i = 0; i < restore_el.length; i++) {
+      if (restore_el[i].id.indexOf("restore") >= 0) {
+        restore_el[i].click();
+        var close_el = innerDoc.getElementsByClassName("goog-close-link");
+        close_el[0].click();
+        return;
+      }
+    }
+  }
+
+  function triggerHtmlEvent(element, eventName) {
+    var event;
+    if (document.createEvent) {
+      event = document.createEvent('HTMLEvents');
+      event.initEvent(eventName, true, true);
+      element.dispatchEvent(event);
+    } else {
+      event = document.createEventObject();
+      event.eventType = eventName;
+      element.fireEvent('on' + event.eventType, event);
+    }
+  }
+
+  var googleCombo = document.querySelector("select.goog-te-combo");
+  var langSelect = document.querySelector('.ct-language');
+  langSelect.addEventListener('click', function(event) {
+    if (!event.target) {
+      return;
+    }
+
+    var selected = document.querySelector('.ct-language .ct-language-selected');
+    if (selected) {
+      selected.classList.remove('ct-language-selected');
+    }
+
+    var target = event.target;
+    while (target && target !== langSelect ) {
+      if (target.matches('.lang-select')) {
+        break;
+      }
+      target = target.parentElement;
+    }
+
+    if (target && target.matches('.lang-select')) {
+      var lang = target.getAttribute('data-lang');
+      if (googleCombo.value == lang) {
+        restoreLang();
+      } else {
+        target.parentElement.classList.add('ct-language-selected');
+        googleCombo.value = lang;
+        triggerHtmlEvent(googleCombo, 'change');
+      }
+    }
+
+    event.preventDefault();
+  });
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</span></div>
+        </nav></div>
+  </div>
+</header>
+
+<script>
+  function initHeader() {
+    var lastScrollY = getScrollPos().y;
+    var documentElement = document.documentElement;
+
+    function storeScrollData() {
+      var y = getScrollPos().y;var scrollStatus = "";
+
+      if (y <= 0) {
+        scrollStatus = "top";
+      } else if ((window.innerHeight + y) >= document.body.offsetHeight) {
+        scrollStatus = "bottom";
+      } else {
+        var isScrollDown = (y - lastScrollY > 0) ? true : false;
+        scrollStatus = isScrollDown ? "down" : "up";
+      }
+
+      lastScrollY = y;
+      documentElement.setAttribute("data-scroll-status", scrollStatus);
+    }
+
+    window.addEventListener('scroll', function(e) {
+      storeScrollData();
+    });
+
+    storeScrollData();
+  }
+  document.addEventListener('DOMContentLoaded', initHeader);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  function hashLocate(hashValue) {
+    hashValue = hashValue.replace(/^.*#h-/, '');
+    hashValue = decodeURIComponent(hashValue);
+    var element = document.getElementById(hashValue);
+
+    if (!element) {
+      return;
+    }
+
+    var header = document.querySelector('header.site-header');
+    var headerRect = header.getBoundingClientRect();
+    var headerTop = Math.floor(headerRect.top);
+    var headerHeight = Math.floor(headerRect.height);
+    var scrollPos = getScrollPos();
+    var offsetY = element.offsetTop - (headerTop + headerHeight + 20);
+
+    if (offsetY == scrollPos.y) {
+      return;
+    }
+
+    if (headerTop == 0  && offsetY > scrollPos.y) {
+      offsetY += headerHeight + 2;
+    } else if (headerTop < 0  && offsetY < scrollPos.y) {
+      offsetY -= headerHeight - 2;
+    }
+
+    smoothScrollTo(offsetY);
+  }
+
+  // The first event occurred
+  window.addEventListener('load', function(event) {
+    if (window.location.hash) {
+      hashLocate(window.location.hash);
+    }
+  });
+
+  // The first event occurred
+  window.addEventListener('click', function(event) {
+    if (event.target.tagName.toLowerCase() == 'a') {
+      hashLocate(event.target.getAttribute('href'));
+    }
+  });
+</script>
+<div class="theme-toggle">
+  <input type="checkbox" id="theme-switch">
+  <label for="theme-switch">
+    <div class="toggle"></div>
+    <div class="names">
+      <p class="light">Light</p>
+      <p class="dark">Dark</p>
+    </div>
+  </label>
+</div>
+
+
+
+
+<script>
+  (function() {
+    var sw = document.getElementById('theme-switch');
+    var html = document.getElementsByTagName('html')[0];
+    var nightModeOption = ('auto' || 'auto').toLowerCase();
+    var storage = nightModeOption === 'manual'
+        ? localStorage
+        : sessionStorage;
+    var themeData = loadThemeData();
+
+    function saveThemeData(data) {
+      storage.setItem('theme', JSON.stringify(data));
+    }
+
+    function loadThemeData() {
+      var data = storage.getItem('theme');
+      try {
+        data = JSON.parse(data ? data : '');
+      } catch(e) {
+        data = { nightShift: undefined, autoToggleAt: 0 };
+        saveThemeData(data);
+      }
+      return data;
+    }
+
+    function handleThemeToggle(nightShift) {
+      themeData.nightShift = nightShift;
+      saveThemeData(themeData);
+      html.dataset.theme = nightShift ? 'dark' : 'light';
+      setTimeout(function() {
+        sw.checked = nightShift ? true : false;
+      }, 50);
+    }
+
+    function autoThemeToggle() {
+      // Next time point of theme toggle
+      var now = new Date();
+      var toggleAt = new Date();
+      var hours = now.getHours();
+      var nightShift = hours >= 19 || hours <=7;
+
+      if (nightShift) {
+        if (hours > 7) {
+          toggleAt.setDate(toggleAt.getDate() + 1);
+        }
+        toggleAt.setHours(7);
+      } else {
+        toggleAt.setHours(19);
+      }
+
+      toggleAt.setMinutes(0);
+      toggleAt.setSeconds(0);
+      toggleAt.setMilliseconds(0)
+
+      var delay = toggleAt.getTime() - now.getTime();
+
+      // auto toggle theme mode
+      setTimeout(function() {
+        handleThemeToggle(!nightShift);
+      }, delay);
+
+      return {
+        nightShift: nightShift,
+        toggleAt: toggleAt.getTime()
+      };
+    }
+
+    // Listen the theme toggle event
+    sw.addEventListener('change', function(event) {
+      handleThemeToggle(event.target.checked);
+    });
+
+    if (nightModeOption == 'auto') {
+      var data = autoThemeToggle();
+
+      // Toggle theme by local setting
+      if (data.toggleAt > themeData.autoToggleAt) {
+        themeData.autoToggleAt = data.toggleAt;
+        handleThemeToggle(data.nightShift);
+      } else {
+        handleThemeToggle(themeData.nightShift);
+      }
+    } else if (nightModeOption == 'manual') {
+      handleThemeToggle(themeData.nightShift);
+    } else {
+      var nightShift = themeData.nightShift;
+      if (nightShift === undefined) {
+        nightShift = nightModeOption === 'on';
+      }
+      handleThemeToggle(nightShift);
+    }
+  })();
+</script>
+<div id="click-to-top" class="click-to-top">
+  <i class="fa fa-arrow-up"></i>
+</div>
+<script>
+  (function () {
+    const clickToTop = document.getElementById('click-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        clickToTop.classList.add('show')
+      }else {
+        clickToTop.classList.remove('show')
+      }
+    });
+    clickToTop.addEventListener('click', () => {
+      window.smoothScrollTo(0);
+    });
+  })();
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="framework">
+  <section class="main">
+
+     <div class="post">
+  <section>
+
+
+
+
+
+
+
+
+
+<header class="post-header">
+  <h1 class="post-title p-name" itemprop="name headline">Grafana Loki 적용기</h1>
+  <h2 class="post-subtitle">SpringBoot 로그 모니터링 방법</h2>
+
+  <p class="post-meta">
+    <time class="dt-published" datetime="2022-07-19T00:00:00+00:00" itemprop="datePublished"><i class="fa fa-calendar"></i> Jul 19, 2022
+    </time>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 5 mins</span>
+  </p><div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#todayilearned">#todayilearned</a></div></header>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="post-content e-content" itemprop="articleBody">
+
+      <ul>
+  <li>개인 공부 목적으로 작성한 포스팅입니다.</li>
+  <li>아래 출처를 참고하여 작성하였습니다. :)</li>
+</ul>
+
+<h3 id="상황">상황</h3>
+
+<ul>
+  <li>도커 컨테이너 안에 file로 로그를 쌓아두다가 서버가 죽어버리니 컨테이너도 죽어버렸습니다.</li>
+  <li>컨테이너가 죽어버리니 내부 로그를 볼 수 있는 방법이 없었습니다ㅠㅠ</li>
+  <li>로그를 컨테이너 외부에 쌓아두지 않은 점을 반성하면서 이어서 든 생각은, 서버에 쌓아둬봤자 이전처럼 서버에 문제가 생기면 <code class="language-plaintext highlighter-rouge">문제 상황일 때</code> 또 로그를 못 보는 건 매한가지가 아닌가 싶었습니다.</li>
+  <li>그래서 <code class="language-plaintext highlighter-rouge">서버 외부에 로그를 쌓는 법</code>을 리서치하면서 <code class="language-plaintext highlighter-rouge">Grafana Loki</code>를 적용한 내용을 정리합니다.
+    <ul>
+      <li>참고) 위 방식을 적용하기 위해 저는 <code class="language-plaintext highlighter-rouge">도커 볼륨</code>을 사용했고, 해당 부분은 생략하고 <code class="language-plaintext highlighter-rouge">Grafana Loki</code>를 적용한 부분만 포스팅을 남깁니다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="grafana-loki">Grafana Loki</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Grafana</code>에서 제공하는 로그 출력을 위한 데이터 소스입니다.</li>
+  <li>아래와 같은 flow를 가지고 있고, k8s에 특화되어 있다고 합니다.</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/75410527/179705933-265db594-a60d-4184-92bb-df56870af22e.png" alt="loki" /></p>
+
+<h4 id="promtail">Promtail</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">애플리케이션의 로그를 수집</code>하여 Loki에 보내는 <code class="language-plaintext highlighter-rouge">로그 수집기</code>입니다.</li>
+</ul>
+
+<h4 id="loki">Loki</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">로그 저장 및 구문 분석에 사용</code>되며 다운스트림 프레젠테이션을 위한 쿼리 API를 제공합니다.</li>
+</ul>
+
+<h4 id="grafana">Grafana</h4>
+
+<ul>
+  <li>Grafana는 Loki의 <code class="language-plaintext highlighter-rouge">로그 시각화를 담당</code>합니다.</li>
+</ul>
+
+<h3 id="설치">설치</h3>
+
+<ul>
+  <li>다운로드 받을 때는 master 브랜치가 아니라 <code class="language-plaintext highlighter-rouge">버전명이 제대로 기입</code>되어야 합니다.</li>
+  <li>저는 참고한 포스팅을 따라 <code class="language-plaintext highlighter-rouge">v2.3.0</code>으로 진행했습니다.</li>
+</ul>
+
+<h4 id="promtailloki-로컬-설치">Promtail,Loki 로컬 설치</h4>
+
+<ul>
+  <li>Promtail와 Loki를 로컬로 설치합니다.</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://github.com/grafana/loki/releases/download/v2.3.0/loki-linux-amd64.zip
+wget https://github.com/grafana/loki/releases/download/v2.3.0/promtail-linux-amd64.zip
+</code></pre></div></div>
+
+<h4 id="promtailloki-설정-파일-설치">Promtail,Loki 설정 파일 설치</h4>
+
+<ul>
+  <li>Promtail와 Loki를 사용하는데 필요한 설정 파일도 로컬로 설치합니다.</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://raw.githubusercontent.com/grafana/loki/v2.3.0/clients/cmd/promtail/promtail-local-config.yaml
+wget https://raw.githubusercontent.com/grafana/loki/v2.3.0/cmd/loki/loki-local-config.yaml
+</code></pre></div></div>
+
+<h3 id="설정">설정</h3>
+
+<ul>
+  <li>설치를 했으니 필요한 설정을 해줍니다.</li>
+</ul>
+
+<h4 id="promtail-설정">Promtail 설정</h4>
+
+<ul>
+  <li>초기의 <code class="language-plaintext highlighter-rouge">promtail-local-config.yaml</code> 아래와 같습니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">clients</code>에는 <code class="language-plaintext highlighter-rouge">실행중인 Loki url</code>을 입력합니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">loki/api/v1/push</code>는 <code class="language-plaintext highlighter-rouge">promtail</code>로 수집한 로그를 Loki에 푸쉬하는 POST 요청 api 입니다.</li>
+</ul>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">server</span><span class="pi">:</span>
+  <span class="na">http_listen_port</span><span class="pi">:</span> <span class="m">9080</span>
+  <span class="na">grpc_listen_port</span><span class="pi">:</span> <span class="m">0</span>
+
+<span class="na">positions</span><span class="pi">:</span>
+  <span class="na">filename</span><span class="pi">:</span> <span class="s">/tmp/positions.yaml</span>
+
+<span class="na">clients</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">url</span><span class="pi">:</span> <span class="s">http://loki:3100/loki/api/v1/push</span>
+
+<span class="na">scrape_configs</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">job_name</span><span class="pi">:</span> <span class="s">system</span>
+    <span class="na">static_configs</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">targets</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="s">localhost</span>
+        <span class="na">labels</span><span class="pi">:</span>
+          <span class="na">job</span><span class="pi">:</span> <span class="s">varlogs</span>
+          <span class="na">__path__</span><span class="pi">:</span> <span class="s">/var/log/*log</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">scrape-configs</code>에 job을 추가할 수 있어서 저는 아래와 같이 수정했습니다.</li>
+  <li>배포서버 내에 <code class="language-plaintext highlighter-rouge">loki</code>와 <code class="language-plaintext highlighter-rouge">Promtail</code>이 같이 있었으므로 <code class="language-plaintext highlighter-rouge">clients</code> 속성은 localhost로 주었습니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">/tmp/log/*log</code>: 제가 SpringBoot에서 로그를 내보내는 경로가 <code class="language-plaintext highlighter-rouge">/tmp/log</code>이며 <code class="language-plaintext highlighter-rouge">*log</code>를 사용해서 해당 경로 안에 있는 모든 <code class="language-plaintext highlighter-rouge">*.log</code> 파일을 읽을 수 있습니다.</li>
+</ul>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">server</span><span class="pi">:</span>
+  <span class="na">http_listen_port</span><span class="pi">:</span> <span class="m">9080</span>
+  <span class="na">grpc_listen_port</span><span class="pi">:</span> <span class="m">0</span>
+
+<span class="na">positions</span><span class="pi">:</span>
+  <span class="na">filename</span><span class="pi">:</span> <span class="s">/tmp/positions.yaml</span>
+
+<span class="na">clients</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">url</span><span class="pi">:</span> <span class="s">http://localhost:3100/loki/api/v1/push</span>
+
+<span class="na">scrape_configs</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">job_name</span><span class="pi">:</span> <span class="s">server-log</span>
+    <span class="na">static_configs</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">targets</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="s">localhost</span>
+        <span class="na">labels</span><span class="pi">:</span>
+          <span class="na">job</span><span class="pi">:</span> <span class="s">server-log</span>
+          <span class="na">__path__</span><span class="pi">:</span> <span class="s">/tmp/log/*log</span>
+</code></pre></div></div>
+
+<ul>
+  <li>다른 서버에서 실행중인 Loki로 보내는 방법은 아래와 같습니다.</li>
+</ul>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">clients</span><span class="pi">:</span>  <span class="c1"># url 을 변경</span>
+  <span class="pi">-</span> <span class="na">url</span><span class="pi">:</span> <span class="s">http://{요청 보낼 Loki 서버 url}:{요청 보낼 Loki port}/loki/api/v1/push</span>
+
+<span class="na">scrape_configs</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">job_name</span><span class="pi">:</span> <span class="s">mylog</span>
+  <span class="na">static_configs</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">targets</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="pi">{</span><span class="nv">요청 보낼 Loki 서버 url</span><span class="pi">}</span>
+  <span class="na">labels</span><span class="pi">:</span>
+    <span class="na">job</span><span class="pi">:</span> <span class="s">mylog</span>
+    <span class="na">__path__</span><span class="pi">:</span> <span class="pi">{</span><span class="nv">경로</span><span class="pi">}</span><span class="s">/mylog.log</span>
+</code></pre></div></div>
+
+<h4 id="loki-설정">Loki 설정</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">loki-local-config.yaml</code> 설정을 건드리면 되는데 따로 건드린 건 없었습니다.</li>
+  <li>포트 변경을 원한다면 <code class="language-plaintext highlighter-rouge">http_listen_port</code>를 원하는 포트로 바꿔주면 됩니다. 디폴트 포트는 <code class="language-plaintext highlighter-rouge">3100</code>입니다.</li>
+</ul>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">auth_enabled</span><span class="pi">:</span> <span class="no">false</span>
+
+<span class="na">server</span><span class="pi">:</span>
+  <span class="na">http_listen_port</span><span class="pi">:</span> <span class="m">3100</span>
+  <span class="na">grpc_listen_port</span><span class="pi">:</span> <span class="m">9096</span>
+  
+<span class="c1"># ...</span>
+</code></pre></div></div>
+
+<h3 id="실행">실행</h3>
+
+<ul>
+  <li>이제 모든 설정을 마쳤으니 <code class="language-plaintext highlighter-rouge">Loki</code>와 <code class="language-plaintext highlighter-rouge">Promtail</code>을 실행하면 됩니다.</li>
+</ul>
+
+<h4 id="loki-실행">Loki 실행</h4>
+
+<ul>
+  <li>아래 명령어를 사용하면 <code class="language-plaintext highlighter-rouge">loki</code>가 실행됩니다.</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./loki-linux-amd64 <span class="nt">-config</span>.file<span class="o">=</span>loki-local-config.yaml
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 백그라운드로 띄우기</span>
+<span class="nb">nohup</span> ./loki-linux-amd64 <span class="nt">-config</span>.file<span class="o">=</span>loki-local-config.yaml &amp;
+</code></pre></div></div>
+
+<h4 id="promtail-실행">Promtail 실행</h4>
+
+<ul>
+  <li>아래 명령어를 사용하면 <code class="language-plaintext highlighter-rouge">promtail</code>가 실행되며 로깅 수집 대상이 되는 파일을 연결해줍니다.</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./promtail-linux-amd64 <span class="nt">-config</span>.file<span class="o">=</span>promtail-local-config.yaml
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 백그라운드로 띄우기</span>
+<span class="nb">nohup</span> ./promtail-linux-amd64 <span class="nt">-config</span>.file<span class="o">=</span>promtail-local-config.yaml &amp;
+</code></pre></div></div>
+
+<h3 id="grafana-연동">grafana 연동</h3>
+
+<ul>
+  <li>위 과정을 통해 <code class="language-plaintext highlighter-rouge">application log</code> =&gt; <code class="language-plaintext highlighter-rouge">promtail</code> =&gt; <code class="language-plaintext highlighter-rouge">loki</code>로 이어지는 흐름은 완성했습니다.</li>
+  <li>이제는 grafana 연동을 통해 <code class="language-plaintext highlighter-rouge">loki</code> =&gt; <code class="language-plaintext highlighter-rouge">grafana</code> 흐름을 완성할 차례입니다.</li>
+</ul>
+
+<hr />
+
+<ul>
+  <li>data source로 Loki를 선택합니다.</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/75410527/179706926-0deb84ff-40af-4d26-bf7c-9cf9577a099d.png" alt="239ca9b85d0a40be80ec052a5faad509" /></p>
+
+<hr />
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">loki가 실행되고 있는 서버 URL</code>을 입력합니다.</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/75410527/179707031-9ef7edbc-e084-4300-bfed-d13651f1b2e2.png" alt="61e95d9321a94c2880e57272a33de55f" /></p>
+
+<hr />
+
+<ul>
+  <li>Promtail 설정에 따라 <code class="language-plaintext highlighter-rouge">filename</code> 또는 <code class="language-plaintext highlighter-rouge">jobs</code>로 쿼리를 생성합니다.</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/75410527/179707338-4c733a49-c5c6-4ee7-a292-4e4570e51d72.png" alt="977162385fb74a2aa92af7384a64e7a3" /></p>
+
+<hr />
+
+<ul>
+  <li>저는 아래와 같이 연동을 완료했습니다.</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/75410527/179707620-8d11634d-2887-48dd-9904-b0b584f5fd6d.png" alt="스크린샷 2022-07-19 오후 3 17 50" /></p>
+
+<hr />
+
+<ul>
+  <li>출처
+    <ul>
+      <li><a href="https://jujeol-jujeol.github.io/2021/10/28/Spring-Boot-%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81-%EC%A0%81%EC%9A%A9-2">Spring Boot 모니터링 적용 - 2</a></li>
+      <li><a href="https://www.springcloud.io/post/2022-02/springboot-loki-1/#gsc.tab=0">SpringBoot integration of lightweight logging system loki - 1</a></li>
+      <li><a href="https://www.springcloud.io/post/2022-02/springboot-loki-2/#gsc.tab=0">SpringBoot integration of lightweight logging system loki - 2</a></li>
+      <li><a href="https://medium.com/@dudwls96/logging-grafana-loki-%ED%86%B5%ED%95%9C-%EB%A1%9C%EA%B7%B8-%EC%88%98%EC%A7%91%ED%95%98%EA%B8%B0-d57ba1b75ab3">Logging/Grafana Loki 통한 로그 수집하기</a></li>
+      <li><a href="https://grafana.com/docs/loki/latest/installation/local/">Install and run Grafana Loki locally</a></li>
+    </ul>
+  </li>
+</ul>
+
+
+    </div>
+
+</article>
+<div class="post-nav"><a class="previous" href="/jekyll-theme-yat/favorites/2022/07/19/favorites-blogs.html" title="즐겨찾는 블로그">즐겨찾는 블로그</a><a class="next" href="/jekyll-theme-yat/todayilearned/2022/07/25/til-mq-kafka-rabbitmq.html" title="Kafka와 RabbitMQ 비교">Kafka와 RabbitMQ 비교</a></div><div class="post-related">
+      <div>Related Articles</div>
+      <ul>
+        <li><a class="post-link" href="/jekyll-theme-yat/boj/2022/05/09/boj-11779.html" title="Kafka와 RabbitMQ 비교">11779번 최소비용 구하기 2</a></li><li><a class="post-link" href="/jekyll-theme-yat/todayilearned/2022/08/27/til-database-realtime-delete.html" title="Kafka와 RabbitMQ 비교">TIL 작성 중</a></li><li><a class="post-link" href="/jekyll-theme-yat/favorites/2022/07/19/favorites-blogs.html" title="Kafka와 RabbitMQ 비교">즐겨찾는 블로그</a></li><li><a class="post-link" href="/jekyll-theme-yat/algorithm/2022/05/11/algo-lis.html" title="Kafka와 RabbitMQ 비교">최장 증가 부분 수열(LIS)</a></li></ul>
+    </div><div class="post-comments"></div></section>
+</div>
+
+
+  </section>
+  <section class="sidebar" style="margin-left: 15px;">
+    <!-- Get sidebar items --><style type="text/css" media="screen">
+.post-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+</style>
+
+<div class="post-menu">
+  <div class="post-menu-title">TOC</div>
+  <div class="post-menu-content"></div>
+</div>
+
+<script>
+  function generateContent() {
+    var menu = document.querySelector(".post-menu");
+    var menuContent =  menu.querySelector(".post-menu-content");
+    var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
+
+    // Hide menu when no headings
+    if (headings.length === 0) {
+      return menu.style.display = "none";
+    }
+
+    // Generate post menu
+    var menuHTML = '';
+    for (var i = 0; i < headings.length; i++) {
+      var h = headings[i];
+      menuHTML += (
+        '<li class="h-' + h.tagName.toLowerCase() + '">'
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+    }
+
+    menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
+
+    // The header element
+    var header = document.querySelector('header.site-header');
+
+    function doMenuCollapse(index, over_items) {
+      var items = menuContent.firstChild.children;
+
+      if (over_items == undefined) {
+        over_items = 20;
+      }
+
+      if (items.length < over_items) {
+        return;
+      }
+
+      var activeItem = items[index];
+      var beginItem = activeItem
+      var endItem = activeItem
+      var beginIndex = index;
+      var endIndex = index + 1;
+      while (beginIndex >= 0
+        && !items[beginIndex].classList.contains('h-h2')) {
+        beginIndex -= 1;
+      }
+      while (endIndex < items.length
+        && !items[endIndex].classList.contains('h-h2')) {
+        endIndex += 1;
+      }
+      for (var i = 0; i < beginIndex; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+      for (var i = beginIndex + 1; i < endIndex; i++) {
+        item = items[i]
+        // if (!item.classList.contains('h-h2')) {
+          item.style.display = '';
+        // }
+      }
+      for (var i = endIndex; i < items.length; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+    }
+
+    // Init menu collapsed
+    doMenuCollapse(-1);
+
+    // Active the menu item
+    window.addEventListener('scroll', function (event) {
+      var lastActive = menuContent.querySelector('.active');
+      var changed = true;
+      var activeIndex = -1;
+      for (var i = headings.length - 1; i >= 0; i--) {
+        var h = headings[i];
+        var headingRect = h.getBoundingClientRect();
+        var headerRect = header.getBoundingClientRect();
+        var headerTop = Math.floor(headerRect.top);
+        var headerHeight = Math.floor(headerRect.height);
+        var headerHeight = headerTop + headerHeight + 20;
+        if (headingRect.top <= headerHeight) {
+          var id = 'h-' + h.getAttribute('id');
+          var a = menuContent.querySelector('a[href="#' + id  + '"]');
+          var curActive = a.parentNode;
+          if (curActive) {
+            curActive.classList.add('active');
+            activeIndex = i;
+          }
+          if (lastActive == curActive) {
+            changed = false;
+          }
+          break;
+        }
+      }
+      if (changed) {
+        if (lastActive) {
+          lastActive.classList.remove('active');
+        }
+        doMenuCollapse(activeIndex);
+      }
+      event.preventDefault();
+    });
+  }
+  generateContent();
+</script>
+</section>
+</div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/jekyll-theme-yat/"></data>
+
+  <div class="wrapper">
+    <div class="site-footer-inner"><div>Unpublished Work <span class="copyleft">&copy;</span> 2017-2024 cotchan</div>
+      <div>Powered by <a title="Jekyll is a simple, blog-aware, static site
+      generator." href="https://jekyllrb.com/">Jekyll</a> &amp; <a title="Yat, yet
+      another theme." href="https://github.com/jeffreytse/jekyll-theme-yat">Yat Theme</a>.</div>
+      <div class="footer-col rss-subscribe">Subscribe <a href="/jekyll-theme-yat/feed.xml">via RSS</a></div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

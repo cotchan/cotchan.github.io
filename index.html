@@ -1,0 +1,5131 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Home | DEVELOPMENT</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Home" />
+<meta name="author" content="cotchan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="https://cotchan.github.io/jekyll-theme-yat/" />
+<meta property="og:url" content="https://cotchan.github.io/jekyll-theme-yat/" />
+<meta property="og:site_name" content="DEVELOPMENT" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Home" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"cotchan"},"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"Home","name":"DEVELOPMENT","url":"https://cotchan.github.io/jekyll-theme-yat/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="shortcut icon" href="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-noto-sans@0.0.72/index.min.css">
+  <link rel="stylesheet" href="/jekyll-theme-yat/assets/css/main.css">
+  <script src="/jekyll-theme-yat/assets/js/main.js"></script><link type="application/atom+xml" rel="alternate" href="https://cotchan.github.io/jekyll-theme-yat/feed.xml" title="DEVELOPMENT" /><link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script charset="UTF-8"
+        src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/go.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// Init highlight js
+document.addEventListener('DOMContentLoaded', function(event) {
+  var els = document.querySelectorAll('pre code')
+
+  function addLangData(block) {
+    var outer = block.parentElement.parentElement.parentElement;
+    var lang = block.getAttribute('data-lang');
+    for (var i = 0; i < outer.classList.length; i++) {
+      var cls = outer.classList[i];
+      if (cls.startsWith('language-')) {
+        lang = cls;
+        break;
+      }
+    }
+    if (!lang) {
+      cls = block.getAttribute('class');
+      lang = cls ? cls.replace('hljs ', '') : '';
+    }
+    if (lang.startsWith('language-')) {
+      lang = lang.substr(9);
+    }
+    block.setAttribute('class', 'hljs ' + lang);
+    block.parentNode.setAttribute('data-lang', lang);
+  }
+
+  function addBadge(block) {
+    var enabled = ('true' || 'true').toLowerCase();
+    if (enabled == 'true') {
+      var pre = block.parentElement;
+      pre.classList.add('badge');
+    }
+  }
+
+  function handle(block) {
+    addLangData(block);
+    addBadge(block)
+    hljs.highlightBlock(block);
+  }
+
+  for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    handle(el);
+  }
+});
+</script>
+
+<style>
+  /* code language badge */
+  pre.badge::before {
+    content: attr(data-lang);
+    color: #fff;
+    background-color: #ff4e00;
+    padding: 0 .5em;
+    border-radius: 0 2px;
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 32px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+  }
+
+  /* fix wrong badge display for firefox browser */
+  code > table pre::before {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="site-header site-header-transparent" role="banner">
+
+  <div class="wrapper">
+    <div class="site-header-inner"><span class="site-brand"><a class="site-brand-inner" rel="author" href="/jekyll-theme-yat/">
+  <img class="site-favicon" title="DEVELOPMENT" src="" onerror="this.style.display='none'">
+  DEVELOPMENT
+</a>
+</span><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewBox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger"><a class="page-link" href="/jekyll-theme-yat/about.html">ABOUT</a><a class="page-link" href="/jekyll-theme-yat/archives.html">ARCHIVES</a><a class="page-link" href="/jekyll-theme-yat/categories.html">CATEGORIES</a><a class="page-link" href="/jekyll-theme-yat/">HOME</a><a class="page-link" href="/jekyll-theme-yat/tags.html">TAGS</a>
+
+
+
+
+
+
+
+
+
+<span class="page-link">
+
+
+
+<div id="google_translate_element" style="display: none;">
+</div>
+
+<span class="ct-language">
+  <ul class="list-unstyled ct-language-dropdown">
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="en">
+          
+          <img src="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-400.png" title="English">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="fr">
+          
+          <img src="https://cdn.countryflags.com/thumbs/france/flag-400.png" title="French">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="zh-CN">
+          
+          <img src="https://cdn.countryflags.com/thumbs/china/flag-400.png" title="Chinese(Simple)">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ja">
+          
+          <img src="https://cdn.countryflags.com/thumbs/japan/flag-400.png" title="Japanese">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ko">
+          
+          <img src="https://cdn.countryflags.com/thumbs/south-korea/flag-400.png" title="Korean">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ru">
+          
+          <img src="https://cdn.countryflags.com/thumbs/russia/flag-400.png" title="Russian">
+          
+        </a>
+      </li>
+    
+  </ul>
+</span>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,
+    layout: google.translate.TranslateElement.InlineLayout.VERTICAL
+  }, 'google_translate_element');
+
+  // Links to cross-origin destinations are unsafe
+  var gll = document.getElementsByClassName('goog-logo-link')[0];
+  if (gll) {
+    gll.setAttribute('rel', 'noopener');
+  }
+
+  function restoreLang() {
+    var iframe = document.getElementsByClassName('goog-te-banner-frame')[0];
+    if (!iframe) return;
+
+    var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+    var restore_el = innerDoc.getElementsByTagName("button");
+
+    for (var i = 0; i < restore_el.length; i++) {
+      if (restore_el[i].id.indexOf("restore") >= 0) {
+        restore_el[i].click();
+        var close_el = innerDoc.getElementsByClassName("goog-close-link");
+        close_el[0].click();
+        return;
+      }
+    }
+  }
+
+  function triggerHtmlEvent(element, eventName) {
+    var event;
+    if (document.createEvent) {
+      event = document.createEvent('HTMLEvents');
+      event.initEvent(eventName, true, true);
+      element.dispatchEvent(event);
+    } else {
+      event = document.createEventObject();
+      event.eventType = eventName;
+      element.fireEvent('on' + event.eventType, event);
+    }
+  }
+
+  var googleCombo = document.querySelector("select.goog-te-combo");
+  var langSelect = document.querySelector('.ct-language');
+  langSelect.addEventListener('click', function(event) {
+    if (!event.target) {
+      return;
+    }
+
+    var selected = document.querySelector('.ct-language .ct-language-selected');
+    if (selected) {
+      selected.classList.remove('ct-language-selected');
+    }
+
+    var target = event.target;
+    while (target && target !== langSelect ) {
+      if (target.matches('.lang-select')) {
+        break;
+      }
+      target = target.parentElement;
+    }
+
+    if (target && target.matches('.lang-select')) {
+      var lang = target.getAttribute('data-lang');
+      if (googleCombo.value == lang) {
+        restoreLang();
+      } else {
+        target.parentElement.classList.add('ct-language-selected');
+        googleCombo.value = lang;
+        triggerHtmlEvent(googleCombo, 'change');
+      }
+    }
+
+    event.preventDefault();
+  });
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</span></div>
+        </nav></div>
+  </div>
+</header>
+
+<script>
+  function initHeader() {
+    var lastScrollY = getScrollPos().y;
+    var documentElement = document.documentElement;
+
+    function storeScrollData() {
+      var y = getScrollPos().y;documentElement.setAttribute("data-header-transparent", "");var scrollStatus = "";
+
+      if (y <= 0) {
+        scrollStatus = "top";
+      } else if ((window.innerHeight + y) >= document.body.offsetHeight) {
+        scrollStatus = "bottom";
+      } else {
+        var isScrollDown = (y - lastScrollY > 0) ? true : false;
+        scrollStatus = isScrollDown ? "down" : "up";
+      }
+
+      lastScrollY = y;
+      documentElement.setAttribute("data-scroll-status", scrollStatus);
+    }
+
+    window.addEventListener('scroll', function(e) {
+      storeScrollData();
+    });
+
+    storeScrollData();
+  }
+  document.addEventListener('DOMContentLoaded', initHeader);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="page-banner">
+    <div class="page-banner-img"><div style="background-image: url(/jekyll-theme-yat/assets/images/banners/home.jpeg)"></div>
+        <img class="img-placeholder" src="/jekyll-theme-yat/assets/images/banners/home.jpeg"></div>
+    <div class="wrapper">
+      <div class="page-banner-inner"><div class="page-banner-default">
+            <h1 class="page-banner-heading">
+              Markdown 쓰고 싶어 옮긴 블로그
+            </h1>
+            <h2 class="page-banner-subheading">
+              개발 블로그
+            </h2>
+          </div></div>
+    </div>
+  </section><script>
+  function hashLocate(hashValue) {
+    hashValue = hashValue.replace(/^.*#h-/, '');
+    hashValue = decodeURIComponent(hashValue);
+    var element = document.getElementById(hashValue);
+
+    if (!element) {
+      return;
+    }
+
+    var header = document.querySelector('header.site-header');
+    var headerRect = header.getBoundingClientRect();
+    var headerTop = Math.floor(headerRect.top);
+    var headerHeight = Math.floor(headerRect.height);
+    var scrollPos = getScrollPos();
+    var offsetY = element.offsetTop - (headerTop + headerHeight + 20);
+
+    if (offsetY == scrollPos.y) {
+      return;
+    }
+
+    if (headerTop == 0  && offsetY > scrollPos.y) {
+      offsetY += headerHeight + 2;
+    } else if (headerTop < 0  && offsetY < scrollPos.y) {
+      offsetY -= headerHeight - 2;
+    }
+
+    smoothScrollTo(offsetY);
+  }
+
+  // The first event occurred
+  window.addEventListener('load', function(event) {
+    if (window.location.hash) {
+      hashLocate(window.location.hash);
+    }
+  });
+
+  // The first event occurred
+  window.addEventListener('click', function(event) {
+    if (event.target.tagName.toLowerCase() == 'a') {
+      hashLocate(event.target.getAttribute('href'));
+    }
+  });
+</script>
+<div class="theme-toggle">
+  <input type="checkbox" id="theme-switch">
+  <label for="theme-switch">
+    <div class="toggle"></div>
+    <div class="names">
+      <p class="light">Light</p>
+      <p class="dark">Dark</p>
+    </div>
+  </label>
+</div>
+
+
+
+
+<script>
+  (function() {
+    var sw = document.getElementById('theme-switch');
+    var html = document.getElementsByTagName('html')[0];
+    var nightModeOption = ('auto' || 'auto').toLowerCase();
+    var storage = nightModeOption === 'manual'
+        ? localStorage
+        : sessionStorage;
+    var themeData = loadThemeData();
+
+    function saveThemeData(data) {
+      storage.setItem('theme', JSON.stringify(data));
+    }
+
+    function loadThemeData() {
+      var data = storage.getItem('theme');
+      try {
+        data = JSON.parse(data ? data : '');
+      } catch(e) {
+        data = { nightShift: undefined, autoToggleAt: 0 };
+        saveThemeData(data);
+      }
+      return data;
+    }
+
+    function handleThemeToggle(nightShift) {
+      themeData.nightShift = nightShift;
+      saveThemeData(themeData);
+      html.dataset.theme = nightShift ? 'dark' : 'light';
+      setTimeout(function() {
+        sw.checked = nightShift ? true : false;
+      }, 50);
+    }
+
+    function autoThemeToggle() {
+      // Next time point of theme toggle
+      var now = new Date();
+      var toggleAt = new Date();
+      var hours = now.getHours();
+      var nightShift = hours >= 19 || hours <=7;
+
+      if (nightShift) {
+        if (hours > 7) {
+          toggleAt.setDate(toggleAt.getDate() + 1);
+        }
+        toggleAt.setHours(7);
+      } else {
+        toggleAt.setHours(19);
+      }
+
+      toggleAt.setMinutes(0);
+      toggleAt.setSeconds(0);
+      toggleAt.setMilliseconds(0)
+
+      var delay = toggleAt.getTime() - now.getTime();
+
+      // auto toggle theme mode
+      setTimeout(function() {
+        handleThemeToggle(!nightShift);
+      }, delay);
+
+      return {
+        nightShift: nightShift,
+        toggleAt: toggleAt.getTime()
+      };
+    }
+
+    // Listen the theme toggle event
+    sw.addEventListener('change', function(event) {
+      handleThemeToggle(event.target.checked);
+    });
+
+    if (nightModeOption == 'auto') {
+      var data = autoThemeToggle();
+
+      // Toggle theme by local setting
+      if (data.toggleAt > themeData.autoToggleAt) {
+        themeData.autoToggleAt = data.toggleAt;
+        handleThemeToggle(data.nightShift);
+      } else {
+        handleThemeToggle(themeData.nightShift);
+      }
+    } else if (nightModeOption == 'manual') {
+      handleThemeToggle(themeData.nightShift);
+    } else {
+      var nightShift = themeData.nightShift;
+      if (nightShift === undefined) {
+        nightShift = nightModeOption === 'on';
+      }
+      handleThemeToggle(nightShift);
+    }
+  })();
+</script>
+<div id="click-to-top" class="click-to-top">
+  <i class="fa fa-arrow-up"></i>
+</div>
+<script>
+  (function () {
+    const clickToTop = document.getElementById('click-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        clickToTop.classList.add('show')
+      }else {
+        clickToTop.classList.remove('show')
+      }
+    });
+    clickToTop.addEventListener('click', () => {
+      window.smoothScrollTo(0);
+    });
+  })();
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="framework">
+  <section class="main">
+
+     <div class="articles">
+  
+
+  
+
+
+  <div class="pagination">
+  <!-- Post list links -->
+  <ul class="post-list"><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/voca/2024/02/15/voca-cs-voca-os.html">
+          CS 단어 정리(운영체제)
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Feb 15, 2024</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 8 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/voca/2024/02/15/voca-cs-voca-os.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+  계속 업데이트할 예정입니다.
+
+
+I/O(input/output)
+
+
+  I/O란, cpu와 메모리를 제외한 나머지 시스템 리소스에 접근하는 것을 의미합니다.
+  데이터의 입출력을 의미합니다.
+    
+      파일을 읽고 쓰기
+      네트워크의 어딘가와 (소켓을 통해) 데이터를 주고받는 것
+      입출력 장치와 데이터를 주고 받는 것
+    
+  
+  공통적으로 I/O는 user-space aplication에서 직접 수행할 수 없습니다.
+  즉, I/O를 수행하기 위해서는 커널에 한 번 이상 시스템 콜을 보내... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#voca">#voca</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/voca/2024/02/15/voca-cs-voca-oop.html">
+          CS 단어 정리(OOP)
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Feb 15, 2024</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 3 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/voca/2024/02/15/voca-cs-voca-oop.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+  계속 업데이트할 예정입니다.
+
+
+SOLID
+
+SRP(단일 책임 원칙)
+
+
+  한 클래스는 하나의 책임만 가져야 한다.
+  관심사의 분리
+    
+      SRP 단일 책임 원칙을 따르면서 관심사를 분리했습니다.
+      구현 객체를 생성하고 연결하는 책임은 AppConfig가 담당하도록 했습니다.
+      클라이언트 객체는 실행하는 책임만 담당합니다.
+    
+  
+  소프트웨어의 2가지 영역
+    
+      객체 구성 영역(Main 영역)
+        
+          사용 영역(애플리케이션 영역)이 쓸 ... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#voca">#voca</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/voca/2024/02/15/voca-cs-voca-network.html">
+          CS 단어 정리(네트워크)
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Feb 15, 2024</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 3 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/voca/2024/02/15/voca-cs-voca-network.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+  계속 업데이트할 예정입니다.
+
+
+공인 IP
+
+
+  말 그대로 외부에 공개되어 있는 IP
+  통신에서 쓰이는 실제 주소이자 공개된 주소. 전 세계에서 유일
+    
+      공인IP주소를 알면 누구라도 그 주소를 토대로 연결된 기기에 1차적인 접근이 가능
+    
+  
+  외부에 공개되어 있기 때문에 인터넷에 연결된 다른 컴퓨터에서 접근이 가능하며, 해킹의 위험이 있기 떄문에 보안 프로그램을 설치해야 한다.
+
+
+내부 IP/가상 IP/사설 IP
+
+
+  가상IP주소는 명칭 그대로 실제 주소가 아닌 가상의 주소
+  공유기를 ... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#voca">#voca</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/voca/2024/02/15/voca-cs-voca-db.html">
+          CS 단어 정리(데이터베이스)
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Feb 15, 2024</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/voca/2024/02/15/voca-cs-voca-db.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+  계속 업데이트할 예정입니다.
+
+
+JOIN
+
+Equi Join
+
+
+  등가조인[Equi Join]
+
+
+SELECT * FROM 테이블1, 테이블2
+	WHERE 테이블명1.컬럼명1=테이블명2.컬럼명2;
+
+
+
+  테이블간의 공통 컬럼을 활용하여 각 테이블의 특정 컬럼에 일치한 데이터를 기준으로 연결하는 방법
+    
+      두 개의 테이블 간의 일치하는 것을 조인(교집합)
+    
+  
+  등가조인(Equi Join) = 내부조인(Inner Join) = 단순조인(Simple Join)
+
+
+NATURAL JOIN
+
+SEL... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#voca">#voca</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/todayilearned/2022/11/03/til-java-collections-emptylist.html">
+          Collections.emptyList() vs new ArrayList&lt;&gt;()
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Nov 03, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/todayilearned/2022/11/03/til-java-collections-emptylist.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+
+
+Collections.emptyList()
+
+
+  수정 불가능한 빈 리스트입니다.
+
+
+
+  명시적으로 '추가 삽입이 없는 그냥 빈 리스트'를 만들고 싶을 때 Collections.emptyList()는 그 의도를 더 잘 표현했습니다.
+
+
+그래서 아래와 같이 Collections.emptyList()를 호출해서 add 연산자를 실행해보면 예외가 발생합니다.
+
+public static void main(String[] args) throws IOException {
+    List&lt;Integer&gt; immutabl... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#todayilearned">#todayilearned</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/data-structure/2022/11/03/ds-pq-heap.html">
+          우선순위 큐(Priority Queue)와 힙(Heap)
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Nov 03, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 3 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/data-structure/2022/11/03/ds-pq-heap.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+
+
+우선순위 큐(Priority Queue)
+
+
+  자료 구조 개념으로 구현하는 방법은 여러 가지입니다.
+힙으로 구현하는 것이 성능이 가장 좋을 뿐, 배열/연결 리스트로 만들어도 됩니다.
+
+
+우선순위 큐(Priority Queue)는 들어간 순서에 상관없이 우선순위가 높은 데이터가 먼저 나오는 자료구조
+
+여러가지 구현방법
+
+
+  시간복잡도의 차이가 발생하는 지점은 내부 데이터를 우선순위 큐의 목적에 맞게 재정렬하는 과정에서 발생합니다
+중요한 차이점은, 재정렬 과정에서 Heap의 경우 Heapify라는 독특한 연산을 통해서 ... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#data-structure">#data-structure</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/favorites/2022/09/21/favorites-todo-read-posting.html">
+          정리해야 할 포스팅
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Sep 21, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/favorites/2022/09/21/favorites-todo-read-posting.html">
+        <p>
+        
+  나중에 읽어보고 정리하고자 작성한 포스팅입니다.
+
+
+읽고 정리해야 할 내용 :)
+
+
+  회원시스템 이벤트기반 아키텍처 구축하기
+  [API 설계] DELETE request 요청/처리/응답에 관한 소소한 고민
+
+ <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#favorites">#favorites</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/voca/2022/09/16/voca-it-voca.html">
+          IT 관련 단어 정리
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Sep 16, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/voca/2022/09/16/voca-it-voca.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+  계속 업데이트할 예정입니다.
+
+
+NFT
+
+
+  대체불가토큰(NFT)는 원본 디지털 이미지를 소유하는 방법으로, 수집품의 디지털 솔루션으로 주목 받는 기술
+  암호 화폐는 디지털 화폐입니다.
+
+
+가상화 기술
+
+
+  하드웨어를 소프트웨어로 구현하는 기술을 가상화 기술이라고 부름
+
+
+
+  하드웨어라는 것은 물리적(Physical) 존재인데, 하드웨어를 소프트웨어 형태로 구현 해버린다? 가능하다.
+
+
+예를 들어 CPU를 소프트웨어로 구현할 수 있냐? 가능
+
+
+  CPU를 보통 Machine이라고 부름. 근데 SW로 구현했으니 ... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#voca">#voca</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/favorites/2022/09/16/favorites-tech-blogs.html">
+          기업 기술 블로그
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Sep 16, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/favorites/2022/09/16/favorites-tech-blogs.html">
+        <p>
+        
+  기업 기술 블로그 목록을 편하게 보고자 작성한 포스팅입니다.
+
+
+Tech Blog :)
+
+
+  Blog - 카카오테크
+  우아한형제들 기술블로그
+  Blog - LINE ENGINEERING
+
+ <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#favorites">#favorites</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/todayilearned/2022/08/27/til-database-realtime-delete.html">
+          TIL 작성 중
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Aug 27, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/todayilearned/2022/08/27/til-database-realtime-delete.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아직 작성 중입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+
+
+DELETE 문 지양 이유
+
+
+  auto_increment id가 들쑥날쑥 해지는 것을 방지
+  혹시 모를 버그나 보안위험이 생겨도 데이터를 지키기 위해
+  데이터 추적을 위해 따로 로그를 남겨둔다거나 state 값을 이용해서 update 문으로 처리
+
+
+
+
+
+  출처
+    
+      delete문 한번더 질문하겠습니다…
+    
+  
+
+ <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#todayilearned">#todayilearned</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/todayilearned/2022/08/19/til-hikari-thread-startvation.html">
+          HikariPool - Thread starvation or clock leap detected 오류
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Aug 19, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/todayilearned/2022/08/19/til-hikari-thread-startvation.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+
+
+상황
+
+
+  재배포 과정 중 AWS 인스턴스 상태 검사가 실패해서 로그를 확인해보니 HikariPool - Thread starvation or clock leap detected라는 메시지가 있었습니다.
+  이게 어떤 오류인지 확인한 내용을 정리합니다.
+  요약하자면, 해당 오류는 consumer thread 갯수에 따른 충분한 HikariCP의 maximum pool size를 설정하지 못해 Dead lock이 발생하면 나타나는 메시지입니다.
+
+
+Hikari Default maximumPoolSize(10개)
+
+
+ ... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#todayilearned">#todayilearned</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/todayilearned/2022/08/18/til-kafka-consumer-sasl-plaintext.html">
+          Kafka 커맨드 라인툴 SASL_PLAINTEXT 연결 설정
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Aug 18, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/todayilearned/2022/08/18/til-kafka-consumer-sasl-plaintext.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+
+
+상황
+
+
+  브로커에 SASL_PLAINTEXT 프로토콜을 설정하면서, 로컬 호스트에서 커맨드 라인툴을 사용할 때도 인증 정보를 제공해줘야 했습니다.
+  사용하고자 했던 커맨드 라인툴 명령어는 토픽 생성 명령어와 브로커가 제대로 동작하는 지 확인하는 명령어였습니다.
+  그래서 커맨드 라인툴에서 SASL_PLAINTEXT 프로토콜을 사용하기 위해 적용했던 내용을 정리합니다.
+
+
+consumer.properties 설정
+
+
+  ${KAFKA_HOME}/config/consumer.properties 파일에 아래 설정을 추가... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#todayilearned">#todayilearned</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/todayilearned/2022/08/02/til-kafka-credentials.html">
+          Kafka credentials 설정
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Aug 02, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 8 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/todayilearned/2022/08/02/til-kafka-credentials.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+
+
+상황
+
+
+  브릿지 모드로 실행되는 스프링부트 컨테이너(도커)에서만 호스트 PC의 카프카에 접근하도록 하기 위해 SASL 인증을 추가하면서 공부한 내용을 정리합니다.
+
+
+JAAS/SASL
+
+
+  Kafka credentials 설정을 하면서 처음 접해본 단어들입니다.
+
+
+JAAS
+
+
+  JAVA 인증 및 인가 서비스 (Java Authentication and Authorization Service)
+  JAAS가 하는 일은 사용자의 인증/인가를 담당합니다.
+    
+      사용자의 인증: 현재 자바코드를 실행하고 ... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#todayilearned">#todayilearned</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/todayilearned/2022/07/25/til-mq-kafka-rabbitmq.html">
+          Kafka와 RabbitMQ 비교
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Jul 25, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 5 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/todayilearned/2022/07/25/til-mq-kafka-rabbitmq.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+
+
+Kafka
+
+Kafka 구조
+
+
+  Kafka는 큐를 구현하지 않는 대신 토픽(topic)라고 불리는 카테고리에 데이터 집합을 저장
+    
+      하나의 토픽은 하나의 파티션 혹은 여러개의 파티션을 가질 수 있음
+    
+  
+  파티션은 실제로 생성되는 토픽 메세지를 저장하는 물리적 파일
+    
+      각 파티션은 메세지가 지속적으로 추가되며 데이터 순서가 정해져있고, 내용이 바뀌지 않음.
+      파티션들은 메세지를 저장하는 물리적 파일로 메세지 추가만 가능한 append-only 속성
+    
+  
+ ... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#todayilearned">#todayilearned</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/todayilearned/2022/07/19/til-grafana-loki.html">
+          Grafana Loki 적용기
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Jul 19, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 5 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/todayilearned/2022/07/19/til-grafana-loki.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+
+
+상황
+
+
+  도커 컨테이너 안에 file로 로그를 쌓아두다가 서버가 죽어버리니 컨테이너도 죽어버렸습니다.
+  컨테이너가 죽어버리니 내부 로그를 볼 수 있는 방법이 없었습니다ㅠㅠ
+  로그를 컨테이너 외부에 쌓아두지 않은 점을 반성하면서 이어서 든 생각은, 서버에 쌓아둬봤자 이전처럼 서버에 문제가 생기면 문제 상황일 때 또 로그를 못 보는 건 매한가지가 아닌가 싶었습니다.
+  그래서 서버 외부에 로그를 쌓는 법을 리서치하면서 Grafana Loki를 적용한 내용을 정리합니다.
+    
+      참고) 위 방식을 적용하기 ... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#todayilearned">#todayilearned</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/favorites/2022/07/19/favorites-blogs.html">
+          즐겨찾는 블로그
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Jul 19, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/favorites/2022/07/19/favorites-blogs.html">
+        <p>
+        
+  제가 자주 방문하는 블로그 목록을 편하게 보고자 작성한 포스팅입니다.
+
+
+Blog :)
+
+
+  거북이같은 개발자의 집필 공간 Evans Library
+  아내와 아들 그리고 딸밖에 모르는 남편
+  함께 자라기
+  Gyun’s 개발일지
+  K리그 프로그래머
+  엘키의 주절 주절
+  BaaaaaaaarkingDog
+  돌이 코딩하는 방
+  굳건하게
+  4주 스프린트에 따라 애자일하게 살고 있습니다. 취미로 야크 털을 깎습니다.
+  윤경구의 Log on Java
+
+ <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#favorites">#favorites</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/todayilearned/2022/07/16/til-querydsl-groupby-date.html">
+          querydsl에서 date 기준으로 통계 쿼리 만들기 (feat. mysql)
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Jul 16, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 5 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/todayilearned/2022/07/16/til-querydsl-groupby-date.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+
+
+상황
+
+
+  개발 화면중에 아래와 같이 깃허브 잔디 심기처럼 한 달 동안의 사용이력을 데이터로 만들어야 했습니다.
+
+
+
+
+date &amp; datetime
+
+
+  도메인에서 사용하던 datetime 필드는 두 가지였습니다.
+    
+      생성시점을 나타내는 created_at
+      수정시점을 나타내는 updated_at
+    
+  
+  그리고 위에서 필요한 쿼리는 time은 필요 없으므로 date를 기준으로 그룹핑 해줘야합니다.
+
+
+해결방법
+
+StringTemplate 정의
+
+
+  StringTemplat... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#todayilearned">#todayilearned</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/todayilearned/2022/07/15/til-throwable-get-cause.html">
+          throwable.getCause()
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Jul 15, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/todayilearned/2022/07/15/til-throwable-get-cause.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+
+
+throwable.getCause()란?
+
+
+  예외가 발생한 근본적인 원인 예외를 반환합니다. 원인 객체가 없는 경우 null을 반환합니다.
+
+
+Throwable getCause();
+
+
+문제 상황
+
+CompletionException
+
+
+  멀티쓰레드를 사용하는 곳에 CompletableFuture.handle()을 적용해서 로직을 처리했었습니다.
+  이 때 해당 쓰레드에서 exception이 발생하면 CompletionException 예외가 반환이 됩니다.
+
+
+# 해당 예외 설명
+Exception thrown w... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#todayilearned">#todayilearned</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/ps/2022/07/13/ps-15559.html">
+          BFS 방문 컴포넌트 갯수 != 싸이클 갯수
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Jul 13, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 7 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/ps/2022/07/13/ps-15559.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+
+
+문제: 내 선물을 받아줘
+
+
+  그래프 내에 존재하는 싸이클 갯수가 정답이 됩니다.
+  그리고 맨 처음 접근한 방식은 BFS로 전체 노드를 방문할 때 몇 개의 컴포넌트로 나뉘는지로 구할 수 있다고 생각했습니다.
+
+
+BFS 방문 컴포넌트 갯수 != 싸이클 갯수
+
+
+  이 방식은 정답이 아닙니다.
+  왜냐면 싸이클 루프에 포함되지는 않지만 싸이클에 진입하는 외부 노드의 경우 문제가 됩니다.
+  싸이클에 진입하는 외부 노드의 BFS 호출이 싸이클 루프의 BFS 호출보다 나중에 이뤄진다면, 외부 노드는 방문하지 않았으므로 BF... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#ps">#ps</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#boj">#boj</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/ps/2022/07/07/ps-prefix-sum.html">
+          구간합 구하기
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Jul 07, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/ps/2022/07/07/ps-prefix-sum.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+  계속 업데이트할 예정입니다.
+
+
+구간합(feat. 원형 구간)
+
+예시 문제: 피자판매
+
+
+  i~j까지의 구간에 대한 구간합을 prefixSum 배열을 쓰지 않고 단순하게 구한다면 O(N^2)이 필요합니다.
+    
+      중요한 건 st, len 형태의 2중 포문으로 정의할 수 있습니다.
+        
+          st: 구간합 계산을 시작하는 인덱스
+          len: st부터 몇 개의 원소를 셀 건지 나타내는 길이
+            
+              범위가 len &lt; N-1인 이... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#ps">#ps</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/ps/2022/07/05/ps-solution-shorts.html">
+          알고리즘별 풀이 쇼츠
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Jul 05, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 18 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/ps/2022/07/05/ps-solution-shorts.html">
+        <p>
+        
+  필요한대로 계속 업데이트할 예정입니다 :)
+
+
+이진탐색
+
+Lower bound
+
+
+  원하는 target 이상의 값이 최초로 나오는 위치를 뜻합니다.
+  달리 말하면, target보다 같거나 큰 원소의 위치 중 가장 작은 위치를 의미합니다.
+
+
+int getLowerBound(int[] numbers, int val) {
+    int st = 0;
+    int en = N-1;
+    int lowerBound = IMPOSSIBLE;
+
+    while (st &lt;= en) {
+        int mid = (st + en) / 2;
+
+        if (numbers[mid] &gt;= val)... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#ps">#ps</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/todayilearned/2022/07/04/til-java-exception-with-enum.html">
+          Enum을 사용한 자바 예외처리
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Jul 04, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 6 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/todayilearned/2022/07/04/til-java-exception-with-enum.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+
+
+INTRO
+
+
+  기존에는 MessageSourceAccessor를 사용하여 예외 메시지 처리를 했었습니다.
+  근데 사용자 정의 예외가 늘어날 때마다 해당 예외 클래스를 추가로 정의해야하는 게 옳은 방식인가 의문이 들었습니다.
+  그래서 Enum을 사용한 예외 처리 방식을 공부했고, 거기에 MessageSourceAccessor를 적용해본 내용을 정리합니다.
+
+
+MessageSourceAccessor
+
+
+  선택사항이지만 예외를 생성하는 곳과 예외 메시지를 만드는 곳을 분리하기 위해 적용했습니다.
+  Enum을 사용해... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#todayilearned">#todayilearned</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/todayilearned/2022/07/03/til-docker-compose-zero-downtime-deploy.html">
+          docker-compose를 사용한 spring-boot 무중단 배포 과정
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Jul 03, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 7 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/todayilearned/2022/07/03/til-docker-compose-zero-downtime-deploy.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+
+
+INTRO
+
+
+  프로젝트를 진행하며 멀티 모듈 구조인 서로 다른 서버 3개를 한 번에 띄웠었습니다.
+  그래서 도커 컴포즈를 이용했었는데, 도커 컴포즈도 이용하면서 무중단 배포를 적용해야겠다 싶어 공부한 내용을 정리합니다.
+  여기서 적용한 무중단 배포는 1대의 서버내에서 nginx reload를 사용하여 서버가 서비스를 제공하는 인스턴스를 변경하는 것을 의미합니다!
+  +) Blue/Green 배포 방식을 적용했습니다.
+
+
+2개의 docker-compose
+
+
+  우선, blue &amp; green 배포를 위해 d... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#todayilearned">#todayilearned</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/todayilearned/2022/06/28/til-multi-module.html">
+          멀티 모듈과 @EntityScan, @EnableJpaRepositories
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Jun 28, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 3 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/todayilearned/2022/06/28/til-multi-module.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+
+
+포스팅 작성 배경
+
+
+  멀티 모듈로 작업을 하게 되면 library 모듈과 서비스 모듈이 분리되므로 Entity, Repository 사용에 있어 바뀌는 부분이 생깁니다.
+  싱글 DB일 때와 멀티 DB인 경우로 나뉠 수 있는데 이 부분을 정리하고자 작성합니다.
+
+
+싱글 DB를 사용하는 경우
+
+
+  멀티 모듈에서 하나의 DB만 접근해서 사용하는 경우입니다.
+  하나의 DB만 사용하는 경우 별도의 트랜잭션 매니저를 정의하지 않아도 됩니다.
+  즉, 별도로 PlatformTransactionManager 빈을 정의하지 않아도 됩니다.
+  그러나 멀티 모듈이므로 @En... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#todayilearned">#todayilearned</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/todayilearned/2022/06/28/til-join-fetchjoin.html">
+          Fetch Join과 일반 Join(with DTO)
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Jun 28, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 3 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/todayilearned/2022/06/28/til-join-fetchjoin.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+
+
+테스트
+
+
+  Querydsl을 사용해서 DTO를 조회하는 코드입니다.
+
+
+@RequiredArgsConstructor
+@Repository
+public class QuizQueryRepository {
+
+    private final JPAQueryFactory jpaQueryFactory;
+
+    public List&lt;QuizQueryDto&gt; findAll(Long userId, Pageable pageable) {
+        return jpaQueryFactory.select(
+         ... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#todayilearned">#todayilearned</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/algorithm/2022/06/27/algo-lcs.html">
+          LCS(최장 공통 문자열, 부분수열)
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Jun 27, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 5 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/algorithm/2022/06/27/algo-lcs.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+
+
+문자열과 부분수열의 차이점
+
+
+  이미지 출처: LCS(최장 공통 부분 수열) 알고리즘 :: 마이구미
+
+
+
+
+LC Substring
+
+공통 부분 문자열(Longest Common Substring)
+
+
+  연속한 값만 취급합니다.
+
+
+점화식
+
+if i == 0 or j == 0:  # margin 셋팅
+	LCS[i][j] = 0
+elif string_A[i] == string_B[j]:
+	LCS[i][j] = LCS[i - 1][j - 1] + 1
+else:
+	LCS[i][j] = 0
+
+
+예시 코드
+
+
+  중요한 건, ... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#algorithm">#algorithm</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/todayilearned/2022/06/23/til-datasource.html">
+          DataSource에 대한 이해
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Jun 23, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/todayilearned/2022/06/23/til-datasource.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+
+
+JDBC란
+
+JDBC 표준 인터페이스
+
+
+  JDBC(Java Database Connectivity)는 자바에서 데이터베이스에 접속할 수 있도록 하는 자바 API
+  JDBC는 데이터베이스에서 자료를 쿼리하거나 업데이트하는 방법을 제공합니다.
+  그런데 인터페이스만 있다고해서 기능이 동작하지는 않습니다.
+  그러므로 이 JDBC 인터페이스를 각각의 DB 벤더에서 자신의 DB에 맞도록 구현해서 라이브러리로 제공하는데, 이것을 JDBC 드라이버라고 합니다.
+
+
+DataSource 탄생 배경
+
+
+  DB 커넥션을 얻는 방법... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#todayilearned">#todayilearned</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/algorithm/2022/06/23/algo-backtrack.html">
+          백트래킹 시간복잡도
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Jun 23, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/algorithm/2022/06/23/algo-backtrack.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+
+
+시간복잡도
+
+
+  일반적으로 백트래킹은 시간복잡도가 2^N인 Exponential이라고 볼 수 있습니다.
+  좀 더 일반적으로 말하자면 (매 깊이에서 선택할 수 있는 경우의 수)^(총 뽑아야 하는 갯수) 입니다.
+
+
+
+
+
+  참고
+    
+      알고리즘 - 백트래킹(Backtracking)
+    
+  
+
+ <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#algorithm">#algorithm</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/ps/2022/06/22/ps-1655.html">
+          힙 두개 사용해서 실시간 중간값 구하기
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Jun 22, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/ps/2022/06/22/ps-1655.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+
+
+문제: 가운데를 말해요
+
+
+  값이 들어올 때마다 중간값을 실시간으로 계산해줘야하는 문제입니다.
+  최대힙과 최소힙을 사용하여 더 빠르게 중간값을 구할 수 있습니다.
+
+
+
+
+규칙
+
+아래 세 개의 규칙을 유지하며 데이터를 넣으면 최대 힙의 top 값이 중간값이 됩니다.
+
+
+  최대 힙의 크기가 최소힙의 크기보다 1 크거나 같도록 유지하며 값을 넣습니다.
+    
+      두 힙의 크기가 같다면 최대힙부터 값을 넣습니다.
+    
+  
+  최소 힙에 있는 값은 모두, 최대 힙에 있는 값보다 큽니다.
+  값을 넣은 후에 최... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#ps">#ps</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#boj">#boj</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/ps/2022/06/21/ps-22251.html">
+          전광판 LED 숫자 비트로 나타내기
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Jun 21, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 9 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/ps/2022/06/21/ps-22251.html">
+        <p>
+        문제: 빌런 호석
+
+
+  아래와 같이 LED 전광판으로 숫자를 나타내고, 주어진 비트 수로 숫자 A에서 숫자 B를 만들 수 있는지 판단해야 하는 문제입니다.
+
+
+
+
+
+  이미지 출처: https://www.acmicpc.net/problem/22251
+
+
+풀이 아이디어
+
+숫자 나타내는 법
+
+
+  LED 전광판 숫자를 나타내는 방법은, 하나의 숫자를 만드는데 최대 7개의 비트가 필요하므로 아래와 같이 숫자를 나타낼 수 있습니다.
+
+
+static String[] numbers = {
+        "1110111",  //0
+        "0010010",  //1
+        "1011101",  //2
+    ... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#ps">#ps</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#boj">#boj</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/todayilearned/2022/06/20/til-handle.html">
+          프로젝트에 CompletableFuture handle 적용하기
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Jun 20, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 3 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/todayilearned/2022/06/20/til-handle.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+
+
+적용배경
+
+
+  모든 요청을 단일 쓰레드에서 처리할 수는 없으므로 멀티 쓰레드 구조로의 전환이 필요했습니다.
+  최소, 리소스 생성같은 역할은 별도의 쓰레드로 분리하여 리소스를 생성하는 과정에서 생기는 오류/장애 분리
+
+
+handle
+
+
+  handle()은 작업이 완료된 다음에 얻게될 결과와 예외를 모두 parameter로 사용할 수 있습니다.
+  handle()은 현재 얻은 결과 또는 예외를 다른 값으로 변환할 수 있습니다.
+
+
+public &lt;U&gt; CompletableFuture&lt;U&gt; handl... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#todayilearned">#todayilearned</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/algorithm/2022/06/20/algo-dp-topdown.html">
+          Top-down DP로 풀이전환 시 고려해야 할 것들
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Jun 20, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 6 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/algorithm/2022/06/20/algo-dp-topdown.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+
+
+
+
+1.intro
+
+
+  외판원 순회 문제를 비트마스킹만 사용하면 시간 복잡도가 초과합니다.
+  같은 상태지만 서로 다른 순서로 접근하는 경우의 수를 모두 중복 연산하기 때문입니다.
+    
+      13425 순서로 방문 -&gt; 결국 방문상태는 12345
+      15432 순서로 방문 -&gt; 결국 방문상태는 12345
+    
+  
+  위 문제를 Topdown dp로 바꾸면서 중복 연산을 제거하려고 할 때 중요한 부분에 대해 적어봅니다.
+
+
+2.dp 배열 초기값과 방문 표시 상태 분리하기
+
+
+  dp 배열... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#algorithm">#algorithm</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/ps/2022/05/19/ps-1707.html">
+          DFS 결과 합쳐서 리턴하기 (Feat. 이분 그래프)
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> May 19, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 5 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/ps/2022/05/19/ps-1707.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+
+
+문제: 이분 그래프
+
+DFS 알고리즘을 사용해서 이분 그래프인지 아닌지 확인할 수 있습니다.
+
+이분 그래프란
+
+
+  인접한 노드는 서로 다른 색의 노드로 구분되어야 합니다.
+  그래프 내의 모든 노드를 두 가지 색으로만 칠할 수 있는 그래프를 의미합니다.
+
+
+문제 해결 방법
+
+
+  DFS로 아무 노드나 방문하면서 A색깔을 칠해줍니다.
+  현재 노드와 인접한 노드를 방문하면서 현재의 색깔(A색깔)과 다른 B색깔로 칠해줍니다.
+    
+      인접 노드 상태 확인 시, 이미 방문했는데 A색깔로 칠해져있다면 이 그래프는 ... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#ps">#ps</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#boj">#boj</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/ps/2022/05/19/ps-12851.html">
+          BFS 최단 경로 &#39;갯수&#39; 구하기
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> May 19, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 5 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/ps/2022/05/19/ps-12851.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+
+
+문제: 숨바꼭질 2
+
+단순 BFS로 최단 경로를 구할 수 있을 때, 그 경로의 갯수는 어떻게 구할 수 있을까요?
+
+BFS에서의 최단 경로
+
+BFS는 DFS와 달리, 잘못된 경로 탐색으로 무한루프에 빠지지 않으므로 BFS로만 해결할 수 있는 문제 유형이 있습니다.
+
+
+  ex. 숫자 A에서 최소 갯수의 연산자(+,-,*)를 사용해서 숫자 B 만들기
+
+
+문제 해결 방법
+
+BFS 탐색 시 사용하는 방문 표시를 하는 순서를 바꿔서 해결할 수 있습니다.
+
+
+  일반적으로 최적화를 위해서 다음 인접 노드(상태)를 순회하는 루프문 ... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#ps">#ps</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#boj">#boj</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/algorithm/2022/05/16/algo-dijkstra.html">
+          다익스트라 문제 접근 방법
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> May 16, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/algorithm/2022/05/16/algo-dijkstra.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+
+
+
+
+다익스트라 문제 접근 시 활용할 수 있는 팁에 대해 알아보겠습니다.
+
+역방향 간선 고려하기
+
+
+  문제에서 간선이 단방향으로 주어질 때 역방향 간선을 활용해서 문제를 해결해야 할 수도 있습니다.
+
+
+예시문제: BOJ17835번: 면접보는 승범이네
+
+
+  위 문제의 경우 역방향 간선을 구해서 면접장 -&gt; 도시의 거리를 구하는 방식으로 해결해야 합니다.
+
+
+시작 노드 여러 개 넣기
+
+
+  다익스트라의 일반 예시는 시작 정점을 한 개만 놓고 풉니다.
+  하지만 시작 정점을 여러개로 두고 다익스트라를 한 번만 돌릴 수... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#algorithm">#algorithm</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/ps/2022/05/11/ps-14939.html">
+          14939번 불 끄기
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> May 11, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 6 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/ps/2022/05/11/ps-14939.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+
+
+문제: 불 끄기
+
+문제해결 아이디어
+
+
+  첫 줄만 어떤 버튼을 누를 지 결정하면
+  두 번째 줄부터는 윗 줄의 전구가 켜져있는지 여부에 따라서 현재 전구를 누를지 말지를 그리디하게 정할 수 있습니다.
+
+
+따라서 탐색 범위는 첫 줄을 클릭하는 모든 경우의 수(2^10)만 구하면 나머지 칸을 눌러야 할 지 말아야 할지는 알아서 결정됩니다.
+
+
+  그렇게 첫 줄의 정보가 완성되면, 두 번째 줄부터 나머지 줄까지 전부 순회를 하면서 윗 칸이 켜져 있으면 자기 자신을 누르면 됩니다.
+
+
+코드
+
+import java.io.*;
+... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#ps">#ps</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#boj">#boj</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/algorithm/2022/05/11/algo-lis.html">
+          최장 증가 부분 수열(LIS)
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> May 11, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 18 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/algorithm/2022/05/11/algo-lis.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+
+
+대표 예시 문제
+
+LIS 유형 문제입니다.
+
+
+  반도체 설계
+  가장 긴 증가하는 부분 수열 5
+  전깃줄 - 2
+
+
+
+
+최장 증가 부분 수열(LIS)이란
+
+원소가 n개인 배열의 일부 원소를 골라내서 만든 부분 수열 중, 각 원소가 이전 원소보다 크다는 조건을 만족하고, 그 길이가 최대인 부분 수열을 최장 증가 부분 수열이라고 합니다.
+
+
+
+O(NlogN) 알고리즘
+
+lower bound
+
+
+  정렬된 배열 arr에서 어떠한 값 val의 lower bound란, arr을 정렬된 상태로 유지하면서 val이 삽입될 수 있... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#algorithm">#algorithm</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/ps/2022/05/10/ps-9935.html">
+          9935번 문자열 폭발
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> May 10, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 5 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/ps/2022/05/10/ps-9935.html">
+        <p>
+        문제: 문자열 폭발
+
+문제해결 아이디어는 Stack 사용과 폭발 문자열의 인덱스 저장입니다.
+
+스택의 역할
+
+
+  문제를 해결하기 위한 자료형은 스택입니다. 스택을 통해 전체 문자열을 한 번만 훑어서 해결하도록 합니다.
+  스택의 역할은 Pair(char, int)을 저장하고 있으며 char는 폭발 문자열 안에 포함된 문자, int는 char 문자의 인덱스를 나타냅니다.
+  예를 들어 전체 문자열이 12ab112ab2ab이고, 폭발 문자열이 12ab이면, 스택에서 폭발 문자열을 만날때 마다 아래와 같이 저장을 합니다.
+
+
+// Pair(char, int)
+// Pair(폭발 문자열 안에 포함된 문자, char 문자... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#ps">#ps</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#boj">#boj</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/algorithm/2022/05/10/algo-tree-dp.html">
+          Tree DP
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> May 10, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 6 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/algorithm/2022/05/10/algo-tree-dp.html">
+        <p>
+        
+  개인 공부 목적으로 작성한 포스팅입니다.
+  아래 출처를 참고하여 작성하였습니다. :)
+
+
+대표 예시 문제
+
+Tree DP 유형 문제입니다.
+
+
+  사회망 서비스(SNS)
+  스크루지 민호 2
+  우수 마을
+
+
+Tree DP란
+
+대표적인 Tree DP 유형의 문제라면 아래 두 가지 조건을 가지고 있습니다.
+
+
+  주어진 자료구조는 트리
+  부모 노드 값을 구하려면 자식 노드의 값을 모두 알아야 할 때
+
+
+1번 조건은 트리에 해당되는 특징이고, 2번 조건은 DP에 해당하는 특징입니다.
+
+문제 해결 과정1
+
+먼저 문제를 해결하기 위한 DP 테이블 정의와 점화식에 대해 알아보겠습니다.
+
+
+  DP 테이블 정의
+  ... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#algorithm">#algorithm</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/boj/2022/05/09/boj-1991.html">
+          1991번 트리 순회
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> May 09, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 4 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/boj/2022/05/09/boj-1991.html">
+        <p>
+        문제: 트리 순회
+
+
+  트리 순회 개념을 안다면 다른 것보다 트리를 어떻게 구현했냐가 중요한 문제인 거 같습니다.
+  저는 2차원 인접행렬을 사용해서 트리를 구현했습니다.
+    
+      0번 인덱스에는 왼쪽 자식 노드, 1번 인덱스에는 오른쪽 자식 노드
+    
+  
+  트리만 잘 구현하고 트리 순회 순서에 맞게 호출하면 해결할 수 있습니다.
+
+
+코드
+
+import java.io.*;
+import java.util.*;
+
+
+public class Main {
+
+    public static int N;
+    public static int[][] tree;
+
+    public static void ma... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#boj">#boj</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/boj/2022/05/09/boj-11779.html">
+          11779번 최소비용 구하기 2
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> May 09, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 6 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/boj/2022/05/09/boj-11779.html">
+        <p>
+        문제: 최소비용 구하기 2
+
+
+  최소 비용 문제이므로 다익스트라로 해결할 수 있습니다.
+  유의해야 할 점은 비용 값이 21억을 넘어갈 수 있으니 비용 계산 시 long을 사용해야 합니다.
+  최단 경로를 기억하기 위해서 int[] parent라는 배열을 생성해서 dist 배열값이 갱신될 때 마다 parent도 갱신해줍니다.
+    
+      parent[nxtNode] = nowNode;
+      parent 배열 각 인덱스의 초기값은 자기 자신입니다.
+    
+  
+  다익스트라로 전부 순회한 뒤 도착 노드부터 parent 배열을 활용해서 역순으로 방문한 노드를 저장해줍니다.
+  현재 도착노드 =&gt; ... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#boj">#boj</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/boj/2022/05/09/boj-11725.html">
+          11725번 트리의 부모 찾기
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> May 09, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 4 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/boj/2022/05/09/boj-11725.html">
+        <p>
+        문제: 트리의 부모 찾기
+
+
+  BFS로 해결할 수 있는 문제입니다.
+  인접 그래프로 트리를 저장한 뒤 루트 노드를 시작점으로 BFS로 순회를 합니다.
+    
+      BFS 순회를 하면서 저장할 값은 {node: root, depth: 1} 입니다.
+    
+  
+  새로운 노드를 방문할 때 마다 새로운 노드와 기존에 방문한 노드 깊이 + 1을 큐에 넣어줍니다.
+    
+      {node: newNode, depth: depth + 1}
+    
+  
+  루트부터 bfs를 한 번 돌면 모든 노드가 트리에서 가지고 있는 깊이를 알 수 있습니다.
+  루프를 N번 돌면서 각 노드의 인접 노드(부모 OR 자식)... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#boj">#boj</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/boj/2022/05/09/boj-11286.html">
+          11286번 절댓값 힙
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> May 09, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/boj/2022/05/09/boj-11286.html">
+        <p>
+        문제: 절댓값 힙
+
+
+  힙으로 해결할 수 있는 문제입니다.
+  주어진 조건에 맞게 정수를 담는 힙을 선언합니다.
+    
+      1순위 비교 조건은 절댓값 내림차순
+      2순위 비교 조건은 값 내림차순
+    
+  
+
+
+코드
+
+import java.io.*;
+import java.util.*;
+
+
+public class Main {
+
+    public static int N;
+
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStream... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#boj">#boj</a></div>
+    </li></ul>
+
+  <!-- Pagination links --></div>
+</div>
+
+
+  </section>
+  <section class="sidebar" style="margin-left: 15px;">
+    <!-- Get sidebar items -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="common-list">
+  <ul>
+    <li>
+      <a href="/jekyll-theme-yat/index.html">
+        All<span>43</span>
+      </a>
+    </li>
+
+    
+      <li>
+        <a href="/jekyll-theme-yat/categories.html#h-algorithm">
+          algorithm <span>6</span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/jekyll-theme-yat/categories.html#h-boj">
+          boj <span>4</span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/jekyll-theme-yat/categories.html#h-data-structure">
+          data-structure <span>1</span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/jekyll-theme-yat/categories.html#h-favorites">
+          favorites <span>3</span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/jekyll-theme-yat/categories.html#h-ps">
+          ps <span>9</span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/jekyll-theme-yat/categories.html#h-todayilearned">
+          todayilearned <span>15</span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/jekyll-theme-yat/categories.html#h-voca">
+          voca <span>5</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+</section>
+</div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/jekyll-theme-yat/"></data>
+
+  <div class="wrapper">
+    <div class="site-footer-inner"><div>Unpublished Work <span class="copyleft">&copy;</span> 2017-2024 cotchan</div>
+      <div>Powered by <a title="Jekyll is a simple, blog-aware, static site
+      generator." href="https://jekyllrb.com/">Jekyll</a> &amp; <a title="Yat, yet
+      another theme." href="https://github.com/jeffreytse/jekyll-theme-yat">Yat Theme</a>.</div>
+      <div class="footer-col rss-subscribe">Subscribe <a href="/jekyll-theme-yat/feed.xml">via RSS</a></div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

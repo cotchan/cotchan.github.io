@@ -1,0 +1,872 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="https://cotchan.github.io/jekyll-theme-yat/feed.xml" rel="self" type="application/atom+xml" /><link href="https://cotchan.github.io/jekyll-theme-yat/" rel="alternate" type="text/html" /><updated>2024-02-19T03:56:53+00:00</updated><id>https://cotchan.github.io/jekyll-theme-yat/feed.xml</id><title type="html">DEVELOPMENT</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>cotchan</name></author><entry><title type="html">CS 단어 정리(데이터베이스)</title><link href="https://cotchan.github.io/jekyll-theme-yat/voca/2024/02/15/voca-cs-voca-db.html" rel="alternate" type="text/html" title="CS 단어 정리(데이터베이스)" /><published>2024-02-15T00:00:00+00:00</published><updated>2024-02-15T00:00:00+00:00</updated><id>https://cotchan.github.io/jekyll-theme-yat/voca/2024/02/15/voca-cs-voca-db</id><content type="html" xml:base="https://cotchan.github.io/jekyll-theme-yat/voca/2024/02/15/voca-cs-voca-db.html"><![CDATA[<ul>
+  <li>개인 공부 목적으로 작성한 포스팅입니다.</li>
+  <li>아래 출처를 참고하여 작성하였습니다. :)</li>
+  <li>계속 업데이트할 예정입니다.</li>
+</ul>
+
+<h3 id="join">JOIN</h3>
+
+<h4 id="equi-join">Equi Join</h4>
+
+<ul>
+  <li>등가조인[Equi Join]</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="err">테이블</span><span class="mi">1</span><span class="p">,</span> <span class="err">테이블</span><span class="mi">2</span>
+	<span class="k">WHERE</span> <span class="err">테이블명</span><span class="mi">1</span><span class="p">.</span><span class="err">컬럼명</span><span class="mi">1</span><span class="o">=</span><span class="err">테이블명</span><span class="mi">2</span><span class="p">.</span><span class="err">컬럼명</span><span class="mi">2</span><span class="p">;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>테이블간의 <code class="language-plaintext highlighter-rouge">공통 컬럼을 활용</code>하여 각 테이블의 특정 컬럼에 <code class="language-plaintext highlighter-rouge">일치한 데이터를 기준으로 연결</code>하는 방법
+    <ul>
+      <li>두 개의 테이블 간의 일치하는 것을 조인(교집합)</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">등가조인(Equi Join)</code> = <code class="language-plaintext highlighter-rouge">내부조인(Inner Join)</code> = <code class="language-plaintext highlighter-rouge">단순조인(Simple Join)</code></li>
+</ul>
+
+<h4 id="natural-join">NATURAL JOIN</h4>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="err">출력할</span> <span class="err">칼럼명</span><span class="mi">1</span><span class="p">,</span> <span class="err">칼럼명</span><span class="mi">2</span><span class="p">,..</span>
+	<span class="k">FROM</span> <span class="err">테이블명</span><span class="mi">1</span> <span class="k">NATURAL</span> <span class="k">JOIN</span> <span class="err">테이블명</span><span class="mi">2</span><span class="p">;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>두 테이블 간 <code class="language-plaintext highlighter-rouge">동일한 이름을 갖는 모든 칼럼</code>에 대해 <code class="language-plaintext highlighter-rouge">EQUI JOIN을 수행</code>하는 방법</li>
+  <li>USING 조건절, ON조건절, WHERE절에서의 JOIN조건을 함께 정의 불가</li>
+  <li>NATURAL JOIN에 사용된 칼럼들은 <code class="language-plaintext highlighter-rouge">같은 데이터 유형</code>이어야 함</li>
+  <li>NATURAL JOIN은 Alias(별칭)이나 테이블명과 같은 접두사(ex&gt; EMP.DEPTNO)를 붙일 수 없음</li>
+</ul>
+
+<hr />
+
+<ul>
+  <li>참고
+    <ul>
+      <li><a href="https://2030bigdata.tistory.com/222">[개미의 걸음 SQLD 2과목] JOIN(외부조인, 내부조인, 등가조인 , 비등가조인 , 셀프조인, 네츄럴조인, 크로스 조인)</a></li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>cotchan</name></author><category term="voca" /><category term="voca" /><summary type="html"><![CDATA[개인 공부 목적으로 작성한 포스팅입니다. 아래 출처를 참고하여 작성하였습니다. :) 계속 업데이트할 예정입니다.]]></summary></entry><entry><title type="html">CS 단어 정리(네트워크)</title><link href="https://cotchan.github.io/jekyll-theme-yat/voca/2024/02/15/voca-cs-voca-network.html" rel="alternate" type="text/html" title="CS 단어 정리(네트워크)" /><published>2024-02-15T00:00:00+00:00</published><updated>2024-02-15T00:00:00+00:00</updated><id>https://cotchan.github.io/jekyll-theme-yat/voca/2024/02/15/voca-cs-voca-network</id><content type="html" xml:base="https://cotchan.github.io/jekyll-theme-yat/voca/2024/02/15/voca-cs-voca-network.html"><![CDATA[<ul>
+  <li>개인 공부 목적으로 작성한 포스팅입니다.</li>
+  <li>아래 출처를 참고하여 작성하였습니다. :)</li>
+  <li>계속 업데이트할 예정입니다.</li>
+</ul>
+
+<h3 id="공인-ip">공인 IP</h3>
+
+<ul>
+  <li>말 그대로 <code class="language-plaintext highlighter-rouge">외부에 공개되어 있는 IP</code></li>
+  <li><code class="language-plaintext highlighter-rouge">통신에서 쓰이는 실제 주소</code>이자 공개된 주소. <code class="language-plaintext highlighter-rouge">전 세계에서 유일</code>
+    <ul>
+      <li>공인IP주소를 알면 누구라도 그 주소를 토대로 연결된 기기에 1차적인 접근이 가능</li>
+    </ul>
+  </li>
+  <li>외부에 공개되어 있기 때문에 인터넷에 연결된 다른 컴퓨터에서 접근이 가능하며, 해킹의 위험이 있기 떄문에 보안 프로그램을 설치해야 한다.</li>
+</ul>
+
+<h3 id="내부-ip가상-ip사설-ip">내부 IP/가상 IP/사설 IP</h3>
+
+<ul>
+  <li>가상IP주소는 명칭 그대로 실제 주소가 아닌 가상의 주소</li>
+  <li>공유기를 통해 인터넷에 접속하게 되면 가상 IP주소가 부여된다.
+    <ul>
+      <li>와이파이, 학교 공용 컴퓨터 등을 보면 아이피가 거의 사설 아이피인것을 확인 할 수 있다.</li>
+    </ul>
+  </li>
+  <li>실제로 <code class="language-plaintext highlighter-rouge">한 공유기를 통해 여러 기기를 사용하듯</code>, <code class="language-plaintext highlighter-rouge">공유기에 공인IP를 부여</code>하고 그에 <code class="language-plaintext highlighter-rouge">연결된 각 기기에는 가상IP를 사용</code>하여 <code class="language-plaintext highlighter-rouge">한 IP주소를 공유하여 쓸 수 있다.</code></li>
+  <li><code class="language-plaintext highlighter-rouge">사설 IP는 국제 표준에 의해 특수목적으로 예약된 IP</code>이므로 내부 충돌을 빼고는 충돌할 염려는 안해도 된다.</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/75410527/193409467-c26580a7-a46a-44f3-840d-267fd31ffd20.jpeg" alt="image_2700764111497423041181" /></p>
+
+<ul>
+  <li>이미지출처: <a href="https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&amp;blogId=with_msip&amp;logNo=221029109709">IP주소란 무엇일까? 가상IP 부터 MAC주소까지 그 궁금증을 풀어보자!</a></li>
+</ul>
+
+<h4 id="비유">비유</h4>
+
+<ul>
+  <li>예를 들어 서울시 서울구 서울동 서울아파트 101동 202호에 홍길동이라는 사람이 산다고 가정을 한다면, 이 주소에서 <code class="language-plaintext highlighter-rouge">'서울시 서울구 서울동 서울아파트'에 해당하는 부분이 공인 IP</code>, <code class="language-plaintext highlighter-rouge">'101동 202호'에 해당하는 부분이 사설 IP</code>가 된다. 이 홍길동이라는 사람이 같은 서울아파트에 사는 친구에게 101동 202호로 오라고 말하면서 초대한다면 그 친구는 당연히 서울아파트 101동 202호라고 생각하고 홍길동의 집을 찾을 수 있다. 그러나 이 홍길동이라는 사람이 부산시 부산구 부산동 부산아파트에 사는 사람한테 101동 202호라고 말해주면 그 사람은 홍길동의 의도와는 다르게 부산아파트 101동 202호로 가려고 할 것이고 당연히 그 곳에 홍길동이 있을 리 없으니 찾을 수 없다.</li>
+  <li>마찬가지로 어떤 사설망에서 A라는 컴퓨터에 할당된 사설 IP 주소가 192.168.1.2라고 가정한다면, <code class="language-plaintext highlighter-rouge">같은 사설망 내의 다른 컴퓨터를 이용하여 192.168.1.2로 접속을 시도하면 A라는 컴퓨터로 접속할 수 있지만</code>, 다른 사설망 내의 컴퓨터를 이용하여 192.168.1.2로 접속을 시도하면 A라는 컴퓨터로 접속할 수 없다.</li>
+  <li>또한, 사설 IP는 같은 사설망 안에서 IP가 중복되면 안 되지만 <code class="language-plaintext highlighter-rouge">다른 사설망끼리는 IP가 중복돼도 무방하다.</code></li>
+  <li>두 개의 컴퓨터가 192.168.1.2라는 IP를 받는다면, 이 두 컴퓨터가 같은 사설망 안에 있다면 IP 중복으로 충돌이 일어나지만 다른 사설망 안에 있다면 IP가 중복돼도 충돌이 일어날 일은 없다.</li>
+</ul>
+
+<h4 id="사설-ip-대역">사설 IP 대역</h4>
+
+<ul>
+  <li>IPv4
+    <ul>
+      <li>10.0.0.0 ~ 10.255.255.255(10.0.0.0/8)</li>
+      <li>172.16.0.0 ~ 172.31.255.255(172.16.0.0/12)</li>
+      <li>192.168.0.0 ~ 192.168.255.255(192.168.0.0/16)</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="장점">장점</h4>
+
+<ul>
+  <li>IPv4 주소의 완전한 고갈을 최대한 지연시킬 수 있다.</li>
+</ul>
+
+<h4 id="단점">단점</h4>
+
+<ul>
+  <li>외부 접근이 어렵다.</li>
+</ul>
+
+<h3 id="nat-ip">NAT IP</h3>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">외부망</code>과 <code class="language-plaintext highlighter-rouge">내부망</code>을 나눠주는 기능을 하는 IP  <br />
+<code class="language-plaintext highlighter-rouge">사설 네트워크에 속한 여러 개의 호스트</code>가 <code class="language-plaintext highlighter-rouge">하나의 공인 IP 주소를 사용</code>하여 인터넷에 접속하기 위해 사용</p>
+</blockquote>
+
+<p>사용 예시: 공인 NAT IP로 방화벽을 해제하였으니, NAT IP를 사용하여 테스트 부탁드립니다.</p>
+
+<h4 id="nat-ip란">NAT IP란?</h4>
+
+<ul>
+  <li>NAT은 <code class="language-plaintext highlighter-rouge">Network Address Translation</code>의 줄임말입니다.</li>
+  <li>즉, NAT은 사설 네트워크에 속한 여러 개의 호스트가 하나의 공인 IP 주소를 사용하여 인터넷에 접속하기 위해 사용합니다.</li>
+  <li>즉, 외부망과 내부망을 나눠주는 기능을 하는 IP라고 보면 됩니다.</li>
+</ul>
+
+<h4 id="nat-특징">NAT 특징</h4>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">내부에서 외부로 통신가능</code> (out-bound call 가능)</li>
+  <li>외부에서 내부로 통신불가 (In-bound call 불가)</li>
+</ol>
+
+<h4 id="nat-장점">NAT 장점</h4>
+
+<ul>
+  <li>여러 사설 네트워크를 사용함으로서 인터넷 공인 IP 주소를 절약할 수 있습니다.</li>
+  <li>사내망 IP주소를 외부로 알리지 않음으로서 외부로부터의 침입/공격 차단이 가능합니다.</li>
+</ul>
+
+<h4 id="nat-단점">NAT 단점</h4>
+
+<ul>
+  <li>네트워크의 복잡성 증가</li>
+  <li>네트워크 지연 영향</li>
+</ul>
+
+<h4 id="nat-종류">NAT 종류</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Static NAT</code>: 사설IP와 공인 IP를 1:1로 매핑</li>
+  <li><code class="language-plaintext highlighter-rouge">Dynamic NAT</code>: 다수의 공인 IP와 다수의 사설 IP를 매핑</li>
+  <li><code class="language-plaintext highlighter-rouge">PAT</code>: 1개의 공인 IP와 다수의 사설 IP 매핑 =&gt; 1개의 공인 IP에 port를 구분하여 사설 PC를 구분합니다.</li>
+</ul>
+
+<hr />
+
+<ul>
+  <li>참고
+    <ul>
+      <li><a href="https://namu.wiki/w/%EC%82%AC%EC%84%A4%20IP">사설 IP</a></li>
+      <li><a href="https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&amp;blogId=with_msip&amp;logNo=221029109709">IP주소란 무엇일까? 가상IP 부터 MAC주소까지 그 궁금증을 풀어보자!</a></li>
+      <li><a href="https://bamdule.tistory.com/189">[Network] 공인 IP, 사설 IP, 고정IP, 유동 IP 란?</a></li>
+      <li><a href="https://blog.voidmainvoid.net/319">NAT IP란?</a></li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>cotchan</name></author><category term="voca" /><category term="voca" /><summary type="html"><![CDATA[개인 공부 목적으로 작성한 포스팅입니다. 아래 출처를 참고하여 작성하였습니다. :) 계속 업데이트할 예정입니다.]]></summary></entry><entry><title type="html">CS 단어 정리(OOP)</title><link href="https://cotchan.github.io/jekyll-theme-yat/voca/2024/02/15/voca-cs-voca-oop.html" rel="alternate" type="text/html" title="CS 단어 정리(OOP)" /><published>2024-02-15T00:00:00+00:00</published><updated>2024-02-15T00:00:00+00:00</updated><id>https://cotchan.github.io/jekyll-theme-yat/voca/2024/02/15/voca-cs-voca-oop</id><content type="html" xml:base="https://cotchan.github.io/jekyll-theme-yat/voca/2024/02/15/voca-cs-voca-oop.html"><![CDATA[<ul>
+  <li>개인 공부 목적으로 작성한 포스팅입니다.</li>
+  <li>아래 출처를 참고하여 작성하였습니다. :)</li>
+  <li>계속 업데이트할 예정입니다.</li>
+</ul>
+
+<h3 id="solid">SOLID</h3>
+
+<h4 id="srp단일-책임-원칙">SRP(단일 책임 원칙)</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">한 클래스는 하나의 책임만 가져야 한다.</code></li>
+  <li><code class="language-plaintext highlighter-rouge">관심사의 분리</code>
+    <ul>
+      <li>SRP 단일 책임 원칙을 따르면서 관심사를 분리했습니다.</li>
+      <li><code class="language-plaintext highlighter-rouge">구현 객체를 생성하고 연결하는 책임은 AppConfig가 담당</code>하도록 했습니다.</li>
+      <li>클라이언트 객체는 <code class="language-plaintext highlighter-rouge">실행하는 책임만 담당</code>합니다.</li>
+    </ul>
+  </li>
+  <li>소프트웨어의 2가지 영역
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">객체 구성 영역(Main 영역)</code>
+        <ul>
+          <li>사용 영역(애플리케이션 영역)이 쓸 <code class="language-plaintext highlighter-rouge">객체를 생성하고, 설정하고, 실행하는 책임</code>
+            <ul>
+              <li>사용 영역에서 쓸 객체를 생성하는 책임</li>
+              <li>애플리케이션이 동작하도록 각 객체 간의 의존관계를 설정(연결)하는 책임</li>
+              <li>애플리케이션 영역을 실행하는 책임</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">객체 사용 영역(Application 영역)</code>
+        <ul>
+          <li>고수준의 정책과 및 저수준의 <code class="language-plaintext highlighter-rouge">비즈니스 로직을 구현하는 책임</code></li>
+        </ul>
+      </li>
+      <li>2가지 영역 사이의 의존관계
+        <ul>
+          <li>의존방향은 생성 영역(메인 영역)에서 사용 영역(애플리케이션 영역) 방향
+            <ul>
+              <li>객체 구성 영역 ==&gt; 객체 사용 영역</li>
+            </ul>
+          </li>
+          <li>즉, 객체 구성 영역이 변경되도 <code class="language-plaintext highlighter-rouge">객체 사용 영역은 변경하지 않아도 됩니다.</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="ocp개방-폐쇄-원칙">OCP(개방 폐쇄 원칙)</h4>
+
+<ul>
+  <li>소프트웨어 요소는 <code class="language-plaintext highlighter-rouge">확장에는 열려 있으나 변경에는 닫혀 있어야 한다.</code>
+    <ul>
+      <li>다형성을 사용하고 클라이언트가 DIP를 지키면 OCP 원칙을 따를 수 있습니다.</li>
+      <li><code class="language-plaintext highlighter-rouge">애플리케이션을 사용 영역과 구성 영역으로 나눴습니다.</code></li>
+      <li>AppConfig가 의존관계를 RateDiscountPolicy로 변경해서 클라이언트 코드에 주입하므로 <code class="language-plaintext highlighter-rouge">클라이언트 코드는 변경하지 않아도 됩니다.</code></li>
+      <li>즉, 소프트웨어 요소를 새롭게 확장해도 사용 영역의 변경은 닫혀 있음을 알 수 있습니다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="isp인터페이스-분리-원칙">ISP(인터페이스 분리 원칙)</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">"클라이언트는 자신이 이용하지 않는 메서드에 의존하지 말아야 한다"</code>는 원칙</li>
+  <li>객체가 반드시 필요한 기능만을 가지도록 제한하는 원칙 (불필요한 기능의 상속/구현 방지)
+    <ul>
+      <li>ISP를 위배하는 경우: <code class="language-plaintext highlighter-rouge">ServiceLocator</code> 사용 시, 클라이언트가 사용하지 않아도 <code class="language-plaintext highlighter-rouge">ServiceLocator</code>가 제공하는 모든 기능에 의존이 걸림</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">큰 덩어리의 인터페이스를 구체적이고 작은 단위로 분리</code>해서 클라이언트가 꼭 필요한 메서드들만 이용할 수 있게 하는 것이 바람직합니다.</li>
+</ul>
+
+<h4 id="dip의존관계-역전-원칙">DIP(의존관계 역전 원칙)</h4>
+
+<ul>
+  <li>프로그래머는 <code class="language-plaintext highlighter-rouge">“추상화(역할)에 의존해야지, 구체화(구현)에 의존하면 안된다.”</code></li>
+  <li><code class="language-plaintext highlighter-rouge">의존관계 역전</code>이라는 표현이 나온 이유
+    <ul>
+      <li>기존에는 <code class="language-plaintext highlighter-rouge">상위계층(정책결정)</code>이 <code class="language-plaintext highlighter-rouge">하위계층(세부사항)</code>에 의존했었습니다.
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">상위계층은 하위계층의 구현으로부터 유추</code></li>
+        </ul>
+      </li>
+      <li>그러나 이런 <code class="language-plaintext highlighter-rouge">전통적인 의존관계를 역전</code>시켜 <code class="language-plaintext highlighter-rouge">하위계층이 상위계층을 구현</code>하도록 만들었습니다.</li>
+      <li>이를 통해, <code class="language-plaintext highlighter-rouge">상위계층이 하위계층의 구현으로부터 독립성</code>을 가질 수 있게 되었습니다.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">의존성 주입</code>은 이 원칙을 따르는 방법 중 하나입니다.
+    <ul>
+      <li>클라이언트 코드가 DiscountPolicy <code class="language-plaintext highlighter-rouge">추상화 인터페이스</code>에만 의존하도록 코드(의존 관계)를 변경했습니다.</li>
+      <li>하지만 클라이언트 코드는 인터페이스만으로는 아무것도 실행할 수 없습니다.</li>
+      <li>그러므로 AppConfig가 FixDiscountPolicy 객체 인스턴스를 클라이언트 코드 대신 생성해서 <code class="language-plaintext highlighter-rouge">클라이언트 코드에 의존관계를 주입했습니다.</code></li>
+      <li><code class="language-plaintext highlighter-rouge">DI</code>는 클라이언트 입장에서 역할에 대한 구현체(의존관계)를 마치 외부에서 주입해주는 것 같다고 해서 DI라고 부릅니다.
+        <ul>
+          <li>클라이언트 입장에서 생성자를 통해 어떤 구현 인스턴스가 들어올지 전혀 모릅니다.</li>
+        </ul>
+      </li>
+      <li>의존관계상 클라이언트가 구체 클래스에 의존한다? 이는 DIP를 위반하는 것을 의미합니다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="references">References</h3>
+
+<ul>
+  <li><a href="https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8-%ED%95%B5%EC%8B%AC%EC%9B%90%EB%A6%AC-%ED%99%9C%EC%9A%A9">스프링 부트 - 핵심 원리와 활용</a></li>
+  <li><a href="https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%ED%95%B5%EC%8B%AC-%EC%9B%90%EB%A6%AC-%EA%B3%A0%EA%B8%89%ED%8E%B8">스프링 핵심 원리 - 고급편</a></li>
+  <li><a href="https://ko.wikipedia.org/wiki/%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4_%EB%B6%84%EB%A6%AC_%EC%9B%90%EC%B9%99">인터페이스 분리 원칙</a></li>
+  <li><a href="https://dreamcoding.tistory.com/69">SOLID 원칙 5 - DIP: 의존성 역전 원칙 (Dependency Inversion)</a></li>
+</ul>]]></content><author><name>cotchan</name></author><category term="voca" /><category term="voca" /><summary type="html"><![CDATA[개인 공부 목적으로 작성한 포스팅입니다. 아래 출처를 참고하여 작성하였습니다. :) 계속 업데이트할 예정입니다.]]></summary></entry><entry><title type="html">CS 단어 정리(운영체제)</title><link href="https://cotchan.github.io/jekyll-theme-yat/voca/2024/02/15/voca-cs-voca-os.html" rel="alternate" type="text/html" title="CS 단어 정리(운영체제)" /><published>2024-02-15T00:00:00+00:00</published><updated>2024-02-15T00:00:00+00:00</updated><id>https://cotchan.github.io/jekyll-theme-yat/voca/2024/02/15/voca-cs-voca-os</id><content type="html" xml:base="https://cotchan.github.io/jekyll-theme-yat/voca/2024/02/15/voca-cs-voca-os.html"><![CDATA[<ul>
+  <li>개인 공부 목적으로 작성한 포스팅입니다.</li>
+  <li>아래 출처를 참고하여 작성하였습니다. :)</li>
+  <li>계속 업데이트할 예정입니다.</li>
+</ul>
+
+<h3 id="ioinputoutput">I/O(input/output)</h3>
+
+<ul>
+  <li>I/O란, <code class="language-plaintext highlighter-rouge">cpu와 메모리를 제외한</code> 나머지 시스템 리소스에 접근하는 것을 의미합니다.</li>
+  <li>데이터의 입출력을 의미합니다.
+    <ul>
+      <li>파일을 읽고 쓰기</li>
+      <li>네트워크의 어딘가와 <code class="language-plaintext highlighter-rouge">(소켓을 통해)</code> 데이터를 주고받는 것</li>
+      <li>입출력 장치와 데이터를 주고 받는 것</li>
+    </ul>
+  </li>
+  <li>공통적으로 I/O는 <code class="language-plaintext highlighter-rouge">user-space aplication</code>에서 <code class="language-plaintext highlighter-rouge">직접 수행할 수 없습니다.</code></li>
+  <li>즉, I/O를 수행하기 위해서는 <code class="language-plaintext highlighter-rouge">커널에 한 번 이상 시스템 콜을 보내야</code>합니다.</li>
+</ul>
+
+<h4 id="io-종류">I/O 종류</h4>
+
+<ul>
+  <li>network(socket) i/o</li>
+  <li>file i/o</li>
+  <li>pipe i/o(프로세스 간 통신)</li>
+  <li>device i/o</li>
+</ul>
+
+<h3 id="tps">TPS</h3>
+
+<ul>
+  <li>TPS(티피에스)란 <code class="language-plaintext highlighter-rouge">Transaction Per Second</code>의 약자로서, <code class="language-plaintext highlighter-rouge">1초당 처리할 수 있는 트랜잭션의 개수를 의미</code>합니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">100만 TPS는 1초당 100만 건</code>의 <code class="language-plaintext highlighter-rouge">트랜잭션을 처리할 수 있는 속도</code>를 말합니다.</li>
+</ul>
+
+<h3 id="load-average">Load Average</h3>
+
+<ul>
+  <li>Load Average란, 프로세스의 여러 상태 중 <code class="language-plaintext highlighter-rouge">R</code> 또는 <code class="language-plaintext highlighter-rouge">D</code> 상태에 있는 프로세스들의 개수를 1분, 5분, 15분 단위로 평균을 낸 값</li>
+  <li>즉, <code class="language-plaintext highlighter-rouge">얼마나 많은 프로세스</code>가 <code class="language-plaintext highlighter-rouge">실행 중 혹은 실행 대기중인지</code>를 의미하는 수치</li>
+  <li>시스템 운영시 권장하는 에버리지는 <code class="language-plaintext highlighter-rouge">70%</code>인 <code class="language-plaintext highlighter-rouge">0.7</code> 이하 이며 그 이상일 경우 시스템에 이상이 없는지 반드시 체크 해야합니다.</li>
+</ul>
+
+<p><img width="480" alt="스크린샷 2022-09-04 오후 3 26 53" src="https://user-images.githubusercontent.com/75410527/188300768-7501e809-f948-4e22-997c-189b0ab83d73.png" /></p>
+
+<ul>
+  <li>출처: scoutapp</li>
+  <li>퍼온 곳: <a href="https://brunch.co.kr/@dreaminz/1">1. Load Average에 관해서</a></li>
+</ul>
+
+<h4 id="load-average가-높다">Load Average가 높다?</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Load Average가 높다</code>는 뜻은, 많은 프로세스가 현재 실행 중이거나, 네트워크 또는 디스크 작업 처리를 위해 대기 상태에 있다는 것을 말합니다.</li>
+</ul>
+
+<h4 id="실행-상태란">‘실행’ 상태란</h4>
+
+<ul>
+  <li>프로세스의 <code class="language-plaintext highlighter-rouge">R(Running)</code> 상태를 의미합니다.</li>
+  <li>프로세스가 <code class="language-plaintext highlighter-rouge">실행</code>중인 상태는 CPU 자원을 소모하고 있는 실행 중인 상태를 의미합니다.</li>
+  <li>R이 많다는 것은 CPU 리소스 측면에서 부하가 많다는 뜻입니다.</li>
+</ul>
+
+<h4 id="실행-대기중-상태란">‘실행 대기중’ 상태란</h4>
+
+<ul>
+  <li>프로세스의 <code class="language-plaintext highlighter-rouge">D(Uninterruptible waiting)</code> 상태를 의미합니다.</li>
+  <li>프로세스가 <code class="language-plaintext highlighter-rouge">실행 대기중</code>인 상태는 I/O에 대해 대기하는 상태로, 다른 어떤 일도 할 수 없는 상태를 의미합니다.</li>
+  <li>보통 <code class="language-plaintext highlighter-rouge">디스크 또는 네트워크 등 I/O 작업 처리를 기다리는</code> 프로세스의 상태를 말합니다.</li>
+</ul>
+
+<h3 id="throughput">Throughput</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">컴퓨터 시스템의 처리 능력</code>을 나타내는 단어로, <code class="language-plaintext highlighter-rouge">단위 시간당 처리할 수 있는 작업양</code>을 의미합니다.</li>
+  <li>Throughput is a measure of how many units of information <code class="language-plaintext highlighter-rouge">a system can process</code> in <code class="language-plaintext highlighter-rouge">a given amount of time.</code></li>
+</ul>
+
+<h3 id="backpressure">Backpressure</h3>
+
+<ul>
+  <li>소프트웨어 시스템에서 백프레셔는 <code class="language-plaintext highlighter-rouge">트래픽 통신에 과부하를 일으키는 기능을 의미</code>합니다.</li>
+  <li>다시 말해, 데이터를 보내는 쪽에서 너무 많은 데이터를 계속 Push 함으로써 데이터 소비자가 처리할 수 없는 상태를 의미합니다.</li>
+  <li>리액티브 프로그래밍의 <code class="language-plaintext highlighter-rouge">non-blocking</code> 특성으로 인해 서버는 전체 스트림을 한 번에 보내지 않고, 데이터가 사용 가능한 즉시 데이터를 푸시할 수 있습니다. 따라서 클라이언트는 이벤트를 수신하고 처리하는 데 더 적은 시간을 기다립니다. 그러나 위와 같은 <code class="language-plaintext highlighter-rouge">Backpressure</code> 문제가 발생할 수 있습니다.</li>
+</ul>
+
+<h3 id="payload">Payload</h3>
+
+<blockquote>
+  <p>헤더가 실어나르는 대상을 Payload라고 함(택배 내용물에 해당)</p>
+</blockquote>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">단위 데이터</code>라고 하는 것(ex. 패킷, 프레임 등)은 <code class="language-plaintext highlighter-rouge">네트워크에서 항상 2개로 쪼갬</code>
+    <ul>
+      <li>앞단은 <code class="language-plaintext highlighter-rouge">Header</code>, 헤더가 실어나르는 대상을 <code class="language-plaintext highlighter-rouge">Payload</code>라고 함(택배 내용물에 해당)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="레지스터">레지스터</h3>
+
+<ul>
+  <li>레지스터는 <code class="language-plaintext highlighter-rouge">CPU에 존재</code>하는 다목적 저장 공간
+    <ul>
+      <li>CPU 레지스터는 각종 명령어들을 수행하기 위해 여러 데이터를 저장하는 존재</li>
+      <li>CPU가 요청을 처리하는데 필요한 데이터를 일시적으로 저장하는 다목적 공간</li>
+      <li>현재 계산을 수행중인 값을 저장하는 데 사용됨.</li>
+    </ul>
+  </li>
+  <li>레지스터는 <code class="language-plaintext highlighter-rouge">데이터와 명령어를 저장하는 역할</code>을 함.</li>
+  <li>레지스터는 컴퓨터의 프로세서 내에서 자료를 보관하는 아주 빠른 기억 장소</li>
+  <li>대부분의 현대 프로세서는 메인 메모리에서 레지스터로 데이터를 옮겨와 데이터를 처리한 후 그 내용을 다시 레지스터에서 메인 메모리로 저장하는 <code class="language-plaintext highlighter-rouge">로드-스토어 설계</code>를 사용하
+    <ul>
+      <li>연산을 위한 데이터를 레지스터에 저장하고, 그 결과값도 레지스터에 저장</li>
+    </ul>
+  </li>
+  <li>레지스터는 메모리 계층의 최상위에 위치하며, <code class="language-plaintext highlighter-rouge">가장 빠른 속도로 접근 가능한 메모리</code></li>
+  <li>속도가 엄청 빠르다. <code class="language-plaintext highlighter-rouge">레지스터</code> &gt; <code class="language-plaintext highlighter-rouge">메모리</code> &gt; <code class="language-plaintext highlighter-rouge">하드디스크</code> 순서</li>
+</ul>
+
+<p><img width="500" alt="스크린샷 2022-09-30 오후 6 40 26" src="https://user-images.githubusercontent.com/75410527/193243059-9cbdcebe-6d6b-444b-92ed-66acafc4b03d.png" /></p>
+
+<h4 id="레지스터의-종류">레지스터의 종류</h4>
+
+<ul>
+  <li>데이터 레지스터 : 정수 값을 저장할 수 있는 레지스터.</li>
+  <li>주소 레지스터 : 메모리 주소를 저장하여 메모리 접근에 사용되는 레지스터. 어떤 프로세서에서는, 주소를 저장하는 것이 아니라 조작하기 위한 목적으로 색인 레지스터를 사용하기도 함.</li>
+  <li>범용 레지스터 : 데이터와 주소를 모두 저장할 수 있는 레지스터.</li>
+  <li>부동 소수점 레지스터 : 많은 시스템에서 부동소수점 값을 저장하기 위해 사용된다.</li>
+  <li>상수 레지스터 : 0이나 1 등 고정된 값을 저장하고 있는 레지스터.</li>
+  <li>특수 레지스터 : <code class="language-plaintext highlighter-rouge">프로그램의 상태를 저장</code>한다. <code class="language-plaintext highlighter-rouge">프로그램 카운터</code>, <code class="language-plaintext highlighter-rouge">스택 포인터</code>, 상태 레지스터 등이 있다.</li>
+  <li>명령 레지스터 : 현재 실행중인 명령어를 저장한다.</li>
+  <li>색인 레지스터 : 실행중에 피연산자의 주소를 계산하는 데 사용된다.</li>
+</ul>
+
+<h4 id="cache-vs-레지스터">Cache vs 레지스터</h4>
+
+<ul>
+  <li>캐시는 <code class="language-plaintext highlighter-rouge">cpu와 별도로 있는 공간</code>이며, 메인 메모리와 cpu 간의 <code class="language-plaintext highlighter-rouge">속도 차이를 극복</code>하기 위한 것</li>
+  <li>레지스터는 <code class="language-plaintext highlighter-rouge">cpu 안에서 연산을 처리하기 위하여 데이터를 저장하는 공간</code></li>
+</ul>
+
+<h3 id="context">Context</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">프로세스/스레드의 상태</code></li>
+  <li>여기서 말하는 <code class="language-plaintext highlighter-rouge">상태</code>라는 건, <code class="language-plaintext highlighter-rouge">CPU에서의 상태</code>, 혹은 <code class="language-plaintext highlighter-rouge">메모리에서의 상태</code>를 의미한다.</li>
+</ul>
+
+<h4 id="context-swtiching">Context Swtiching</h4>
+
+<ul>
+  <li>CPU에서 수행되기 위해서 어느 한 프로세스에서 다른 프로세스로 교체되는 것</li>
+  <li>CPU/코어에서 실행 중이던 프로세스/스레드가 다른 프로세스/스레드로 교체되는 것</li>
+</ul>
+
+<blockquote>
+  <p>커널 모드에서 실행된다.<br />
+CPU의 레지스터 상태가 교체된다.</p>
+</blockquote>
+
+<h3 id="커널모드">커널모드</h3>
+
+<ul>
+  <li>커널 모드란, 프로세스가 실행되다가 하드웨어와 밀접한 일들 혹은 컴퓨터의 리소스들을 다뤄야하는 상황이 오면 이 때는 프로세스가 직접 컴퓨터의 리소스에 접근하는 게 아니라, 운영체제를 통해 접근합니다.</li>
+  <li>특히 운영체제 중에서도 커널을 통해 접근합니다.</li>
+  <li>이 때 <code class="language-plaintext highlighter-rouge">프로세스에서 커널로 통제권이 넘어가서</code> <code class="language-plaintext highlighter-rouge">커널에 의해 실행</code>되는 걸 커널모드라고 합니다.</li>
+</ul>
+
+<h3 id="cpu-atomic">CPU atomic</h3>
+
+<p><code class="language-plaintext highlighter-rouge">CPU atomic</code>한 연산이란,</p>
+
+<ul>
+  <li>실행 중간에 간섭받거나 중단되지 않는다.</li>
+  <li>같은 메모리 영역에 대해 동시에 실행되지 않는다.
+    <ul>
+      <li>같은 메모리영역에 대해 실행되지 않는다는 건,</li>
+      <li>동일한 parameter에 대해 (예시. <code class="language-plaintext highlighter-rouge">lock</code>) 두 개 이상의 스레드나 프로세스가 동시에 호출한다고 해도</li>
+      <li><code class="language-plaintext highlighter-rouge">CPU 레벨에서 알아서</code> 먼저 하나를 실행시키고, 하나가 실행이 끝나고 이어서 다른 하나를 실행시킴.</li>
+      <li><code class="language-plaintext highlighter-rouge">이렇게 동기화해서 실행시킨다는 뜻</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="race-condition">race condition</h3>
+
+<ul>
+  <li>여러 프로세스/스레드가 <code class="language-plaintext highlighter-rouge">동시에 같은 데이터를 조작</code>할 때</li>
+  <li><code class="language-plaintext highlighter-rouge">타이밍</code>이나 <code class="language-plaintext highlighter-rouge">접근 순서</code>에 따라 <code class="language-plaintext highlighter-rouge">결과가 달라질 수 있는 상황</code></li>
+</ul>
+
+<h3 id="동기화synchronization">동기화(synchronization)</h3>
+
+<ul>
+  <li>여러 프로세스/스레드를 동시에 실행해도 <code class="language-plaintext highlighter-rouge">공유 데이터의 일관성을 유지</code>하는 것</li>
+  <li><code class="language-plaintext highlighter-rouge">한 순간에</code> <code class="language-plaintext highlighter-rouge">하나의 자원</code>을 <code class="language-plaintext highlighter-rouge">하나의 스레드/프로세스가 사용하도록 보장/제어</code>하는 것</li>
+</ul>
+
+<h3 id="thread-safe">Thread Safe</h3>
+
+<ul>
+  <li>어떤 함수나 변수, 객체가 <code class="language-plaintext highlighter-rouge">여러 스레드로부터 동시에 접근이 이루어져도</code> 프로그램 실행에 문제가 없음을 의미</li>
+</ul>
+
+<blockquote>
+  <p>멀티 스레드 프로그래밍에서 사용하는 용어</p>
+</blockquote>
+
+<h3 id="critical-section">critical section</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">공유 데이터의 일관성을 보장하기 위해</code> <code class="language-plaintext highlighter-rouge">하나의 프로세스/스레드만 진입해서 실행 가능</code>한 영역</li>
+</ul>
+
+<h4 id="mutual-exclusion">mutual exclusion</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">하나의 프로세스/스레드만 진입</code>해서 실행하게 하는 것</li>
+</ul>
+
+<h3 id="mutex">mutex</h3>
+
+<blockquote>
+  <p>핵심은 LOCK을 가질 수 있을 때 까지 휴식</p>
+</blockquote>
+
+<ul>
+  <li>critical section에서 <code class="language-plaintext highlighter-rouge">mutual exclusion을 보장</code>하는 장치</li>
+  <li>critical section에 진입하려면 <code class="language-plaintext highlighter-rouge">mutex lock</code>을 획득해야 함</li>
+  <li>mutex lock을 획득하지 못한 스레드는 <code class="language-plaintext highlighter-rouge">큐에 들어간 후 대기(waiting) 상태로 전환</code>
+    <ul>
+      <li>ex.entry queue</li>
+    </ul>
+  </li>
+  <li>mutex lock을 쥔 스레드가 lock을 반환하면, lock을 기다리며 큐에 대기 상태로 있던 스레드 중 하나가 실행</li>
+</ul>
+
+<h3 id="semaphore">semaphore</h3>
+
+<ul>
+  <li>하나 이상의 프로세스/스레드가 critical section에 접근 가능하도록 하는 장치
+    <ul>
+      <li>세마포어의 특별한 기능이라 할 수 있는 <code class="language-plaintext highlighter-rouge">시그널 메커니즘</code>을 통해 제어한다.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">시그널 메커니즘</code>을 통해 프로세스/스레드 간 <code class="language-plaintext highlighter-rouge">동기화(작업 순서)를 보장</code>해줄 수 있다.</li>
+</ul>
+
+<blockquote>
+  <p>lock이라는 이름이 wait<br />
+unlock이라는 이름이 signal</p>
+</blockquote>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">semaphore</span><span class="o">-&gt;</span><span class="n">wait</span><span class="o">();</span>
+<span class="o">...</span> <span class="n">critical</span> <span class="n">section</span>
+<span class="n">semaphore</span><span class="o">-&gt;</span><span class="n">signal</span><span class="o">();</span>
+</code></pre></div></div>
+
+<hr />
+
+<ul>
+  <li>참고
+    <ul>
+      <li><a href="http://wiki.hash.kr/index.php/TPS">TPS - 해시넷 위키</a></li>
+      <li><a href="https://brunch.co.kr/@dreaminz/1">1. Load Average에 관해서</a></li>
+      <li><a href="https://kim-dragon.tistory.com/45">[Linux]Load Average 란?</a></li>
+      <li><a href="https://m.blog.naver.com/sung_mk1919/221212568779">쓰루풋(Throughput)이란?</a></li>
+      <li><a href="https://www.techtarget.com/searchnetworking/definition/throughput">throughput</a></li>
+      <li><a href="https://www.baeldung.com/spring-webflux-backpressure">Backpressure Mechanism in Spring WebFlux</a></li>
+      <li><a href="https://www.youtube.com/watch?v=mb-QHxVfmcs&amp;ab_channel=%EC%89%AC%EC%9A%B4%EC%BD%94%EB%93%9C">block I/O vs non-block I/O 개념을 설명합니다! 소켓 I/O를 예제로 주로 설명해요! I/O multiplexing(다중 입출력) 설명도 빠질 수 없겠죠? ;)</a></li>
+      <li><a href="https://www.youtube.com/watch?v=qnVKEwjG_gM&amp;t=77s&amp;ab_channel=%EC%89%AC%EC%9A%B4%EC%BD%94%EB%93%9C">cpu bound, io bound 의미를 설명합니다! 이에 따른 스레드 개수를 정하는 팁도 알려드립니다!</a></li>
+      <li><a href="https://youtu.be/Xh9Nt7y07FE">컨텍스트 스위칭 뽀개기! 의미와 종류와 왜 스레드 컨텍스트 스위칭이 더 빠르다고 하는지까지..! 이 모든 것을 시원~~하게 설명합니다!!</a></li>
+      <li><a href="https://plummmm.tistory.com/113">레지스터 (Register)</a></li>
+      <li><a href="https://melonicedlatte.com/computer/2018/11/07/190754.html">캐시와 레지스터의 차이가 무엇일까요???</a></li>
+      <li><a href="https://www.youtube.com/watch?v=vp0Gckz3z64&amp;ab_channel=%EC%89%AC%EC%9A%B4%EC%BD%94%EB%93%9C">동기화(synchronization), 경쟁 조건(race condition), 임계 영역(critical section)을 자세하게 설명합니다! 헷갈리시는 분들 꼭 보세요!</a></li>
+      <li><a href="https://www.youtube.com/watch?v=gTkvX2Awj6g&amp;t=594s&amp;ab_channel=%EC%89%AC%EC%9A%B4%EC%BD%94%EB%93%9C">스핀락(spinlock) 뮤텍스(mutex) 세마포(semaphore) 각각의 특징과 차이 완벽 설명! 뮤텍스는 바이너리 세마포가 아니라는 것도 설명합니다!</a></li>
+      <li><a href="https://www.youtube.com/watch?v=Dms1oBmRAlo&amp;ab_channel=%EC%89%AC%EC%9A%B4%EC%BD%94%EB%93%9C">모니터가 어떻게 동기화에 사용되는지 아주 자세히 설명합니다! 자바에서 모니터는 어떤 모습인지도 설명하니 헷갈리시는 분들 꼭 보세요!</a></li>
+      <li><a href="https://www.youtube.com/channel/UCdGTtaI-ERLjzZNLuBj3X6A">널널한 개발자 TV</a></li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>cotchan</name></author><category term="voca" /><category term="voca" /><summary type="html"><![CDATA[개인 공부 목적으로 작성한 포스팅입니다. 아래 출처를 참고하여 작성하였습니다. :) 계속 업데이트할 예정입니다.]]></summary></entry><entry><title type="html">우선순위 큐(Priority Queue)와 힙(Heap)</title><link href="https://cotchan.github.io/jekyll-theme-yat/data-structure/2022/11/03/ds-pq-heap.html" rel="alternate" type="text/html" title="우선순위 큐(Priority Queue)와 힙(Heap)" /><published>2022-11-03T00:00:00+00:00</published><updated>2022-11-03T00:00:00+00:00</updated><id>https://cotchan.github.io/jekyll-theme-yat/data-structure/2022/11/03/ds-pq-heap</id><content type="html" xml:base="https://cotchan.github.io/jekyll-theme-yat/data-structure/2022/11/03/ds-pq-heap.html"><![CDATA[<ul>
+  <li>개인 공부 목적으로 작성한 포스팅입니다.</li>
+  <li>아래 출처를 참고하여 작성하였습니다. :)</li>
+</ul>
+
+<h3 id="우선순위-큐priority-queue">우선순위 큐(Priority Queue)</h3>
+
+<blockquote>
+  <p>자료 구조 <code class="language-plaintext highlighter-rouge">개념</code>으로 구현하는 방법은 여러 가지입니다.<br />
+<code class="language-plaintext highlighter-rouge">힙으로 구현하는 것</code>이 성능이 가장 좋을 뿐, 배열/연결 리스트로 만들어도 됩니다.</p>
+</blockquote>
+
+<p>우선순위 큐(Priority Queue)는 들어간 순서에 상관없이 <code class="language-plaintext highlighter-rouge">우선순위가 높은 데이터가 먼저 나오는 자료구조</code></p>
+
+<h4 id="여러가지-구현방법">여러가지 구현방법</h4>
+
+<blockquote>
+  <p>시간복잡도의 차이가 발생하는 지점은 내부 데이터를 <code class="language-plaintext highlighter-rouge">우선순위 큐의 목적에 맞게 재정렬하는 과정</code>에서 발생합니다<br />
+중요한 차이점은, 재정렬 과정에서 Heap의 경우 <code class="language-plaintext highlighter-rouge">Heapify</code>라는 독특한 연산을 통해서 <code class="language-plaintext highlighter-rouge">O(logN)</code>만에 재정렬이 끝납니다.</p>
+</blockquote>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">구현방법</th>
+      <th style="text-align: center">enqueue()</th>
+      <th style="text-align: center">dequeue()</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">배열 (unsorted array)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(N)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">연결 리스트 (unsorted linked list)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(N)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">정렬된 배열 (sorted array)</td>
+      <td style="text-align: center">O(N)</td>
+      <td style="text-align: center">O(1)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">정렬된 연결 리스트 (sorted linked list)</td>
+      <td style="text-align: center">O(N)</td>
+      <td style="text-align: center">O(1)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">힙 (Heap)</td>
+      <td style="text-align: center">O(logN)</td>
+      <td style="text-align: center">O(logN)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="힙heap">힙(Heap)</h3>
+
+<p>JAVA 구현 기준입니다</p>
+
+<blockquote>
+  <p>Priority queue represented as <code class="language-plaintext highlighter-rouge">a balanced binary heap</code></p>
+</blockquote>
+
+<h4 id="heap이란">Heap이란?</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">완전 이진트리</code> 기반으로 자료구조로 <code class="language-plaintext highlighter-rouge">부모-자식끼리만 대소관계</code>를 가지는 <code class="language-plaintext highlighter-rouge">느슨한 정렬을 사용</code>합니다.
+    <ul>
+      <li>내부 모든 데이터가 정렬되어 있는 형태 X</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>내부적으로는 동적으로 크기가 커지는 <code class="language-plaintext highlighter-rouge">배열</code>로 구현되어 있습니다.</p>
+</blockquote>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">PriorityQueue</span><span class="o">&lt;</span><span class="no">E</span><span class="o">&gt;</span> <span class="kd">extends</span> <span class="nc">AbstractQueue</span><span class="o">&lt;</span><span class="no">E</span><span class="o">&gt;</span>
+    <span class="kd">implements</span> <span class="n">java</span><span class="o">.</span><span class="na">io</span><span class="o">.</span><span class="na">Serializable</span> <span class="o">{</span>
+
+    <span class="cm">/**
+     * Priority queue represented as a balanced binary heap: the two
+     * children of queue[n] are queue[2*n+1] and queue[2*(n+1)].  The
+     * priority queue is ordered by comparator, or by the elements'
+     * natural ordering, if comparator is null: For each node n in the
+     * heap and each descendant d of n, n &lt;= d.  The element with the
+     * lowest value is in queue[0], assuming the queue is nonempty.
+     */</span>
+    <span class="kd">transient</span> <span class="nc">Object</span><span class="o">[]</span> <span class="n">queue</span><span class="o">;</span> <span class="c1">// non-private to simplify nested class access</span>
+</code></pre></div></div>
+
+<h4 id="n과-2n1-2n2">n과 2<em>n+1, 2</em>n+2</h4>
+
+<blockquote>
+  <p>Priority queue represented as <code class="language-plaintext highlighter-rouge">a balanced binary heap</code><br />
+the two children of queue[n] are queue[2<em>n+1] and queue[2</em>(n+1)].</p>
+</blockquote>
+
+<ul>
+  <li>힙 구현시 배열 인덱스를 <code class="language-plaintext highlighter-rouge">0부터 사용하면</code> 부모-자식 노드 간의 이동 연산 계산식이 <code class="language-plaintext highlighter-rouge">n</code>과 <code class="language-plaintext highlighter-rouge">2*n+1</code>, <code class="language-plaintext highlighter-rouge">2*n+2</code> 입니다.</li>
+</ul>
+
+<blockquote>
+  <p>siftDown 연산: 부모 =&gt; 자식으로 이동하는 경우</p>
+</blockquote>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">leftChild</span> <span class="o">=</span> <span class="o">(</span><span class="n">parent</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="o">)</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">rightChild</span> <span class="o">=</span> <span class="n">leftChild</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>siftUp 연산: 자식 =&gt; 부모로 이동하는 경우</p>
+</blockquote>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">parent</span> <span class="o">=</span> <span class="o">(</span><span class="n">child</span> <span class="o">-</span> <span class="mi">1</span><span class="o">)</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="o">;</span>
+</code></pre></div></div>
+
+<hr />
+
+<ul>
+  <li>출처
+    <ul>
+      <li><a href="https://yoongrammer.tistory.com/81#%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84_%ED%81%90_(Priority_Queue)_%EA%B0%9C%EB%85%90_%EB%B0%8F_%EA%B5%AC%ED%98%84">[자료구조] 우선순위 큐 (Priority Queue) 개념 및 구현</a></li>
+      <li><a href="https://chanhuiseok.github.io/posts/ds-4/">자료구조 - 우선순위 큐(Priority Queue)와 힙(heap)</a></li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>cotchan</name></author><category term="data-structure" /><category term="data-structure" /><summary type="html"><![CDATA[개인 공부 목적으로 작성한 포스팅입니다. 아래 출처를 참고하여 작성하였습니다. :)]]></summary></entry><entry><title type="html">Collections.emptyList() vs new ArrayList&amp;lt;&amp;gt;()</title><link href="https://cotchan.github.io/jekyll-theme-yat/todayilearned/2022/11/03/til-java-collections-emptylist.html" rel="alternate" type="text/html" title="Collections.emptyList() vs new ArrayList&amp;lt;&amp;gt;()" /><published>2022-11-03T00:00:00+00:00</published><updated>2022-11-03T00:00:00+00:00</updated><id>https://cotchan.github.io/jekyll-theme-yat/todayilearned/2022/11/03/til-java-collections-emptylist</id><content type="html" xml:base="https://cotchan.github.io/jekyll-theme-yat/todayilearned/2022/11/03/til-java-collections-emptylist.html"><![CDATA[<ul>
+  <li>개인 공부 목적으로 작성한 포스팅입니다.</li>
+  <li>아래 출처를 참고하여 작성하였습니다. :)</li>
+</ul>
+
+<h3 id="collectionsemptylist">Collections.emptyList()</h3>
+
+<blockquote>
+  <p>수정 불가능한 빈 리스트입니다.</p>
+</blockquote>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">명시적으로 '추가 삽입이 없는 그냥 빈 리스트'를 만들고 싶을 때</code> Collections.emptyList()는 그 의도를 더 잘 표현했습니다.</li>
+</ul>
+
+<p>그래서 아래와 같이 <code class="language-plaintext highlighter-rouge">Collections.emptyList()</code>를 호출해서 <code class="language-plaintext highlighter-rouge">add</code> 연산자를 실행해보면 예외가 발생합니다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">immutableIntegerList</span> <span class="o">=</span> <span class="nc">Collections</span><span class="o">.</span><span class="na">emptyList</span><span class="o">();</span>
+
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">loop</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">loop</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="o">;</span> <span class="o">++</span><span class="n">loop</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">immutableIntegerList</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">loop</span><span class="o">);</span> <span class="c1">// 예외 발생</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>이렇게 <code class="language-plaintext highlighter-rouge">UnsupportedOperationException</code> 예외가 발생합니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Exception in thread "main" java.lang.UnsupportedOperationException
+	at java.util.AbstractList.add(AbstractList.java:148)
+	at java.util.AbstractList.add(AbstractList.java:108)
+	at Solution.main(Solution.java:13)
+
+Process finished with exit code 1
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">AbstractList</code> 추상 클래스는 <code class="language-plaintext highlighter-rouge">random access</code>를 구현하는데 필요한 최소한의 것만 만들어 <code class="language-plaintext highlighter-rouge">List</code> 인터페이스의 구현체를 제공합니다.</li>
+</ul>
+
+<blockquote>
+  <p>그래서 add 메서드 호출 시 <code class="language-plaintext highlighter-rouge">UnsupportedOperationException</code> 예외가 발생함을 알 수 있습니다.</p>
+</blockquote>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//AbstractList.java</span>
+
+<span class="c1">//caller</span>
+<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">add</span><span class="o">(</span><span class="no">E</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">add</span><span class="o">(</span><span class="n">size</span><span class="o">(),</span> <span class="n">e</span><span class="o">);</span>
+    <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="c1">//callee</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="kt">int</span> <span class="n">index</span><span class="o">,</span> <span class="no">E</span> <span class="n">element</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nf">UnsupportedOperationException</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h4 id="빈-리스트-딱-하나만-생성">빈 리스트 딱 하나만 생성</h4>
+
+<p>공식문서를 보면 아래와 같은 문장이 있습니다.</p>
+
+<blockquote>
+  <p>Collection.emptyList() creates a new empty list instance only once</p>
+</blockquote>
+
+<p>그리고 아래와 같이 <code class="language-plaintext highlighter-rouge">emptyList()</code> 메서드를 사용해서 <code class="language-plaintext highlighter-rouge">EMPTY_LIST 인스턴스를 재사용</code>합니다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">List</span> <span class="no">EMPTY_LIST</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">EmptyList</span><span class="o">&lt;&gt;();</span>
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="nc">List</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="nf">emptyList</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;)</span> <span class="no">EMPTY_LIST</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>그러므로 <code class="language-plaintext highlighter-rouge">명시적으로 빈 목록을 만들고 싶을 때</code>는 <code class="language-plaintext highlighter-rouge">Collection.emptyList()</code>를 사용하는 것이 바람직합니다.</p>
+
+<hr />
+
+<ul>
+  <li>출처
+    <ul>
+      <li><a href="https://www.baeldung.com/java-collections-emptylist-new-list">Collections.emptyList() vs. New List Instance</a></li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>cotchan</name></author><category term="todayilearned" /><category term="todayilearned" /><summary type="html"><![CDATA[개인 공부 목적으로 작성한 포스팅입니다. 아래 출처를 참고하여 작성하였습니다. :)]]></summary></entry><entry><title type="html">정리해야 할 포스팅</title><link href="https://cotchan.github.io/jekyll-theme-yat/favorites/2022/09/21/favorites-todo-read-posting.html" rel="alternate" type="text/html" title="정리해야 할 포스팅" /><published>2022-09-21T00:00:00+00:00</published><updated>2022-09-21T00:00:00+00:00</updated><id>https://cotchan.github.io/jekyll-theme-yat/favorites/2022/09/21/favorites-todo-read-posting</id><content type="html" xml:base="https://cotchan.github.io/jekyll-theme-yat/favorites/2022/09/21/favorites-todo-read-posting.html"><![CDATA[<ul>
+  <li>나중에 읽어보고 정리하고자 작성한 포스팅입니다.</li>
+</ul>
+
+<h3 id="읽고-정리해야-할-내용-">읽고 정리해야 할 내용 :)</h3>
+
+<ul>
+  <li><a href="https://techblog.woowahan.com/7835/">회원시스템 이벤트기반 아키텍처 구축하기</a></li>
+  <li><a href="https://humblego.tistory.com/18">[API 설계] DELETE request 요청/처리/응답에 관한 소소한 고민</a></li>
+</ul>]]></content><author><name>cotchan</name></author><category term="favorites" /><category term="favorites" /><summary type="html"><![CDATA[나중에 읽어보고 정리하고자 작성한 포스팅입니다.]]></summary></entry><entry><title type="html">기업 기술 블로그</title><link href="https://cotchan.github.io/jekyll-theme-yat/favorites/2022/09/16/favorites-tech-blogs.html" rel="alternate" type="text/html" title="기업 기술 블로그" /><published>2022-09-16T00:00:00+00:00</published><updated>2022-09-16T00:00:00+00:00</updated><id>https://cotchan.github.io/jekyll-theme-yat/favorites/2022/09/16/favorites-tech-blogs</id><content type="html" xml:base="https://cotchan.github.io/jekyll-theme-yat/favorites/2022/09/16/favorites-tech-blogs.html"><![CDATA[<ul>
+  <li>기업 기술 블로그 목록을 편하게 보고자 작성한 포스팅입니다.</li>
+</ul>
+
+<h3 id="tech-blog-">Tech Blog :)</h3>
+
+<ul>
+  <li><a href="https://tech.kakao.com/blog/">Blog - 카카오테크</a></li>
+  <li><a href="https://techblog.woowahan.com/">우아한형제들 기술블로그</a></li>
+  <li><a href="https://engineering.linecorp.com/ko/blog">Blog - LINE ENGINEERING</a></li>
+</ul>]]></content><author><name>cotchan</name></author><category term="favorites" /><category term="favorites" /><summary type="html"><![CDATA[기업 기술 블로그 목록을 편하게 보고자 작성한 포스팅입니다.]]></summary></entry><entry><title type="html">IT 관련 단어 정리</title><link href="https://cotchan.github.io/jekyll-theme-yat/voca/2022/09/16/voca-it-voca.html" rel="alternate" type="text/html" title="IT 관련 단어 정리" /><published>2022-09-16T00:00:00+00:00</published><updated>2022-09-16T00:00:00+00:00</updated><id>https://cotchan.github.io/jekyll-theme-yat/voca/2022/09/16/voca-it-voca</id><content type="html" xml:base="https://cotchan.github.io/jekyll-theme-yat/voca/2022/09/16/voca-it-voca.html"><![CDATA[<ul>
+  <li>개인 공부 목적으로 작성한 포스팅입니다.</li>
+  <li>아래 출처를 참고하여 작성하였습니다. :)</li>
+  <li>계속 업데이트할 예정입니다.</li>
+</ul>
+
+<h3 id="nft">NFT</h3>
+
+<ul>
+  <li>대체불가토큰(NFT)는 <code class="language-plaintext highlighter-rouge">원본 디지털 이미지를 소유하는 방법</code>으로, <code class="language-plaintext highlighter-rouge">수집품의 디지털 솔루션</code>으로 주목 받는 기술</li>
+  <li>암호 화폐는 <code class="language-plaintext highlighter-rouge">디지털 화폐</code>입니다.</li>
+</ul>
+
+<h3 id="가상화-기술">가상화 기술</h3>
+
+<blockquote>
+  <p>하드웨어를 소프트웨어로 구현하는 기술을 <code class="language-plaintext highlighter-rouge">가상화 기술</code>이라고 부름</p>
+</blockquote>
+
+<ul>
+  <li>하드웨어라는 것은 물리적(Physical) 존재인데, 하드웨어를 소프트웨어 형태로 구현 해버린다? <code class="language-plaintext highlighter-rouge">가능하다.</code></li>
+</ul>
+
+<p>예를 들어 CPU를 소프트웨어로 구현할 수 있냐? 가능</p>
+
+<ul>
+  <li>CPU를 보통 <code class="language-plaintext highlighter-rouge">Machine</code>이라고 부름. 근데 SW로 구현했으니 Virtual, 그래서 <code class="language-plaintext highlighter-rouge">Virtual Machine</code>이라고 부름</li>
+  <li>그래서 하드웨어를 소프트웨어로 구현하는 기술을 <code class="language-plaintext highlighter-rouge">가상화 기술</code>이라고 부름
+    <ul>
+      <li>논리적으로 존재한다? SW적 존재다. 프로그램이라는 뜻</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<ul>
+  <li>참고
+    <ul>
+      <li><a href="https://www.bbc.com/korean/international-61489478">Z세대는 어떻게 암호화폐와 NFT에 매료되나</a></li>
+      <li><a href="https://www.youtube.com/channel/UCdGTtaI-ERLjzZNLuBj3X6A">널널한 개발자 TV</a></li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>cotchan</name></author><category term="voca" /><category term="voca" /><summary type="html"><![CDATA[개인 공부 목적으로 작성한 포스팅입니다. 아래 출처를 참고하여 작성하였습니다. :) 계속 업데이트할 예정입니다.]]></summary></entry><entry><title type="html">TIL 작성 중</title><link href="https://cotchan.github.io/jekyll-theme-yat/todayilearned/2022/08/27/til-database-realtime-delete.html" rel="alternate" type="text/html" title="TIL 작성 중" /><published>2022-08-27T00:00:00+00:00</published><updated>2022-08-27T00:00:00+00:00</updated><id>https://cotchan.github.io/jekyll-theme-yat/todayilearned/2022/08/27/til-database-realtime-delete</id><content type="html" xml:base="https://cotchan.github.io/jekyll-theme-yat/todayilearned/2022/08/27/til-database-realtime-delete.html"><![CDATA[<ul>
+  <li>개인 공부 목적으로 작성한 포스팅입니다.</li>
+  <li>아직 작성 중입니다.</li>
+  <li>아래 출처를 참고하여 작성하였습니다. :)</li>
+</ul>
+
+<h3 id="delete-문-지양-이유">DELETE 문 지양 이유</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">auto_increment id</code>가 들쑥날쑥 해지는 것을 방지</li>
+  <li>혹시 모를 버그나 보안위험이 생겨도 데이터를 지키기 위해</li>
+  <li><code class="language-plaintext highlighter-rouge">데이터 추적을 위해</code> 따로 로그를 남겨둔다거나 state 값을 이용해서 update 문으로 처리</li>
+</ul>
+
+<hr />
+
+<ul>
+  <li>출처
+    <ul>
+      <li><a href="https://www.sqler.com/board_SQLQA/321227">delete문 한번더 질문하겠습니다…</a></li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>cotchan</name></author><category term="todayilearned" /><category term="todayilearned" /><summary type="html"><![CDATA[개인 공부 목적으로 작성한 포스팅입니다. 아직 작성 중입니다. 아래 출처를 참고하여 작성하였습니다. :)]]></summary></entry></feed>

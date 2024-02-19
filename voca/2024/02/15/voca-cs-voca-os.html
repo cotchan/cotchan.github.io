@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>CS 단어 정리(운영체제) | DEVELOPMENT</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="CS 단어 정리(운영체제)" />
+<meta name="author" content="cotchan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="개인 공부 목적으로 작성한 포스팅입니다. 아래 출처를 참고하여 작성하였습니다. :) 계속 업데이트할 예정입니다." />
+<meta property="og:description" content="개인 공부 목적으로 작성한 포스팅입니다. 아래 출처를 참고하여 작성하였습니다. :) 계속 업데이트할 예정입니다." />
+<link rel="canonical" href="https://cotchan.github.io/jekyll-theme-yat/voca/2024/02/15/voca-cs-voca-os.html" />
+<meta property="og:url" content="https://cotchan.github.io/jekyll-theme-yat/voca/2024/02/15/voca-cs-voca-os.html" />
+<meta property="og:site_name" content="DEVELOPMENT" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-02-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="CS 단어 정리(운영체제)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"cotchan"},"dateModified":"2024-02-15T00:00:00+00:00","datePublished":"2024-02-15T00:00:00+00:00","description":"개인 공부 목적으로 작성한 포스팅입니다. 아래 출처를 참고하여 작성하였습니다. :) 계속 업데이트할 예정입니다.","headline":"CS 단어 정리(운영체제)","mainEntityOfPage":{"@type":"WebPage","@id":"https://cotchan.github.io/jekyll-theme-yat/voca/2024/02/15/voca-cs-voca-os.html"},"url":"https://cotchan.github.io/jekyll-theme-yat/voca/2024/02/15/voca-cs-voca-os.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="shortcut icon" href="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-noto-sans@0.0.72/index.min.css">
+  <link rel="stylesheet" href="/jekyll-theme-yat/assets/css/main.css">
+  <script src="/jekyll-theme-yat/assets/js/main.js"></script><link type="application/atom+xml" rel="alternate" href="https://cotchan.github.io/jekyll-theme-yat/feed.xml" title="DEVELOPMENT" /><link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script charset="UTF-8"
+        src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/go.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// Init highlight js
+document.addEventListener('DOMContentLoaded', function(event) {
+  var els = document.querySelectorAll('pre code')
+
+  function addLangData(block) {
+    var outer = block.parentElement.parentElement.parentElement;
+    var lang = block.getAttribute('data-lang');
+    for (var i = 0; i < outer.classList.length; i++) {
+      var cls = outer.classList[i];
+      if (cls.startsWith('language-')) {
+        lang = cls;
+        break;
+      }
+    }
+    if (!lang) {
+      cls = block.getAttribute('class');
+      lang = cls ? cls.replace('hljs ', '') : '';
+    }
+    if (lang.startsWith('language-')) {
+      lang = lang.substr(9);
+    }
+    block.setAttribute('class', 'hljs ' + lang);
+    block.parentNode.setAttribute('data-lang', lang);
+  }
+
+  function addBadge(block) {
+    var enabled = ('true' || 'true').toLowerCase();
+    if (enabled == 'true') {
+      var pre = block.parentElement;
+      pre.classList.add('badge');
+    }
+  }
+
+  function handle(block) {
+    addLangData(block);
+    addBadge(block)
+    hljs.highlightBlock(block);
+  }
+
+  for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    handle(el);
+  }
+});
+</script>
+
+<style>
+  /* code language badge */
+  pre.badge::before {
+    content: attr(data-lang);
+    color: #fff;
+    background-color: #ff4e00;
+    padding: 0 .5em;
+    border-radius: 0 2px;
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 32px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+  }
+
+  /* fix wrong badge display for firefox browser */
+  code > table pre::before {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="site-header " role="banner">
+
+  <div class="wrapper">
+    <div class="site-header-inner"><span class="site-brand"><a class="site-brand-inner" rel="author" href="/jekyll-theme-yat/">
+  <img class="site-favicon" title="DEVELOPMENT" src="" onerror="this.style.display='none'">
+  DEVELOPMENT
+</a>
+</span><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewBox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger"><a class="page-link" href="/jekyll-theme-yat/about.html">ABOUT</a><a class="page-link" href="/jekyll-theme-yat/archives.html">ARCHIVES</a><a class="page-link" href="/jekyll-theme-yat/categories.html">CATEGORIES</a><a class="page-link" href="/jekyll-theme-yat/">HOME</a><a class="page-link" href="/jekyll-theme-yat/tags.html">TAGS</a>
+
+
+
+
+
+
+
+
+
+<span class="page-link">
+
+
+
+<div id="google_translate_element" style="display: none;">
+</div>
+
+<span class="ct-language">
+  <ul class="list-unstyled ct-language-dropdown">
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="en">
+          
+          <img src="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-400.png" title="English">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="fr">
+          
+          <img src="https://cdn.countryflags.com/thumbs/france/flag-400.png" title="French">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="zh-CN">
+          
+          <img src="https://cdn.countryflags.com/thumbs/china/flag-400.png" title="Chinese(Simple)">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ja">
+          
+          <img src="https://cdn.countryflags.com/thumbs/japan/flag-400.png" title="Japanese">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ko">
+          
+          <img src="https://cdn.countryflags.com/thumbs/south-korea/flag-400.png" title="Korean">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ru">
+          
+          <img src="https://cdn.countryflags.com/thumbs/russia/flag-400.png" title="Russian">
+          
+        </a>
+      </li>
+    
+  </ul>
+</span>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,
+    layout: google.translate.TranslateElement.InlineLayout.VERTICAL
+  }, 'google_translate_element');
+
+  // Links to cross-origin destinations are unsafe
+  var gll = document.getElementsByClassName('goog-logo-link')[0];
+  if (gll) {
+    gll.setAttribute('rel', 'noopener');
+  }
+
+  function restoreLang() {
+    var iframe = document.getElementsByClassName('goog-te-banner-frame')[0];
+    if (!iframe) return;
+
+    var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+    var restore_el = innerDoc.getElementsByTagName("button");
+
+    for (var i = 0; i < restore_el.length; i++) {
+      if (restore_el[i].id.indexOf("restore") >= 0) {
+        restore_el[i].click();
+        var close_el = innerDoc.getElementsByClassName("goog-close-link");
+        close_el[0].click();
+        return;
+      }
+    }
+  }
+
+  function triggerHtmlEvent(element, eventName) {
+    var event;
+    if (document.createEvent) {
+      event = document.createEvent('HTMLEvents');
+      event.initEvent(eventName, true, true);
+      element.dispatchEvent(event);
+    } else {
+      event = document.createEventObject();
+      event.eventType = eventName;
+      element.fireEvent('on' + event.eventType, event);
+    }
+  }
+
+  var googleCombo = document.querySelector("select.goog-te-combo");
+  var langSelect = document.querySelector('.ct-language');
+  langSelect.addEventListener('click', function(event) {
+    if (!event.target) {
+      return;
+    }
+
+    var selected = document.querySelector('.ct-language .ct-language-selected');
+    if (selected) {
+      selected.classList.remove('ct-language-selected');
+    }
+
+    var target = event.target;
+    while (target && target !== langSelect ) {
+      if (target.matches('.lang-select')) {
+        break;
+      }
+      target = target.parentElement;
+    }
+
+    if (target && target.matches('.lang-select')) {
+      var lang = target.getAttribute('data-lang');
+      if (googleCombo.value == lang) {
+        restoreLang();
+      } else {
+        target.parentElement.classList.add('ct-language-selected');
+        googleCombo.value = lang;
+        triggerHtmlEvent(googleCombo, 'change');
+      }
+    }
+
+    event.preventDefault();
+  });
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</span></div>
+        </nav></div>
+  </div>
+</header>
+
+<script>
+  function initHeader() {
+    var lastScrollY = getScrollPos().y;
+    var documentElement = document.documentElement;
+
+    function storeScrollData() {
+      var y = getScrollPos().y;var scrollStatus = "";
+
+      if (y <= 0) {
+        scrollStatus = "top";
+      } else if ((window.innerHeight + y) >= document.body.offsetHeight) {
+        scrollStatus = "bottom";
+      } else {
+        var isScrollDown = (y - lastScrollY > 0) ? true : false;
+        scrollStatus = isScrollDown ? "down" : "up";
+      }
+
+      lastScrollY = y;
+      documentElement.setAttribute("data-scroll-status", scrollStatus);
+    }
+
+    window.addEventListener('scroll', function(e) {
+      storeScrollData();
+    });
+
+    storeScrollData();
+  }
+  document.addEventListener('DOMContentLoaded', initHeader);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  function hashLocate(hashValue) {
+    hashValue = hashValue.replace(/^.*#h-/, '');
+    hashValue = decodeURIComponent(hashValue);
+    var element = document.getElementById(hashValue);
+
+    if (!element) {
+      return;
+    }
+
+    var header = document.querySelector('header.site-header');
+    var headerRect = header.getBoundingClientRect();
+    var headerTop = Math.floor(headerRect.top);
+    var headerHeight = Math.floor(headerRect.height);
+    var scrollPos = getScrollPos();
+    var offsetY = element.offsetTop - (headerTop + headerHeight + 20);
+
+    if (offsetY == scrollPos.y) {
+      return;
+    }
+
+    if (headerTop == 0  && offsetY > scrollPos.y) {
+      offsetY += headerHeight + 2;
+    } else if (headerTop < 0  && offsetY < scrollPos.y) {
+      offsetY -= headerHeight - 2;
+    }
+
+    smoothScrollTo(offsetY);
+  }
+
+  // The first event occurred
+  window.addEventListener('load', function(event) {
+    if (window.location.hash) {
+      hashLocate(window.location.hash);
+    }
+  });
+
+  // The first event occurred
+  window.addEventListener('click', function(event) {
+    if (event.target.tagName.toLowerCase() == 'a') {
+      hashLocate(event.target.getAttribute('href'));
+    }
+  });
+</script>
+<div class="theme-toggle">
+  <input type="checkbox" id="theme-switch">
+  <label for="theme-switch">
+    <div class="toggle"></div>
+    <div class="names">
+      <p class="light">Light</p>
+      <p class="dark">Dark</p>
+    </div>
+  </label>
+</div>
+
+
+
+
+<script>
+  (function() {
+    var sw = document.getElementById('theme-switch');
+    var html = document.getElementsByTagName('html')[0];
+    var nightModeOption = ('auto' || 'auto').toLowerCase();
+    var storage = nightModeOption === 'manual'
+        ? localStorage
+        : sessionStorage;
+    var themeData = loadThemeData();
+
+    function saveThemeData(data) {
+      storage.setItem('theme', JSON.stringify(data));
+    }
+
+    function loadThemeData() {
+      var data = storage.getItem('theme');
+      try {
+        data = JSON.parse(data ? data : '');
+      } catch(e) {
+        data = { nightShift: undefined, autoToggleAt: 0 };
+        saveThemeData(data);
+      }
+      return data;
+    }
+
+    function handleThemeToggle(nightShift) {
+      themeData.nightShift = nightShift;
+      saveThemeData(themeData);
+      html.dataset.theme = nightShift ? 'dark' : 'light';
+      setTimeout(function() {
+        sw.checked = nightShift ? true : false;
+      }, 50);
+    }
+
+    function autoThemeToggle() {
+      // Next time point of theme toggle
+      var now = new Date();
+      var toggleAt = new Date();
+      var hours = now.getHours();
+      var nightShift = hours >= 19 || hours <=7;
+
+      if (nightShift) {
+        if (hours > 7) {
+          toggleAt.setDate(toggleAt.getDate() + 1);
+        }
+        toggleAt.setHours(7);
+      } else {
+        toggleAt.setHours(19);
+      }
+
+      toggleAt.setMinutes(0);
+      toggleAt.setSeconds(0);
+      toggleAt.setMilliseconds(0)
+
+      var delay = toggleAt.getTime() - now.getTime();
+
+      // auto toggle theme mode
+      setTimeout(function() {
+        handleThemeToggle(!nightShift);
+      }, delay);
+
+      return {
+        nightShift: nightShift,
+        toggleAt: toggleAt.getTime()
+      };
+    }
+
+    // Listen the theme toggle event
+    sw.addEventListener('change', function(event) {
+      handleThemeToggle(event.target.checked);
+    });
+
+    if (nightModeOption == 'auto') {
+      var data = autoThemeToggle();
+
+      // Toggle theme by local setting
+      if (data.toggleAt > themeData.autoToggleAt) {
+        themeData.autoToggleAt = data.toggleAt;
+        handleThemeToggle(data.nightShift);
+      } else {
+        handleThemeToggle(themeData.nightShift);
+      }
+    } else if (nightModeOption == 'manual') {
+      handleThemeToggle(themeData.nightShift);
+    } else {
+      var nightShift = themeData.nightShift;
+      if (nightShift === undefined) {
+        nightShift = nightModeOption === 'on';
+      }
+      handleThemeToggle(nightShift);
+    }
+  })();
+</script>
+<div id="click-to-top" class="click-to-top">
+  <i class="fa fa-arrow-up"></i>
+</div>
+<script>
+  (function () {
+    const clickToTop = document.getElementById('click-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        clickToTop.classList.add('show')
+      }else {
+        clickToTop.classList.remove('show')
+      }
+    });
+    clickToTop.addEventListener('click', () => {
+      window.smoothScrollTo(0);
+    });
+  })();
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="framework">
+  <section class="main">
+
+     <div class="post">
+  <section>
+
+
+
+
+
+
+
+
+
+<header class="post-header">
+  <h1 class="post-title p-name" itemprop="name headline">CS 단어 정리(운영체제)</h1>
+  <h2 class="post-subtitle">Computer Science 단어 정리</h2>
+
+  <p class="post-meta">
+    <time class="dt-published" datetime="2024-02-15T00:00:00+00:00" itemprop="datePublished"><i class="fa fa-calendar"></i> Feb 15, 2024
+    </time>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 8 mins</span>
+  </p><div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#voca">#voca</a></div></header>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="post-content e-content" itemprop="articleBody">
+
+      <ul>
+  <li>개인 공부 목적으로 작성한 포스팅입니다.</li>
+  <li>아래 출처를 참고하여 작성하였습니다. :)</li>
+  <li>계속 업데이트할 예정입니다.</li>
+</ul>
+
+<h3 id="ioinputoutput">I/O(input/output)</h3>
+
+<ul>
+  <li>I/O란, <code class="language-plaintext highlighter-rouge">cpu와 메모리를 제외한</code> 나머지 시스템 리소스에 접근하는 것을 의미합니다.</li>
+  <li>데이터의 입출력을 의미합니다.
+    <ul>
+      <li>파일을 읽고 쓰기</li>
+      <li>네트워크의 어딘가와 <code class="language-plaintext highlighter-rouge">(소켓을 통해)</code> 데이터를 주고받는 것</li>
+      <li>입출력 장치와 데이터를 주고 받는 것</li>
+    </ul>
+  </li>
+  <li>공통적으로 I/O는 <code class="language-plaintext highlighter-rouge">user-space aplication</code>에서 <code class="language-plaintext highlighter-rouge">직접 수행할 수 없습니다.</code></li>
+  <li>즉, I/O를 수행하기 위해서는 <code class="language-plaintext highlighter-rouge">커널에 한 번 이상 시스템 콜을 보내야</code>합니다.</li>
+</ul>
+
+<h4 id="io-종류">I/O 종류</h4>
+
+<ul>
+  <li>network(socket) i/o</li>
+  <li>file i/o</li>
+  <li>pipe i/o(프로세스 간 통신)</li>
+  <li>device i/o</li>
+</ul>
+
+<h3 id="tps">TPS</h3>
+
+<ul>
+  <li>TPS(티피에스)란 <code class="language-plaintext highlighter-rouge">Transaction Per Second</code>의 약자로서, <code class="language-plaintext highlighter-rouge">1초당 처리할 수 있는 트랜잭션의 개수를 의미</code>합니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">100만 TPS는 1초당 100만 건</code>의 <code class="language-plaintext highlighter-rouge">트랜잭션을 처리할 수 있는 속도</code>를 말합니다.</li>
+</ul>
+
+<h3 id="load-average">Load Average</h3>
+
+<ul>
+  <li>Load Average란, 프로세스의 여러 상태 중 <code class="language-plaintext highlighter-rouge">R</code> 또는 <code class="language-plaintext highlighter-rouge">D</code> 상태에 있는 프로세스들의 개수를 1분, 5분, 15분 단위로 평균을 낸 값</li>
+  <li>즉, <code class="language-plaintext highlighter-rouge">얼마나 많은 프로세스</code>가 <code class="language-plaintext highlighter-rouge">실행 중 혹은 실행 대기중인지</code>를 의미하는 수치</li>
+  <li>시스템 운영시 권장하는 에버리지는 <code class="language-plaintext highlighter-rouge">70%</code>인 <code class="language-plaintext highlighter-rouge">0.7</code> 이하 이며 그 이상일 경우 시스템에 이상이 없는지 반드시 체크 해야합니다.</li>
+</ul>
+
+<p><img width="480" alt="스크린샷 2022-09-04 오후 3 26 53" src="https://user-images.githubusercontent.com/75410527/188300768-7501e809-f948-4e22-997c-189b0ab83d73.png" /></p>
+
+<ul>
+  <li>출처: scoutapp</li>
+  <li>퍼온 곳: <a href="https://brunch.co.kr/@dreaminz/1">1. Load Average에 관해서</a></li>
+</ul>
+
+<h4 id="load-average가-높다">Load Average가 높다?</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Load Average가 높다</code>는 뜻은, 많은 프로세스가 현재 실행 중이거나, 네트워크 또는 디스크 작업 처리를 위해 대기 상태에 있다는 것을 말합니다.</li>
+</ul>
+
+<h4 id="실행-상태란">‘실행’ 상태란</h4>
+
+<ul>
+  <li>프로세스의 <code class="language-plaintext highlighter-rouge">R(Running)</code> 상태를 의미합니다.</li>
+  <li>프로세스가 <code class="language-plaintext highlighter-rouge">실행</code>중인 상태는 CPU 자원을 소모하고 있는 실행 중인 상태를 의미합니다.</li>
+  <li>R이 많다는 것은 CPU 리소스 측면에서 부하가 많다는 뜻입니다.</li>
+</ul>
+
+<h4 id="실행-대기중-상태란">‘실행 대기중’ 상태란</h4>
+
+<ul>
+  <li>프로세스의 <code class="language-plaintext highlighter-rouge">D(Uninterruptible waiting)</code> 상태를 의미합니다.</li>
+  <li>프로세스가 <code class="language-plaintext highlighter-rouge">실행 대기중</code>인 상태는 I/O에 대해 대기하는 상태로, 다른 어떤 일도 할 수 없는 상태를 의미합니다.</li>
+  <li>보통 <code class="language-plaintext highlighter-rouge">디스크 또는 네트워크 등 I/O 작업 처리를 기다리는</code> 프로세스의 상태를 말합니다.</li>
+</ul>
+
+<h3 id="throughput">Throughput</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">컴퓨터 시스템의 처리 능력</code>을 나타내는 단어로, <code class="language-plaintext highlighter-rouge">단위 시간당 처리할 수 있는 작업양</code>을 의미합니다.</li>
+  <li>Throughput is a measure of how many units of information <code class="language-plaintext highlighter-rouge">a system can process</code> in <code class="language-plaintext highlighter-rouge">a given amount of time.</code></li>
+</ul>
+
+<h3 id="backpressure">Backpressure</h3>
+
+<ul>
+  <li>소프트웨어 시스템에서 백프레셔는 <code class="language-plaintext highlighter-rouge">트래픽 통신에 과부하를 일으키는 기능을 의미</code>합니다.</li>
+  <li>다시 말해, 데이터를 보내는 쪽에서 너무 많은 데이터를 계속 Push 함으로써 데이터 소비자가 처리할 수 없는 상태를 의미합니다.</li>
+  <li>리액티브 프로그래밍의 <code class="language-plaintext highlighter-rouge">non-blocking</code> 특성으로 인해 서버는 전체 스트림을 한 번에 보내지 않고, 데이터가 사용 가능한 즉시 데이터를 푸시할 수 있습니다. 따라서 클라이언트는 이벤트를 수신하고 처리하는 데 더 적은 시간을 기다립니다. 그러나 위와 같은 <code class="language-plaintext highlighter-rouge">Backpressure</code> 문제가 발생할 수 있습니다.</li>
+</ul>
+
+<h3 id="payload">Payload</h3>
+
+<blockquote>
+  <p>헤더가 실어나르는 대상을 Payload라고 함(택배 내용물에 해당)</p>
+</blockquote>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">단위 데이터</code>라고 하는 것(ex. 패킷, 프레임 등)은 <code class="language-plaintext highlighter-rouge">네트워크에서 항상 2개로 쪼갬</code>
+    <ul>
+      <li>앞단은 <code class="language-plaintext highlighter-rouge">Header</code>, 헤더가 실어나르는 대상을 <code class="language-plaintext highlighter-rouge">Payload</code>라고 함(택배 내용물에 해당)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="레지스터">레지스터</h3>
+
+<ul>
+  <li>레지스터는 <code class="language-plaintext highlighter-rouge">CPU에 존재</code>하는 다목적 저장 공간
+    <ul>
+      <li>CPU 레지스터는 각종 명령어들을 수행하기 위해 여러 데이터를 저장하는 존재</li>
+      <li>CPU가 요청을 처리하는데 필요한 데이터를 일시적으로 저장하는 다목적 공간</li>
+      <li>현재 계산을 수행중인 값을 저장하는 데 사용됨.</li>
+    </ul>
+  </li>
+  <li>레지스터는 <code class="language-plaintext highlighter-rouge">데이터와 명령어를 저장하는 역할</code>을 함.</li>
+  <li>레지스터는 컴퓨터의 프로세서 내에서 자료를 보관하는 아주 빠른 기억 장소</li>
+  <li>대부분의 현대 프로세서는 메인 메모리에서 레지스터로 데이터를 옮겨와 데이터를 처리한 후 그 내용을 다시 레지스터에서 메인 메모리로 저장하는 <code class="language-plaintext highlighter-rouge">로드-스토어 설계</code>를 사용하
+    <ul>
+      <li>연산을 위한 데이터를 레지스터에 저장하고, 그 결과값도 레지스터에 저장</li>
+    </ul>
+  </li>
+  <li>레지스터는 메모리 계층의 최상위에 위치하며, <code class="language-plaintext highlighter-rouge">가장 빠른 속도로 접근 가능한 메모리</code></li>
+  <li>속도가 엄청 빠르다. <code class="language-plaintext highlighter-rouge">레지스터</code> &gt; <code class="language-plaintext highlighter-rouge">메모리</code> &gt; <code class="language-plaintext highlighter-rouge">하드디스크</code> 순서</li>
+</ul>
+
+<p><img width="500" alt="스크린샷 2022-09-30 오후 6 40 26" src="https://user-images.githubusercontent.com/75410527/193243059-9cbdcebe-6d6b-444b-92ed-66acafc4b03d.png" /></p>
+
+<h4 id="레지스터의-종류">레지스터의 종류</h4>
+
+<ul>
+  <li>데이터 레지스터 : 정수 값을 저장할 수 있는 레지스터.</li>
+  <li>주소 레지스터 : 메모리 주소를 저장하여 메모리 접근에 사용되는 레지스터. 어떤 프로세서에서는, 주소를 저장하는 것이 아니라 조작하기 위한 목적으로 색인 레지스터를 사용하기도 함.</li>
+  <li>범용 레지스터 : 데이터와 주소를 모두 저장할 수 있는 레지스터.</li>
+  <li>부동 소수점 레지스터 : 많은 시스템에서 부동소수점 값을 저장하기 위해 사용된다.</li>
+  <li>상수 레지스터 : 0이나 1 등 고정된 값을 저장하고 있는 레지스터.</li>
+  <li>특수 레지스터 : <code class="language-plaintext highlighter-rouge">프로그램의 상태를 저장</code>한다. <code class="language-plaintext highlighter-rouge">프로그램 카운터</code>, <code class="language-plaintext highlighter-rouge">스택 포인터</code>, 상태 레지스터 등이 있다.</li>
+  <li>명령 레지스터 : 현재 실행중인 명령어를 저장한다.</li>
+  <li>색인 레지스터 : 실행중에 피연산자의 주소를 계산하는 데 사용된다.</li>
+</ul>
+
+<h4 id="cache-vs-레지스터">Cache vs 레지스터</h4>
+
+<ul>
+  <li>캐시는 <code class="language-plaintext highlighter-rouge">cpu와 별도로 있는 공간</code>이며, 메인 메모리와 cpu 간의 <code class="language-plaintext highlighter-rouge">속도 차이를 극복</code>하기 위한 것</li>
+  <li>레지스터는 <code class="language-plaintext highlighter-rouge">cpu 안에서 연산을 처리하기 위하여 데이터를 저장하는 공간</code></li>
+</ul>
+
+<h3 id="context">Context</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">프로세스/스레드의 상태</code></li>
+  <li>여기서 말하는 <code class="language-plaintext highlighter-rouge">상태</code>라는 건, <code class="language-plaintext highlighter-rouge">CPU에서의 상태</code>, 혹은 <code class="language-plaintext highlighter-rouge">메모리에서의 상태</code>를 의미한다.</li>
+</ul>
+
+<h4 id="context-swtiching">Context Swtiching</h4>
+
+<ul>
+  <li>CPU에서 수행되기 위해서 어느 한 프로세스에서 다른 프로세스로 교체되는 것</li>
+  <li>CPU/코어에서 실행 중이던 프로세스/스레드가 다른 프로세스/스레드로 교체되는 것</li>
+</ul>
+
+<blockquote>
+  <p>커널 모드에서 실행된다.<br />
+CPU의 레지스터 상태가 교체된다.</p>
+</blockquote>
+
+<h3 id="커널모드">커널모드</h3>
+
+<ul>
+  <li>커널 모드란, 프로세스가 실행되다가 하드웨어와 밀접한 일들 혹은 컴퓨터의 리소스들을 다뤄야하는 상황이 오면 이 때는 프로세스가 직접 컴퓨터의 리소스에 접근하는 게 아니라, 운영체제를 통해 접근합니다.</li>
+  <li>특히 운영체제 중에서도 커널을 통해 접근합니다.</li>
+  <li>이 때 <code class="language-plaintext highlighter-rouge">프로세스에서 커널로 통제권이 넘어가서</code> <code class="language-plaintext highlighter-rouge">커널에 의해 실행</code>되는 걸 커널모드라고 합니다.</li>
+</ul>
+
+<h3 id="cpu-atomic">CPU atomic</h3>
+
+<p><code class="language-plaintext highlighter-rouge">CPU atomic</code>한 연산이란,</p>
+
+<ul>
+  <li>실행 중간에 간섭받거나 중단되지 않는다.</li>
+  <li>같은 메모리 영역에 대해 동시에 실행되지 않는다.
+    <ul>
+      <li>같은 메모리영역에 대해 실행되지 않는다는 건,</li>
+      <li>동일한 parameter에 대해 (예시. <code class="language-plaintext highlighter-rouge">lock</code>) 두 개 이상의 스레드나 프로세스가 동시에 호출한다고 해도</li>
+      <li><code class="language-plaintext highlighter-rouge">CPU 레벨에서 알아서</code> 먼저 하나를 실행시키고, 하나가 실행이 끝나고 이어서 다른 하나를 실행시킴.</li>
+      <li><code class="language-plaintext highlighter-rouge">이렇게 동기화해서 실행시킨다는 뜻</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="race-condition">race condition</h3>
+
+<ul>
+  <li>여러 프로세스/스레드가 <code class="language-plaintext highlighter-rouge">동시에 같은 데이터를 조작</code>할 때</li>
+  <li><code class="language-plaintext highlighter-rouge">타이밍</code>이나 <code class="language-plaintext highlighter-rouge">접근 순서</code>에 따라 <code class="language-plaintext highlighter-rouge">결과가 달라질 수 있는 상황</code></li>
+</ul>
+
+<h3 id="동기화synchronization">동기화(synchronization)</h3>
+
+<ul>
+  <li>여러 프로세스/스레드를 동시에 실행해도 <code class="language-plaintext highlighter-rouge">공유 데이터의 일관성을 유지</code>하는 것</li>
+  <li><code class="language-plaintext highlighter-rouge">한 순간에</code> <code class="language-plaintext highlighter-rouge">하나의 자원</code>을 <code class="language-plaintext highlighter-rouge">하나의 스레드/프로세스가 사용하도록 보장/제어</code>하는 것</li>
+</ul>
+
+<h3 id="thread-safe">Thread Safe</h3>
+
+<ul>
+  <li>어떤 함수나 변수, 객체가 <code class="language-plaintext highlighter-rouge">여러 스레드로부터 동시에 접근이 이루어져도</code> 프로그램 실행에 문제가 없음을 의미</li>
+</ul>
+
+<blockquote>
+  <p>멀티 스레드 프로그래밍에서 사용하는 용어</p>
+</blockquote>
+
+<h3 id="critical-section">critical section</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">공유 데이터의 일관성을 보장하기 위해</code> <code class="language-plaintext highlighter-rouge">하나의 프로세스/스레드만 진입해서 실행 가능</code>한 영역</li>
+</ul>
+
+<h4 id="mutual-exclusion">mutual exclusion</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">하나의 프로세스/스레드만 진입</code>해서 실행하게 하는 것</li>
+</ul>
+
+<h3 id="mutex">mutex</h3>
+
+<blockquote>
+  <p>핵심은 LOCK을 가질 수 있을 때 까지 휴식</p>
+</blockquote>
+
+<ul>
+  <li>critical section에서 <code class="language-plaintext highlighter-rouge">mutual exclusion을 보장</code>하는 장치</li>
+  <li>critical section에 진입하려면 <code class="language-plaintext highlighter-rouge">mutex lock</code>을 획득해야 함</li>
+  <li>mutex lock을 획득하지 못한 스레드는 <code class="language-plaintext highlighter-rouge">큐에 들어간 후 대기(waiting) 상태로 전환</code>
+    <ul>
+      <li>ex.entry queue</li>
+    </ul>
+  </li>
+  <li>mutex lock을 쥔 스레드가 lock을 반환하면, lock을 기다리며 큐에 대기 상태로 있던 스레드 중 하나가 실행</li>
+</ul>
+
+<h3 id="semaphore">semaphore</h3>
+
+<ul>
+  <li>하나 이상의 프로세스/스레드가 critical section에 접근 가능하도록 하는 장치
+    <ul>
+      <li>세마포어의 특별한 기능이라 할 수 있는 <code class="language-plaintext highlighter-rouge">시그널 메커니즘</code>을 통해 제어한다.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">시그널 메커니즘</code>을 통해 프로세스/스레드 간 <code class="language-plaintext highlighter-rouge">동기화(작업 순서)를 보장</code>해줄 수 있다.</li>
+</ul>
+
+<blockquote>
+  <p>lock이라는 이름이 wait<br />
+unlock이라는 이름이 signal</p>
+</blockquote>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">semaphore</span><span class="o">-&gt;</span><span class="n">wait</span><span class="o">();</span>
+<span class="o">...</span> <span class="n">critical</span> <span class="n">section</span>
+<span class="n">semaphore</span><span class="o">-&gt;</span><span class="n">signal</span><span class="o">();</span>
+</code></pre></div></div>
+
+<hr />
+
+<ul>
+  <li>참고
+    <ul>
+      <li><a href="http://wiki.hash.kr/index.php/TPS">TPS - 해시넷 위키</a></li>
+      <li><a href="https://brunch.co.kr/@dreaminz/1">1. Load Average에 관해서</a></li>
+      <li><a href="https://kim-dragon.tistory.com/45">[Linux]Load Average 란?</a></li>
+      <li><a href="https://m.blog.naver.com/sung_mk1919/221212568779">쓰루풋(Throughput)이란?</a></li>
+      <li><a href="https://www.techtarget.com/searchnetworking/definition/throughput">throughput</a></li>
+      <li><a href="https://www.baeldung.com/spring-webflux-backpressure">Backpressure Mechanism in Spring WebFlux</a></li>
+      <li><a href="https://www.youtube.com/watch?v=mb-QHxVfmcs&amp;ab_channel=%EC%89%AC%EC%9A%B4%EC%BD%94%EB%93%9C">block I/O vs non-block I/O 개념을 설명합니다! 소켓 I/O를 예제로 주로 설명해요! I/O multiplexing(다중 입출력) 설명도 빠질 수 없겠죠? ;)</a></li>
+      <li><a href="https://www.youtube.com/watch?v=qnVKEwjG_gM&amp;t=77s&amp;ab_channel=%EC%89%AC%EC%9A%B4%EC%BD%94%EB%93%9C">cpu bound, io bound 의미를 설명합니다! 이에 따른 스레드 개수를 정하는 팁도 알려드립니다!</a></li>
+      <li><a href="https://youtu.be/Xh9Nt7y07FE">컨텍스트 스위칭 뽀개기! 의미와 종류와 왜 스레드 컨텍스트 스위칭이 더 빠르다고 하는지까지..! 이 모든 것을 시원~~하게 설명합니다!!</a></li>
+      <li><a href="https://plummmm.tistory.com/113">레지스터 (Register)</a></li>
+      <li><a href="https://melonicedlatte.com/computer/2018/11/07/190754.html">캐시와 레지스터의 차이가 무엇일까요???</a></li>
+      <li><a href="https://www.youtube.com/watch?v=vp0Gckz3z64&amp;ab_channel=%EC%89%AC%EC%9A%B4%EC%BD%94%EB%93%9C">동기화(synchronization), 경쟁 조건(race condition), 임계 영역(critical section)을 자세하게 설명합니다! 헷갈리시는 분들 꼭 보세요!</a></li>
+      <li><a href="https://www.youtube.com/watch?v=gTkvX2Awj6g&amp;t=594s&amp;ab_channel=%EC%89%AC%EC%9A%B4%EC%BD%94%EB%93%9C">스핀락(spinlock) 뮤텍스(mutex) 세마포(semaphore) 각각의 특징과 차이 완벽 설명! 뮤텍스는 바이너리 세마포가 아니라는 것도 설명합니다!</a></li>
+      <li><a href="https://www.youtube.com/watch?v=Dms1oBmRAlo&amp;ab_channel=%EC%89%AC%EC%9A%B4%EC%BD%94%EB%93%9C">모니터가 어떻게 동기화에 사용되는지 아주 자세히 설명합니다! 자바에서 모니터는 어떤 모습인지도 설명하니 헷갈리시는 분들 꼭 보세요!</a></li>
+      <li><a href="https://www.youtube.com/channel/UCdGTtaI-ERLjzZNLuBj3X6A">널널한 개발자 TV</a></li>
+    </ul>
+  </li>
+</ul>
+
+
+    </div>
+
+</article>
+<div class="post-nav"><a class="previous" href="/jekyll-theme-yat/voca/2024/02/15/voca-cs-voca-oop.html" title="CS 단어 정리(OOP)">CS 단어 정리(OOP)</a><span></span></div><div class="post-related">
+      <div>Related Articles</div>
+      <ul>
+        <li><a class="post-link" href="/jekyll-theme-yat/todayilearned/2022/06/28/til-join-fetchjoin.html" title="">Fetch Join과 일반 Join(with DTO)</a></li><li><a class="post-link" href="/jekyll-theme-yat/favorites/2022/09/16/favorites-tech-blogs.html" title="">기업 기술 블로그</a></li><li><a class="post-link" href="/jekyll-theme-yat/boj/2022/05/09/boj-11725.html" title="">11725번 트리의 부모 찾기</a></li><li><a class="post-link" href="/jekyll-theme-yat/ps/2022/07/13/ps-15559.html" title="">BFS 방문 컴포넌트 갯수 != 싸이클 갯수</a></li></ul>
+    </div><div class="post-comments"></div></section>
+</div>
+
+
+  </section>
+  <section class="sidebar" style="margin-left: 15px;">
+    <!-- Get sidebar items --><style type="text/css" media="screen">
+.post-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+</style>
+
+<div class="post-menu">
+  <div class="post-menu-title">TOC</div>
+  <div class="post-menu-content"></div>
+</div>
+
+<script>
+  function generateContent() {
+    var menu = document.querySelector(".post-menu");
+    var menuContent =  menu.querySelector(".post-menu-content");
+    var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
+
+    // Hide menu when no headings
+    if (headings.length === 0) {
+      return menu.style.display = "none";
+    }
+
+    // Generate post menu
+    var menuHTML = '';
+    for (var i = 0; i < headings.length; i++) {
+      var h = headings[i];
+      menuHTML += (
+        '<li class="h-' + h.tagName.toLowerCase() + '">'
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+    }
+
+    menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
+
+    // The header element
+    var header = document.querySelector('header.site-header');
+
+    function doMenuCollapse(index, over_items) {
+      var items = menuContent.firstChild.children;
+
+      if (over_items == undefined) {
+        over_items = 20;
+      }
+
+      if (items.length < over_items) {
+        return;
+      }
+
+      var activeItem = items[index];
+      var beginItem = activeItem
+      var endItem = activeItem
+      var beginIndex = index;
+      var endIndex = index + 1;
+      while (beginIndex >= 0
+        && !items[beginIndex].classList.contains('h-h2')) {
+        beginIndex -= 1;
+      }
+      while (endIndex < items.length
+        && !items[endIndex].classList.contains('h-h2')) {
+        endIndex += 1;
+      }
+      for (var i = 0; i < beginIndex; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+      for (var i = beginIndex + 1; i < endIndex; i++) {
+        item = items[i]
+        // if (!item.classList.contains('h-h2')) {
+          item.style.display = '';
+        // }
+      }
+      for (var i = endIndex; i < items.length; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+    }
+
+    // Init menu collapsed
+    doMenuCollapse(-1);
+
+    // Active the menu item
+    window.addEventListener('scroll', function (event) {
+      var lastActive = menuContent.querySelector('.active');
+      var changed = true;
+      var activeIndex = -1;
+      for (var i = headings.length - 1; i >= 0; i--) {
+        var h = headings[i];
+        var headingRect = h.getBoundingClientRect();
+        var headerRect = header.getBoundingClientRect();
+        var headerTop = Math.floor(headerRect.top);
+        var headerHeight = Math.floor(headerRect.height);
+        var headerHeight = headerTop + headerHeight + 20;
+        if (headingRect.top <= headerHeight) {
+          var id = 'h-' + h.getAttribute('id');
+          var a = menuContent.querySelector('a[href="#' + id  + '"]');
+          var curActive = a.parentNode;
+          if (curActive) {
+            curActive.classList.add('active');
+            activeIndex = i;
+          }
+          if (lastActive == curActive) {
+            changed = false;
+          }
+          break;
+        }
+      }
+      if (changed) {
+        if (lastActive) {
+          lastActive.classList.remove('active');
+        }
+        doMenuCollapse(activeIndex);
+      }
+      event.preventDefault();
+    });
+  }
+  generateContent();
+</script>
+</section>
+</div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/jekyll-theme-yat/"></data>
+
+  <div class="wrapper">
+    <div class="site-footer-inner"><div>Unpublished Work <span class="copyleft">&copy;</span> 2017-2024 cotchan</div>
+      <div>Powered by <a title="Jekyll is a simple, blog-aware, static site
+      generator." href="https://jekyllrb.com/">Jekyll</a> &amp; <a title="Yat, yet
+      another theme." href="https://github.com/jeffreytse/jekyll-theme-yat">Yat Theme</a>.</div>
+      <div class="footer-col rss-subscribe">Subscribe <a href="/jekyll-theme-yat/feed.xml">via RSS</a></div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

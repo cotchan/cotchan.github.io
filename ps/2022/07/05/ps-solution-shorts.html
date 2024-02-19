@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>알고리즘별 풀이 쇼츠 | DEVELOPMENT</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="알고리즘별 풀이 쇼츠" />
+<meta name="author" content="cotchan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="필요한대로 계속 업데이트할 예정입니다 :)" />
+<meta property="og:description" content="필요한대로 계속 업데이트할 예정입니다 :)" />
+<link rel="canonical" href="https://cotchan.github.io/jekyll-theme-yat/ps/2022/07/05/ps-solution-shorts.html" />
+<meta property="og:url" content="https://cotchan.github.io/jekyll-theme-yat/ps/2022/07/05/ps-solution-shorts.html" />
+<meta property="og:site_name" content="DEVELOPMENT" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-07-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="알고리즘별 풀이 쇼츠" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"cotchan"},"dateModified":"2022-07-05T00:00:00+00:00","datePublished":"2022-07-05T00:00:00+00:00","description":"필요한대로 계속 업데이트할 예정입니다 :)","headline":"알고리즘별 풀이 쇼츠","mainEntityOfPage":{"@type":"WebPage","@id":"https://cotchan.github.io/jekyll-theme-yat/ps/2022/07/05/ps-solution-shorts.html"},"url":"https://cotchan.github.io/jekyll-theme-yat/ps/2022/07/05/ps-solution-shorts.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="shortcut icon" href="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-noto-sans@0.0.72/index.min.css">
+  <link rel="stylesheet" href="/jekyll-theme-yat/assets/css/main.css">
+  <script src="/jekyll-theme-yat/assets/js/main.js"></script><link type="application/atom+xml" rel="alternate" href="https://cotchan.github.io/jekyll-theme-yat/feed.xml" title="DEVELOPMENT" /><link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script charset="UTF-8"
+        src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/go.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// Init highlight js
+document.addEventListener('DOMContentLoaded', function(event) {
+  var els = document.querySelectorAll('pre code')
+
+  function addLangData(block) {
+    var outer = block.parentElement.parentElement.parentElement;
+    var lang = block.getAttribute('data-lang');
+    for (var i = 0; i < outer.classList.length; i++) {
+      var cls = outer.classList[i];
+      if (cls.startsWith('language-')) {
+        lang = cls;
+        break;
+      }
+    }
+    if (!lang) {
+      cls = block.getAttribute('class');
+      lang = cls ? cls.replace('hljs ', '') : '';
+    }
+    if (lang.startsWith('language-')) {
+      lang = lang.substr(9);
+    }
+    block.setAttribute('class', 'hljs ' + lang);
+    block.parentNode.setAttribute('data-lang', lang);
+  }
+
+  function addBadge(block) {
+    var enabled = ('true' || 'true').toLowerCase();
+    if (enabled == 'true') {
+      var pre = block.parentElement;
+      pre.classList.add('badge');
+    }
+  }
+
+  function handle(block) {
+    addLangData(block);
+    addBadge(block)
+    hljs.highlightBlock(block);
+  }
+
+  for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    handle(el);
+  }
+});
+</script>
+
+<style>
+  /* code language badge */
+  pre.badge::before {
+    content: attr(data-lang);
+    color: #fff;
+    background-color: #ff4e00;
+    padding: 0 .5em;
+    border-radius: 0 2px;
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 32px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+  }
+
+  /* fix wrong badge display for firefox browser */
+  code > table pre::before {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="site-header " role="banner">
+
+  <div class="wrapper">
+    <div class="site-header-inner"><span class="site-brand"><a class="site-brand-inner" rel="author" href="/jekyll-theme-yat/">
+  <img class="site-favicon" title="DEVELOPMENT" src="" onerror="this.style.display='none'">
+  DEVELOPMENT
+</a>
+</span><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewBox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger"><a class="page-link" href="/jekyll-theme-yat/about.html">ABOUT</a><a class="page-link" href="/jekyll-theme-yat/archives.html">ARCHIVES</a><a class="page-link" href="/jekyll-theme-yat/categories.html">CATEGORIES</a><a class="page-link" href="/jekyll-theme-yat/">HOME</a><a class="page-link" href="/jekyll-theme-yat/tags.html">TAGS</a>
+
+
+
+
+
+
+
+
+
+<span class="page-link">
+
+
+
+<div id="google_translate_element" style="display: none;">
+</div>
+
+<span class="ct-language">
+  <ul class="list-unstyled ct-language-dropdown">
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="en">
+          
+          <img src="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-400.png" title="English">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="fr">
+          
+          <img src="https://cdn.countryflags.com/thumbs/france/flag-400.png" title="French">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="zh-CN">
+          
+          <img src="https://cdn.countryflags.com/thumbs/china/flag-400.png" title="Chinese(Simple)">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ja">
+          
+          <img src="https://cdn.countryflags.com/thumbs/japan/flag-400.png" title="Japanese">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ko">
+          
+          <img src="https://cdn.countryflags.com/thumbs/south-korea/flag-400.png" title="Korean">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ru">
+          
+          <img src="https://cdn.countryflags.com/thumbs/russia/flag-400.png" title="Russian">
+          
+        </a>
+      </li>
+    
+  </ul>
+</span>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,
+    layout: google.translate.TranslateElement.InlineLayout.VERTICAL
+  }, 'google_translate_element');
+
+  // Links to cross-origin destinations are unsafe
+  var gll = document.getElementsByClassName('goog-logo-link')[0];
+  if (gll) {
+    gll.setAttribute('rel', 'noopener');
+  }
+
+  function restoreLang() {
+    var iframe = document.getElementsByClassName('goog-te-banner-frame')[0];
+    if (!iframe) return;
+
+    var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+    var restore_el = innerDoc.getElementsByTagName("button");
+
+    for (var i = 0; i < restore_el.length; i++) {
+      if (restore_el[i].id.indexOf("restore") >= 0) {
+        restore_el[i].click();
+        var close_el = innerDoc.getElementsByClassName("goog-close-link");
+        close_el[0].click();
+        return;
+      }
+    }
+  }
+
+  function triggerHtmlEvent(element, eventName) {
+    var event;
+    if (document.createEvent) {
+      event = document.createEvent('HTMLEvents');
+      event.initEvent(eventName, true, true);
+      element.dispatchEvent(event);
+    } else {
+      event = document.createEventObject();
+      event.eventType = eventName;
+      element.fireEvent('on' + event.eventType, event);
+    }
+  }
+
+  var googleCombo = document.querySelector("select.goog-te-combo");
+  var langSelect = document.querySelector('.ct-language');
+  langSelect.addEventListener('click', function(event) {
+    if (!event.target) {
+      return;
+    }
+
+    var selected = document.querySelector('.ct-language .ct-language-selected');
+    if (selected) {
+      selected.classList.remove('ct-language-selected');
+    }
+
+    var target = event.target;
+    while (target && target !== langSelect ) {
+      if (target.matches('.lang-select')) {
+        break;
+      }
+      target = target.parentElement;
+    }
+
+    if (target && target.matches('.lang-select')) {
+      var lang = target.getAttribute('data-lang');
+      if (googleCombo.value == lang) {
+        restoreLang();
+      } else {
+        target.parentElement.classList.add('ct-language-selected');
+        googleCombo.value = lang;
+        triggerHtmlEvent(googleCombo, 'change');
+      }
+    }
+
+    event.preventDefault();
+  });
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</span></div>
+        </nav></div>
+  </div>
+</header>
+
+<script>
+  function initHeader() {
+    var lastScrollY = getScrollPos().y;
+    var documentElement = document.documentElement;
+
+    function storeScrollData() {
+      var y = getScrollPos().y;var scrollStatus = "";
+
+      if (y <= 0) {
+        scrollStatus = "top";
+      } else if ((window.innerHeight + y) >= document.body.offsetHeight) {
+        scrollStatus = "bottom";
+      } else {
+        var isScrollDown = (y - lastScrollY > 0) ? true : false;
+        scrollStatus = isScrollDown ? "down" : "up";
+      }
+
+      lastScrollY = y;
+      documentElement.setAttribute("data-scroll-status", scrollStatus);
+    }
+
+    window.addEventListener('scroll', function(e) {
+      storeScrollData();
+    });
+
+    storeScrollData();
+  }
+  document.addEventListener('DOMContentLoaded', initHeader);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  function hashLocate(hashValue) {
+    hashValue = hashValue.replace(/^.*#h-/, '');
+    hashValue = decodeURIComponent(hashValue);
+    var element = document.getElementById(hashValue);
+
+    if (!element) {
+      return;
+    }
+
+    var header = document.querySelector('header.site-header');
+    var headerRect = header.getBoundingClientRect();
+    var headerTop = Math.floor(headerRect.top);
+    var headerHeight = Math.floor(headerRect.height);
+    var scrollPos = getScrollPos();
+    var offsetY = element.offsetTop - (headerTop + headerHeight + 20);
+
+    if (offsetY == scrollPos.y) {
+      return;
+    }
+
+    if (headerTop == 0  && offsetY > scrollPos.y) {
+      offsetY += headerHeight + 2;
+    } else if (headerTop < 0  && offsetY < scrollPos.y) {
+      offsetY -= headerHeight - 2;
+    }
+
+    smoothScrollTo(offsetY);
+  }
+
+  // The first event occurred
+  window.addEventListener('load', function(event) {
+    if (window.location.hash) {
+      hashLocate(window.location.hash);
+    }
+  });
+
+  // The first event occurred
+  window.addEventListener('click', function(event) {
+    if (event.target.tagName.toLowerCase() == 'a') {
+      hashLocate(event.target.getAttribute('href'));
+    }
+  });
+</script>
+<div class="theme-toggle">
+  <input type="checkbox" id="theme-switch">
+  <label for="theme-switch">
+    <div class="toggle"></div>
+    <div class="names">
+      <p class="light">Light</p>
+      <p class="dark">Dark</p>
+    </div>
+  </label>
+</div>
+
+
+
+
+<script>
+  (function() {
+    var sw = document.getElementById('theme-switch');
+    var html = document.getElementsByTagName('html')[0];
+    var nightModeOption = ('auto' || 'auto').toLowerCase();
+    var storage = nightModeOption === 'manual'
+        ? localStorage
+        : sessionStorage;
+    var themeData = loadThemeData();
+
+    function saveThemeData(data) {
+      storage.setItem('theme', JSON.stringify(data));
+    }
+
+    function loadThemeData() {
+      var data = storage.getItem('theme');
+      try {
+        data = JSON.parse(data ? data : '');
+      } catch(e) {
+        data = { nightShift: undefined, autoToggleAt: 0 };
+        saveThemeData(data);
+      }
+      return data;
+    }
+
+    function handleThemeToggle(nightShift) {
+      themeData.nightShift = nightShift;
+      saveThemeData(themeData);
+      html.dataset.theme = nightShift ? 'dark' : 'light';
+      setTimeout(function() {
+        sw.checked = nightShift ? true : false;
+      }, 50);
+    }
+
+    function autoThemeToggle() {
+      // Next time point of theme toggle
+      var now = new Date();
+      var toggleAt = new Date();
+      var hours = now.getHours();
+      var nightShift = hours >= 19 || hours <=7;
+
+      if (nightShift) {
+        if (hours > 7) {
+          toggleAt.setDate(toggleAt.getDate() + 1);
+        }
+        toggleAt.setHours(7);
+      } else {
+        toggleAt.setHours(19);
+      }
+
+      toggleAt.setMinutes(0);
+      toggleAt.setSeconds(0);
+      toggleAt.setMilliseconds(0)
+
+      var delay = toggleAt.getTime() - now.getTime();
+
+      // auto toggle theme mode
+      setTimeout(function() {
+        handleThemeToggle(!nightShift);
+      }, delay);
+
+      return {
+        nightShift: nightShift,
+        toggleAt: toggleAt.getTime()
+      };
+    }
+
+    // Listen the theme toggle event
+    sw.addEventListener('change', function(event) {
+      handleThemeToggle(event.target.checked);
+    });
+
+    if (nightModeOption == 'auto') {
+      var data = autoThemeToggle();
+
+      // Toggle theme by local setting
+      if (data.toggleAt > themeData.autoToggleAt) {
+        themeData.autoToggleAt = data.toggleAt;
+        handleThemeToggle(data.nightShift);
+      } else {
+        handleThemeToggle(themeData.nightShift);
+      }
+    } else if (nightModeOption == 'manual') {
+      handleThemeToggle(themeData.nightShift);
+    } else {
+      var nightShift = themeData.nightShift;
+      if (nightShift === undefined) {
+        nightShift = nightModeOption === 'on';
+      }
+      handleThemeToggle(nightShift);
+    }
+  })();
+</script>
+<div id="click-to-top" class="click-to-top">
+  <i class="fa fa-arrow-up"></i>
+</div>
+<script>
+  (function () {
+    const clickToTop = document.getElementById('click-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        clickToTop.classList.add('show')
+      }else {
+        clickToTop.classList.remove('show')
+      }
+    });
+    clickToTop.addEventListener('click', () => {
+      window.smoothScrollTo(0);
+    });
+  })();
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="framework">
+  <section class="main">
+
+     <div class="post">
+  <section>
+
+
+
+
+
+
+
+
+
+<header class="post-header">
+  <h1 class="post-title p-name" itemprop="name headline">알고리즘별 풀이 쇼츠</h1>
+  <h2 class="post-subtitle">본인이 볼려고 정리해놓는 풀이 쇼츠</h2>
+
+  <p class="post-meta">
+    <time class="dt-published" datetime="2022-07-05T00:00:00+00:00" itemprop="datePublished"><i class="fa fa-calendar"></i> Jul 05, 2022
+    </time>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 18 mins</span>
+  </p><div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#ps">#ps</a></div></header>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="post-content e-content" itemprop="articleBody">
+
+      <ul>
+  <li>필요한대로 계속 업데이트할 예정입니다 :)</li>
+</ul>
+
+<h3 id="이진탐색">이진탐색</h3>
+
+<h4 id="lower-bound">Lower bound</h4>
+
+<ul>
+  <li>원하는 <code class="language-plaintext highlighter-rouge">target 이상의 값</code>이 <code class="language-plaintext highlighter-rouge">최초로 나오는 위치</code>를 뜻합니다.</li>
+  <li>달리 말하면, <code class="language-plaintext highlighter-rouge">target보다 같거나 큰 원소</code>의 위치 중 가장 작은 위치를 의미합니다.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">getLowerBound</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">numbers</span><span class="o">,</span> <span class="kt">int</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">st</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="n">en</span> <span class="o">=</span> <span class="no">N</span><span class="o">-</span><span class="mi">1</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="n">lowerBound</span> <span class="o">=</span> <span class="no">IMPOSSIBLE</span><span class="o">;</span>
+
+    <span class="k">while</span> <span class="o">(</span><span class="n">st</span> <span class="o">&lt;=</span> <span class="n">en</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="o">(</span><span class="n">st</span> <span class="o">+</span> <span class="n">en</span><span class="o">)</span> <span class="o">/</span> <span class="mi">2</span><span class="o">;</span>
+
+        <span class="k">if</span> <span class="o">(</span><span class="n">numbers</span><span class="o">[</span><span class="n">mid</span><span class="o">]</span> <span class="o">&gt;=</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">lowerBound</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">min</span><span class="o">(</span><span class="n">lowerBound</span><span class="o">,</span> <span class="n">mid</span><span class="o">);</span>
+            <span class="n">en</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="n">st</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="k">return</span> <span class="n">ans</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h4 id="upper-bound">Upper bound</h4>
+
+<ul>
+  <li>원하는 <code class="language-plaintext highlighter-rouge">target을 초과하는 값</code>이 <code class="language-plaintext highlighter-rouge">최초로 나오는 위치</code>를 뜻합니다.</li>
+  <li>달리 말하면, <code class="language-plaintext highlighter-rouge">target을 초과하는 원소</code>의 위치 중 가장 작은 위치를 의미합니다.</li>
+  <li>Lower bound 코드에서 <code class="language-plaintext highlighter-rouge">등호만 제외하면</code> Upper bound를 구하는 코드입니다.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">getUpperBound</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">numbers</span><span class="o">,</span> <span class="kt">int</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">st</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="n">en</span> <span class="o">=</span> <span class="no">N</span><span class="o">-</span><span class="mi">1</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="n">upperBound</span> <span class="o">=</span> <span class="no">IMPOSSIBLE</span><span class="o">;</span>
+
+    <span class="k">while</span> <span class="o">(</span><span class="n">st</span> <span class="o">&lt;=</span> <span class="n">en</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="o">(</span><span class="n">st</span> <span class="o">+</span> <span class="n">en</span><span class="o">)</span> <span class="o">/</span> <span class="mi">2</span><span class="o">;</span>
+
+        <span class="k">if</span> <span class="o">(</span><span class="n">numbers</span><span class="o">[</span><span class="n">mid</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">upperBound</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">min</span><span class="o">(</span><span class="n">upperBound</span><span class="o">,</span> <span class="n">mid</span><span class="o">);</span>
+            <span class="n">en</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="n">st</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="k">return</span> <span class="n">ans</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h4 id="배열-내-데이터의-갯수">배열 내 데이터의 갯수</h4>
+
+<ul>
+  <li>lower bound와 upper bound의 성질을 이용하여 배열 내 데이터의 갯수를 구할 수 있습니다.</li>
+  <li>배열 내 데이터의 갯수는 <code class="language-plaintext highlighter-rouge">lowerBound</code>와 <code class="language-plaintext highlighter-rouge">upperBound</code> 이 두 값이 <code class="language-plaintext highlighter-rouge">차이</code>입니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">데이터가 존재하지 않는다면</code> 두 값은 같습니다.</li>
+</ul>
+
+<h3 id="lis">LIS</h3>
+
+<p>최장 증가 부분 수열입니다.</p>
+
+<h4 id="lis-길이-구하기">LIS 길이 구하기</h4>
+
+<ul>
+  <li>아래 세 가지 조합으로 최장 증가 부분 수열의 <code class="language-plaintext highlighter-rouge">길이</code>를 구할 수 있습니다.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">lower bound</code> + <code class="language-plaintext highlighter-rouge">이분 탐색</code> + <code class="language-plaintext highlighter-rouge">List&lt;&gt; lis</code></li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">lower bound</code>는 <code class="language-plaintext highlighter-rouge">현재 숫자가</code> lis 리스트에서 <code class="language-plaintext highlighter-rouge">위치할 수 있는 가장 작은 인덱스를 의미</code>합니다.</li>
+  <li>이분 탐색은 위 lower bound를 O(logN) 시간에 구하기 위해 사용합니다.</li>
+  <li>주어진 배열 내 숫자를 하나씩 탐색하면서 이분 탐색으로 <code class="language-plaintext highlighter-rouge">lower bound</code>를 구하며 <code class="language-plaintext highlighter-rouge">List&lt;&gt; lis</code>를 갱신해주면 됩니다.
+    <ul>
+      <li>맨 뒤에 넣을 수 있으면 맨 끝에 add</li>
+      <li>중간에 넣을 수 있으면 기존의 <code class="language-plaintext highlighter-rouge">lis[index]</code> 값 갱신</li>
+    </ul>
+  </li>
+</ul>
+
+<p>예시 코드</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">static</span> <span class="kt">int</span> <span class="no">N</span><span class="o">;</span>
+<span class="kd">static</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">numbers</span><span class="o">;</span>
+<span class="kd">static</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">lis</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">num</span> <span class="o">:</span> <span class="n">numbers</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="n">getLowerBound</span><span class="o">(</span><span class="n">num</span><span class="o">);</span>
+
+        <span class="k">if</span> <span class="o">(</span><span class="n">index</span> <span class="o">==</span> <span class="n">lis</span><span class="o">.</span><span class="na">size</span><span class="o">())</span> <span class="o">{</span>
+            <span class="n">lis</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">num</span><span class="o">);</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="kt">int</span> <span class="n">comparedValue</span> <span class="o">=</span> <span class="n">lis</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">index</span><span class="o">);</span>
+
+            <span class="k">if</span> <span class="o">(</span><span class="n">num</span> <span class="o">&lt;</span> <span class="n">comparedValue</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">lis</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">index</span><span class="o">,</span> <span class="n">num</span><span class="o">);</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">lis</span><span class="o">.</span><span class="na">size</span><span class="o">());</span>
+<span class="o">}</span>
+
+<span class="kd">static</span> <span class="kt">int</span> <span class="nf">getLowerBound</span><span class="o">(</span><span class="kt">int</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">st</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="n">en</span> <span class="o">=</span> <span class="n">lis</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="n">ans</span> <span class="o">=</span> <span class="n">lis</span><span class="o">.</span><span class="na">size</span><span class="o">();</span>
+
+    <span class="k">while</span> <span class="o">(</span><span class="n">st</span> <span class="o">&lt;=</span> <span class="n">en</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="o">(</span><span class="n">st</span> <span class="o">+</span> <span class="n">en</span><span class="o">)</span> <span class="o">/</span> <span class="mi">2</span><span class="o">;</span>
+        <span class="kt">int</span> <span class="n">comparedValue</span> <span class="o">=</span> <span class="n">lis</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">mid</span><span class="o">);</span>
+
+        <span class="k">if</span> <span class="o">(</span><span class="n">value</span> <span class="o">&lt;=</span> <span class="n">comparedValue</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">ans</span> <span class="o">=</span> <span class="n">mid</span><span class="o">;</span>
+            <span class="n">en</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="n">st</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="k">return</span> <span class="n">ans</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="dp">DP</h3>
+
+<h4 id="공통-유의사항">공통 유의사항</h4>
+
+<ul>
+  <li>dp의 특정상태 <code class="language-plaintext highlighter-rouge">dp[i][j]</code>가 <code class="language-plaintext highlighter-rouge">몇 번 계산(정의)되는지</code> 따져봐야 합니다.</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">여러 번</code> 계산이 된다면</p>
+
+<ul>
+  <li>dp 갱신값의 <code class="language-plaintext highlighter-rouge">비교 대상은 자기 자신</code>이 됩니다.
+    <ul>
+      <li>왜냐면 같은 상태가 여러번 정의될 수 있으므로 그 중에서의 최댓값/최솟값을 구해야 하기 때문입니다.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//자기 자신과 비교연산</span>
+<span class="n">dp</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">dp</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">],</span> <span class="o">...);</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">단 한 번</code>만 계산된다면</p>
+
+<ul>
+  <li>dp 갱신값의 <code class="language-plaintext highlighter-rouge">비교 대상은 자신의 이전 상태</code>가 됩니다.
+    <ul>
+      <li>왜냐면 특정 상태는 <code class="language-plaintext highlighter-rouge">딱 한 번만 계산</code> 되므로 자신과 비교할 필요가 없고 이전 상태와 현재 상태 중 뭐가 더 나은지만 판단하면 됩니다.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//이전 상태와 비교연산</span>
+<span class="n">dp</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">dp</span><span class="o">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="o">][</span><span class="n">j</span><span class="o">],</span> <span class="o">...);</span>
+</code></pre></div></div>
+
+<h4 id="동전-고르기--냅색">동전 고르기 &amp; 냅색</h4>
+
+<ul>
+  <li>동전 고르기
+    <ul>
+      <li>N개의 동전 <code class="language-plaintext highlighter-rouge">int[] coins</code>를 가지고 M원을 만들 수 있는 동전의 최대/최소 갯수</li>
+      <li>핵심은 N,M을 어떤 순서로 루프 도는지가 중요하고, 새로운 <code class="language-plaintext highlighter-rouge">i번째 동전</code>을 사용할 때마다 <code class="language-plaintext highlighter-rouge">0~M원</code>을 전부 확인해줘야합니다.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
+    * dp[i]: N번째 동전까지 고려했을 때 M원을 만드는데 필요한 최대/최소 동전 갯수
+*/</span>
+<span class="kt">int</span><span class="o">[]</span> <span class="n">coins</span><span class="o">;</span>
+
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="no">N</span><span class="o">;</span> <span class="o">++</span><span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">m</span> <span class="o">&lt;=</span> <span class="no">M</span><span class="o">;</span> <span class="o">++</span><span class="n">m</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">m</span> <span class="o">&gt;=</span> <span class="n">coins</span><span class="o">[</span><span class="n">i</span><span class="o">])</span> <span class="o">{</span>
+            <span class="n">dp</span><span class="o">[</span><span class="n">m</span><span class="o">]</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">dp</span><span class="o">[</span><span class="n">m</span><span class="o">],</span> <span class="n">dp</span><span class="o">[</span><span class="n">m</span><span class="o">-</span><span class="n">coins</span><span class="o">[</span><span class="n">i</span><span class="o">]]</span> <span class="o">+</span> <span class="mi">1</span><span class="o">);</span>
+            <span class="c1">//OR</span>
+            <span class="n">dp</span><span class="o">[</span><span class="n">m</span><span class="o">]</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">min</span><span class="o">(</span><span class="n">dp</span><span class="o">[</span><span class="n">m</span><span class="o">],</span> <span class="n">dp</span><span class="o">[</span><span class="n">m</span><span class="o">-</span><span class="n">coins</span><span class="o">[</span><span class="n">i</span><span class="o">]]</span> <span class="o">+</span> <span class="mi">1</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>냅색 문제
+    <ul>
+      <li>핵심은 <code class="language-plaintext highlighter-rouge">dp[i][m]과의 비교대상</code>은 가방에 <code class="language-plaintext highlighter-rouge">넣거나, 안 넣거나</code> 이렇게 두 가지 상태입니다.
+        <ul>
+          <li>가방에 안 넣거나: <code class="language-plaintext highlighter-rouge">dp[i][m]</code></li>
+          <li>가방에 넣거나: <code class="language-plaintext highlighter-rouge">dp[i][m-weight] + value</code></li>
+        </ul>
+      </li>
+      <li>자기 자신의 최대값을 갱신하는 dp[i][m] = Math.max(dp[i][m], newValue) 이런 형태가 아닙니다.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
+    * dp[i][j]: i번째 보석까지 고려하고, 무게 j만큼 담았을 때 얻을 수 있는 최대 가치
+    *
+    * dp[i][j] = dp[i-1][j-nowWeight] + nowValue
+    * dp[i][j] = d[i-1][j]
+    */</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="no">N</span><span class="o">;</span> <span class="o">++</span><span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">m</span> <span class="o">&lt;=</span> <span class="no">M</span><span class="o">;</span> <span class="o">++</span><span class="n">m</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Stone</span> <span class="n">nowStone</span> <span class="o">=</span> <span class="n">stones</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+
+        <span class="k">if</span> <span class="o">(</span><span class="n">m</span> <span class="o">&gt;=</span> <span class="n">nowStone</span><span class="o">.</span><span class="na">weight</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">dp</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">m</span><span class="o">]</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">dp</span><span class="o">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="o">][</span><span class="n">m</span><span class="o">],</span> <span class="n">dp</span><span class="o">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="o">][</span><span class="n">m</span><span class="o">-</span><span class="n">nowStone</span><span class="o">.</span><span class="na">weight</span><span class="o">]</span> <span class="o">+</span> <span class="n">nowStone</span><span class="o">.</span><span class="na">value</span><span class="o">);</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="n">dp</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">m</span><span class="o">]</span> <span class="o">=</span> <span class="n">dp</span><span class="o">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="o">][</span><span class="n">m</span><span class="o">];</span>
+        <span class="o">}</span>
+
+        <span class="n">ans</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">ans</span><span class="o">,</span> <span class="n">dp</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">m</span><span class="o">]);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="위상정렬">위상정렬</h3>
+
+<h4 id="기본-풀이-순서">기본 풀이 순서</h4>
+
+<ol>
+  <li>가장 기본적인 풀이 순서는 그래프를 만들면서 <code class="language-plaintext highlighter-rouge">나에게 들어오는 간선의 갯수</code>를 세는 <code class="language-plaintext highlighter-rouge">int[] indegree</code>를 계산합니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">모든</code> <code class="language-plaintext highlighter-rouge">indegree[i] == 0인 정점을 큐에 넣고</code> 탐색을 시작합니다.</li>
+  <li>큐에서 정점을 하나씩 빼면서 인접한 모든 정점을 탐색하고 그 때 마다 <code class="language-plaintext highlighter-rouge">--indegree[nxt]</code>을 해주면서 <code class="language-plaintext highlighter-rouge">indegree[nxt] == 0</code>이 되면 해당 정점을 큐에 넣어줍니다.</li>
+</ol>
+
+<p><a href="https://www.acmicpc.net/problem/2056">BOJ 2056번: 작업</a> 문제 풀이 코드</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kd">static</span> <span class="kt">int</span> <span class="no">N</span><span class="o">;</span>
+    <span class="kd">static</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">indegree</span><span class="o">,</span> <span class="n">times</span><span class="o">;</span>
+    <span class="kd">static</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;[]</span> <span class="n">graph</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+        <span class="nc">BufferedReader</span> <span class="n">br</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="nc">InputStreamReader</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">));</span>
+
+        <span class="no">N</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
+        <span class="n">indegree</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="no">N</span><span class="o">];</span>
+        <span class="n">times</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="no">N</span><span class="o">];</span>
+
+        <span class="n">graph</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">List</span><span class="o">[</span><span class="no">N</span><span class="o">];</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="no">N</span><span class="o">;</span> <span class="o">++</span><span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">graph</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+        <span class="o">}</span>
+
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="no">N</span><span class="o">;</span> <span class="o">++</span><span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+            <span class="nc">String</span><span class="o">[]</span> <span class="n">jobInfo</span> <span class="o">=</span> <span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">().</span><span class="na">split</span><span class="o">(</span><span class="s">" "</span><span class="o">);</span>
+            <span class="kt">int</span> <span class="n">time</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">jobInfo</span><span class="o">[</span><span class="mi">0</span><span class="o">]);</span>
+            <span class="kt">int</span> <span class="n">preCnt</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">jobInfo</span><span class="o">[</span><span class="mi">1</span><span class="o">]);</span>
+
+            <span class="n">times</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">time</span><span class="o">;</span>
+
+            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">preCnt</span><span class="o">;</span> <span class="o">++</span><span class="n">j</span><span class="o">)</span> <span class="o">{</span>
+                <span class="kt">int</span> <span class="n">preJobNumber</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">jobInfo</span><span class="o">[</span><span class="n">j</span><span class="o">+</span><span class="mi">2</span><span class="o">]);</span>
+                <span class="n">preJobNumber</span><span class="o">--;</span>
+                <span class="n">graph</span><span class="o">[</span><span class="n">preJobNumber</span><span class="o">].</span><span class="na">add</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+                <span class="c1">//1. 그래프를 만들면서 `나에게 들어오는 간선의 갯수`를 세는 `int[] indegree`를 계산</span>
+                <span class="n">indegree</span><span class="o">[</span><span class="n">i</span><span class="o">]++;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">dist</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="no">N</span><span class="o">];</span>
+        <span class="nc">Queue</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">q</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">&lt;&gt;();</span>
+
+        <span class="c1">//2. `모든` `indegree[i] == 0`인 정점을 큐에 넣고 탐색을 시작</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="no">N</span><span class="o">;</span> <span class="o">++</span><span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">indegree</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">dist</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">times</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+                <span class="n">q</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+
+        <span class="k">while</span> <span class="o">(!</span><span class="n">q</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
+            <span class="kt">int</span> <span class="n">now</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="na">poll</span><span class="o">();</span>
+
+            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">nxt</span> <span class="o">:</span> <span class="n">graph</span><span class="o">[</span><span class="n">now</span><span class="o">])</span> <span class="o">{</span>
+                <span class="k">if</span> <span class="o">(</span><span class="n">dist</span><span class="o">[</span><span class="n">nxt</span><span class="o">]</span> <span class="o">&lt;</span> <span class="n">dist</span><span class="o">[</span><span class="n">now</span><span class="o">]</span> <span class="o">+</span> <span class="n">times</span><span class="o">[</span><span class="n">nxt</span><span class="o">])</span> <span class="o">{</span>
+                    <span class="n">dist</span><span class="o">[</span><span class="n">nxt</span><span class="o">]</span> <span class="o">=</span> <span class="n">dist</span><span class="o">[</span><span class="n">now</span><span class="o">]</span> <span class="o">+</span> <span class="n">times</span><span class="o">[</span><span class="n">nxt</span><span class="o">];</span>
+                <span class="o">}</span>
+
+                <span class="cm">/**
+                 * 3. 큐에서 정점을 하나씩 빼면서 인접한 모든 정점을 탐색하고
+                 * 그 때 마다 --indegree[nxt]을 해주면서 indegree[nxt] == 0이 되면 해당 정점을 큐에 넣어줍니다.
+                 */</span>
+                <span class="k">if</span> <span class="o">(--</span><span class="n">indegree</span><span class="o">[</span><span class="n">nxt</span><span class="o">]</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="n">q</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">nxt</span><span class="o">);</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+        <span class="kt">int</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="no">N</span><span class="o">;</span> <span class="o">++</span><span class="n">i</span><span class="o">)</span> <span class="n">ans</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">ans</span><span class="o">,</span><span class="n">dist</span><span class="o">[</span><span class="n">i</span><span class="o">]);</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">ans</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h4 id="위상-정렬-최대-길이-구하기">위상 정렬 최대 길이 구하기</h4>
+
+<ul>
+  <li>주어진 그래프를 위상 정렬로 정렬했을 시 <code class="language-plaintext highlighter-rouge">가장 오래 걸리는 경로</code>를 찾는 유형입니다.</li>
+  <li>다익스트라랑 비슷하면서도 다른 부분이 있어서 정리합니다.</li>
+  <li>아래는 <code class="language-plaintext highlighter-rouge">위상 정렬 내 최대 길이</code>를 구하는 로직 코드입니다.</li>
+  <li>기존과 달라서 중요한 부분은 <code class="language-plaintext highlighter-rouge">4가지</code>입니다.
+    <ol>
+      <li><code class="language-plaintext highlighter-rouge">indegree[i] == 0</code>인 시작점을 <code class="language-plaintext highlighter-rouge">한 번에 큐에 다 넣습니다.</code></li>
+      <li><code class="language-plaintext highlighter-rouge">최대 길이</code>를 구해야 하므로 <code class="language-plaintext highlighter-rouge">dist[i]</code>는 0 같은 <code class="language-plaintext highlighter-rouge">작은 값으로 초기화</code>합니다.</li>
+      <li><code class="language-plaintext highlighter-rouge">dist[nxt]</code> 갱신 조건은 아래와 같이 <code class="language-plaintext highlighter-rouge">"최댓값을 바꿀 수 있을 때"</code> 입니다.
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">if (dist[nxt] &lt; dist[now] + times[nxt]) {}</code></li>
+        </ul>
+      </li>
+      <li>마지막으로 <code class="language-plaintext highlighter-rouge">큐에 새로 원소가 들어가는 조건</code> 입니다.
+        <ul>
+          <li>매 루프마다 <code class="language-plaintext highlighter-rouge">indegree[nxt]</code>값을 감소시키고 <code class="language-plaintext highlighter-rouge">indegree[nxt] == 0</code>이면 큐에 새로 넣습니다.</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span><span class="o">[]</span> <span class="n">dist</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="no">N</span><span class="o">];</span>
+<span class="nc">Queue</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">q</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">&lt;&gt;();</span>
+
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="no">N</span><span class="o">;</span> <span class="o">++</span><span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">indegree</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">dist</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">times</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+        <span class="n">q</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="k">while</span> <span class="o">(!</span><span class="n">q</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">now</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="na">poll</span><span class="o">();</span>
+
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">nxt</span> <span class="o">:</span> <span class="n">graph</span><span class="o">[</span><span class="n">now</span><span class="o">])</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">dist</span><span class="o">[</span><span class="n">nxt</span><span class="o">]</span> <span class="o">&lt;</span> <span class="n">dist</span><span class="o">[</span><span class="n">now</span><span class="o">]</span> <span class="o">+</span> <span class="n">times</span><span class="o">[</span><span class="n">nxt</span><span class="o">])</span> <span class="o">{</span>
+            <span class="n">dist</span><span class="o">[</span><span class="n">nxt</span><span class="o">]</span> <span class="o">=</span> <span class="n">dist</span><span class="o">[</span><span class="n">now</span><span class="o">]</span> <span class="o">+</span> <span class="n">times</span><span class="o">[</span><span class="n">nxt</span><span class="o">];</span>
+        <span class="o">}</span>
+
+        <span class="k">if</span> <span class="o">(--</span><span class="n">indegree</span><span class="o">[</span><span class="n">nxt</span><span class="o">]</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">q</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">nxt</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h4 id="경로-칠하기">경로 칠하기</h4>
+
+<ul>
+  <li>위상 정렬 내 최대 길이에 <code class="language-plaintext highlighter-rouge">포함되는 경로의 갯수</code>를 구하는 문제입니다.</li>
+  <li>예시 문제: <a href="https://www.acmicpc.net/problem/1948">BOJ 1948번: 임계경로</a></li>
+</ul>
+
+<p>풀이 방법은 다음과 같습니다.</p>
+
+<ol>
+  <li>위상 정렬로 주어진 그래프 <code class="language-plaintext highlighter-rouge">정방향으로</code> 순회하면서 <code class="language-plaintext highlighter-rouge">dist[i]</code> 완성하기</li>
+  <li>그 다음에 <code class="language-plaintext highlighter-rouge">경로를 칠하는 방법</code>은 <code class="language-plaintext highlighter-rouge">역방향으로 정점을 순회</code>하면서 아래 조건을 만족하는 경우만 <code class="language-plaintext highlighter-rouge">dfs로 따라가면 됩니다.</code></li>
+</ol>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">if (dist[node] == dist[nxtNode] + nxtTime) {}</code></li>
+  <li>해당 조건은 ‘이 간선’은 첫 번째 단계에서 구해놓은 <code class="language-plaintext highlighter-rouge">'dist[]가 최댓값으로 이동하는 경로에 포함되는 간선'</code>이라는 뜻입니다.</li>
+</ul>
+
+<ol>
+  <li>단, 주의할 점은 <code class="language-plaintext highlighter-rouge">이미 방문한 정점을 재방문하는 경우</code>가 생깁니다.</li>
+</ol>
+
+<ul>
+  <li>그러므로 무조건 <code class="language-plaintext highlighter-rouge">dfs(nxtNode)</code>를 호출해서 방문할 수 있게 처리하되, 방문했다면 호출 후 바로 종료시키는 방식으로 처리해야 합니다.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">dfs</span><span class="o">(</span><span class="kt">int</span> <span class="n">node</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">//중복 방문 제거</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">visit</span><span class="o">[</span><span class="n">node</span><span class="o">])</span> <span class="k">return</span><span class="o">;</span>
+    <span class="n">visit</span><span class="o">[</span><span class="n">node</span><span class="o">]</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+
+    <span class="k">for</span> <span class="o">(</span><span class="nc">Integer</span><span class="o">[]</span> <span class="n">nxt</span> <span class="o">:</span> <span class="n">reverseGraph</span><span class="o">[</span><span class="n">node</span><span class="o">])</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">nxtNode</span> <span class="o">=</span> <span class="n">nxt</span><span class="o">[</span><span class="mi">0</span><span class="o">];</span>
+        <span class="kt">int</span> <span class="n">nxtTime</span> <span class="o">=</span> <span class="n">nxt</span><span class="o">[</span><span class="mi">1</span><span class="o">];</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">dist</span><span class="o">[</span><span class="n">node</span><span class="o">]</span> <span class="o">==</span> <span class="n">dist</span><span class="o">[</span><span class="n">nxtNode</span><span class="o">]</span> <span class="o">+</span> <span class="n">nxtTime</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">dfs</span><span class="o">(</span><span class="n">nxtNode</span><span class="o">);</span>
+            <span class="n">ans</span><span class="o">++;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="dijkstra">DIJKSTRA</h3>
+
+<h4 id="특정-간선만-길이를-2배로">특정 간선만 길이를 2배로</h4>
+
+<p>특정 간선의 길이만 <code class="language-plaintext highlighter-rouge">2배로 늘렸을 때</code> 최단 경로가 어떻게 달라지는지 물어보는 문제입니다.</p>
+
+<ul>
+  <li>풀이의 핵심은, 2배로 늘렸을 때 최단 경로가 달라지게 하는 간선은 <code class="language-plaintext highlighter-rouge">기존의 최단 경로에 포함되는 간선들만 해당된다</code>는 점입니다.</li>
+  <li>즉, 기존에 최단 경로에 없던 간선은, 길이가 2배로 늘어나도 정답이었던 최단 경로에 아무런 영향을 끼치지 않습니다.</li>
+  <li>풀이방법
+    <ol>
+      <li>다익스트라를 한 번 돌려서 최단 경로에 포함되는 간선들을 구합니다.</li>
+      <li>최단 경로에 포함되는 간선들만 하나씩 뽑아 2배로 늘려보면서 새로 최단 경로를 구해봅니다.</li>
+    </ol>
+  </li>
+  <li>여기서 중요한 건, 최단 경로에 포함되는 간선은 <code class="language-plaintext highlighter-rouge">N-1</code>개 이므로 시간복잡도는 <code class="language-plaintext highlighter-rouge">O(N * MlogM)</code>이 됩니다.
+    <ul>
+      <li>정점의 갯수: N개, 간선의 갯수: M개라고 가정합니다.</li>
+      <li>시간복잡도가 <code class="language-plaintext highlighter-rouge">O(M * MlogM)</code>이 아니라는 것이 중요합니다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="우선순위-큐-사용문제">우선순위 큐 사용문제</h3>
+
+<p>우선순위 큐를 이하 PQ로 표현합니다.</p>
+
+<ul>
+  <li>PQ를 사용해서 <code class="language-plaintext highlighter-rouge">2개 이상의 조건</code>으로 주어진 데이터를 처리해야 하는 경우</li>
+  <li>이 경우 풀이 방법은 1개의 조건으로 주어진 데이터를 <code class="language-plaintext highlighter-rouge">정렬</code>합니다.</li>
+  <li>그 후 정렬된 데이터를 <code class="language-plaintext highlighter-rouge">루프를 돌면서</code>, 매 루프마다 예외 상황에 대해 <code class="language-plaintext highlighter-rouge">PQ</code>가 처리하도록 합니다.</li>
+  <li>위 풀이는 <code class="language-plaintext highlighter-rouge">O(N^2)</code>이면 터지는 문제를 <code class="language-plaintext highlighter-rouge">O(NlogN)</code>으로 바꾸려고 하는 문제입니다.</li>
+  <li>정렬하는데 <code class="language-plaintext highlighter-rouge">O(NlogN)</code>, 루프 도는데 <code class="language-plaintext highlighter-rouge">O(N)</code>, 루프마다 PQ를 사용하게 되므로 <code class="language-plaintext highlighter-rouge">O(NlogN)</code>입니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">최악의 문제 풀이</code>는 <code class="language-plaintext highlighter-rouge">PQ를 2개 이상 사용</code>하면서 서로 값을 옮겨담는 것입니다.
+    <ul>
+      <li>이 풀이는 <code class="language-plaintext highlighter-rouge">O(N^2)</code>입니다.</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<ul>
+  <li>참고
+    <ul>
+      <li><a href="https://chanhuiseok.github.io/posts/improve-6/">[알고리즘 트레이닝] 5장 - 동적계획법과 냅색(Knapsack) (백준 12865번 평범한 배낭 문제로 살펴보기)</a></li>
+      <li><a href="https://suuntree.tistory.com/120">BOJ 1948 - 임계경로 (위상정렬)</a></li>
+      <li><a href="https://suuntree.tistory.com/119">BOJ 2056 - 작업 (위상정렬)</a></li>
+    </ul>
+  </li>
+</ul>
+
+
+    </div>
+
+</article>
+<div class="post-nav"><a class="previous" href="/jekyll-theme-yat/todayilearned/2022/07/04/til-java-exception-with-enum.html" title="Enum을 사용한 자바 예외처리">Enum을 사용한 자바 예외처리</a><a class="next" href="/jekyll-theme-yat/ps/2022/07/07/ps-prefix-sum.html" title="구간합 구하기">구간합 구하기</a></div><div class="post-related">
+      <div>Related Articles</div>
+      <ul>
+        <li><a class="post-link" href="/jekyll-theme-yat/todayilearned/2022/06/20/til-handle.html" title="구간합 구하기">프로젝트에 CompletableFuture handle 적용하기</a></li><li><a class="post-link" href="/jekyll-theme-yat/boj/2022/05/09/boj-11286.html" title="구간합 구하기">11286번 절댓값 힙</a></li><li><a class="post-link" href="/jekyll-theme-yat/todayilearned/2022/06/23/til-datasource.html" title="구간합 구하기">DataSource에 대한 이해</a></li><li><a class="post-link" href="/jekyll-theme-yat/ps/2022/05/11/ps-14939.html" title="구간합 구하기">14939번 불 끄기</a></li></ul>
+    </div><div class="post-comments"></div></section>
+</div>
+
+
+  </section>
+  <section class="sidebar" style="margin-left: 15px;">
+    <!-- Get sidebar items --><style type="text/css" media="screen">
+.post-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+</style>
+
+<div class="post-menu">
+  <div class="post-menu-title">TOC</div>
+  <div class="post-menu-content"></div>
+</div>
+
+<script>
+  function generateContent() {
+    var menu = document.querySelector(".post-menu");
+    var menuContent =  menu.querySelector(".post-menu-content");
+    var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
+
+    // Hide menu when no headings
+    if (headings.length === 0) {
+      return menu.style.display = "none";
+    }
+
+    // Generate post menu
+    var menuHTML = '';
+    for (var i = 0; i < headings.length; i++) {
+      var h = headings[i];
+      menuHTML += (
+        '<li class="h-' + h.tagName.toLowerCase() + '">'
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+    }
+
+    menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
+
+    // The header element
+    var header = document.querySelector('header.site-header');
+
+    function doMenuCollapse(index, over_items) {
+      var items = menuContent.firstChild.children;
+
+      if (over_items == undefined) {
+        over_items = 20;
+      }
+
+      if (items.length < over_items) {
+        return;
+      }
+
+      var activeItem = items[index];
+      var beginItem = activeItem
+      var endItem = activeItem
+      var beginIndex = index;
+      var endIndex = index + 1;
+      while (beginIndex >= 0
+        && !items[beginIndex].classList.contains('h-h2')) {
+        beginIndex -= 1;
+      }
+      while (endIndex < items.length
+        && !items[endIndex].classList.contains('h-h2')) {
+        endIndex += 1;
+      }
+      for (var i = 0; i < beginIndex; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+      for (var i = beginIndex + 1; i < endIndex; i++) {
+        item = items[i]
+        // if (!item.classList.contains('h-h2')) {
+          item.style.display = '';
+        // }
+      }
+      for (var i = endIndex; i < items.length; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+    }
+
+    // Init menu collapsed
+    doMenuCollapse(-1);
+
+    // Active the menu item
+    window.addEventListener('scroll', function (event) {
+      var lastActive = menuContent.querySelector('.active');
+      var changed = true;
+      var activeIndex = -1;
+      for (var i = headings.length - 1; i >= 0; i--) {
+        var h = headings[i];
+        var headingRect = h.getBoundingClientRect();
+        var headerRect = header.getBoundingClientRect();
+        var headerTop = Math.floor(headerRect.top);
+        var headerHeight = Math.floor(headerRect.height);
+        var headerHeight = headerTop + headerHeight + 20;
+        if (headingRect.top <= headerHeight) {
+          var id = 'h-' + h.getAttribute('id');
+          var a = menuContent.querySelector('a[href="#' + id  + '"]');
+          var curActive = a.parentNode;
+          if (curActive) {
+            curActive.classList.add('active');
+            activeIndex = i;
+          }
+          if (lastActive == curActive) {
+            changed = false;
+          }
+          break;
+        }
+      }
+      if (changed) {
+        if (lastActive) {
+          lastActive.classList.remove('active');
+        }
+        doMenuCollapse(activeIndex);
+      }
+      event.preventDefault();
+    });
+  }
+  generateContent();
+</script>
+</section>
+</div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/jekyll-theme-yat/"></data>
+
+  <div class="wrapper">
+    <div class="site-footer-inner"><div>Unpublished Work <span class="copyleft">&copy;</span> 2017-2024 cotchan</div>
+      <div>Powered by <a title="Jekyll is a simple, blog-aware, static site
+      generator." href="https://jekyllrb.com/">Jekyll</a> &amp; <a title="Yat, yet
+      another theme." href="https://github.com/jeffreytse/jekyll-theme-yat">Yat Theme</a>.</div>
+      <div class="footer-col rss-subscribe">Subscribe <a href="/jekyll-theme-yat/feed.xml">via RSS</a></div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
